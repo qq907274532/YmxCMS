@@ -1,0 +1,1787 @@
+[ 2015-11-02T16:00:38+08:00 ] 120.131.75.138 /index.php/Cahe/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000276s ]
+NOTIC: [8192] mysql_get_server_info(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /var/www/shop/App/Admin/Conf/config.php 第 18 行.
+NOTIC: [2] mysql_get_server_info(): Access denied for user 'www'@'localhost' (using password: NO) /var/www/shop/App/Admin/Conf/config.php 第 18 行.
+NOTIC: [2] mysql_get_server_info(): A link to the server could not be established /var/www/shop/App/Admin/Conf/config.php 第 18 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000385s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000429s ]
+SQL: SHOW COLUMNS FROM `hx_node` [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `hx_admin` [ RunTime:0.0007s ]
+SQL: SELECT n.name,n.title,n.id,n.pid,n.icon FROM hx_admin a  left join hx_role r on r.id=a.role_id  left join hx_access ac on ac.role_id=r.id  left join hx_node n on n.id=ac.node_id  WHERE n.status = '开启' AND a.id = '1' ORDER BY n.sort  [ RunTime:0.0008s ]
+SQL: SELECT n.name,n.title,n.id,n.pid,n.icon FROM hx_admin a  left join hx_role r on r.id=a.role_id  left join hx_access ac on ac.role_id=r.id  left join hx_node n on n.id=ac.node_id  WHERE n.status = '开启' AND a.id = '1' ORDER BY n.sort  [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `hx_node` [ RunTime:0.0007s ]
+SQL: SELECT `pid` FROM `hx_node` WHERE `name` = 'Cahe' LIMIT 1   [ RunTime:0.0002s ]
+NOTIC: [2] Missing argument 1 for Admin\Model\NodeModel::getMenu(), called in /var/www/shop/App/Admin/Controller/BaseController.class.php on line 32 and defined /var/www/shop/App/Admin/Model/NodeModel.class.php 第 29 行.
+NOTIC: [8] Undefined variable: id /var/www/shop/App/Admin/Model/NodeModel.class.php 第 32 行.
+SQL: SELECT n.name,n.title,n.id,n.pid,n.icon FROM hx_admin a  left join hx_role r on r.id=a.role_id  left join hx_access ac on ac.role_id=r.id  left join hx_node n on n.id=ac.node_id  WHERE n.status = '开启' AND n.type = '是' AND a.id = null ORDER BY n.sort  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000073s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000120s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012232s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012323s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000118s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000155s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000420s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000466s ]
+
+[ 2015-11-02T16:00:40+08:00 ] 120.131.75.138 /index.php/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000276s ]
+NOTIC: [8192] mysql_get_server_info(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /var/www/shop/App/Admin/Conf/config.php 第 18 行.
+NOTIC: [2] mysql_get_server_info(): Access denied for user 'www'@'localhost' (using password: NO) /var/www/shop/App/Admin/Conf/config.php 第 18 行.
+NOTIC: [2] mysql_get_server_info(): A link to the server could not be established /var/www/shop/App/Admin/Conf/config.php 第 18 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000367s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000416s ]
+SQL: SHOW COLUMNS FROM `hx_node` [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `hx_admin` [ RunTime:0.0007s ]
+SQL: SELECT n.name,n.title,n.id,n.pid,n.icon FROM hx_admin a  left join hx_role r on r.id=a.role_id  left join hx_access ac on ac.role_id=r.id  left join hx_node n on n.id=ac.node_id  WHERE n.status = '开启' AND a.id = '1' ORDER BY n.sort  [ RunTime:0.0008s ]
+SQL: SELECT n.name,n.title,n.id,n.pid,n.icon FROM hx_admin a  left join hx_role r on r.id=a.role_id  left join hx_access ac on ac.role_id=r.id  left join hx_node n on n.id=ac.node_id  WHERE n.status = '开启' AND a.id = '1' ORDER BY n.sort  [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `hx_node` [ RunTime:0.0008s ]
+SQL: SELECT `pid` FROM `hx_node` WHERE `name` = 'Index' LIMIT 1   [ RunTime:0.0003s ]
+NOTIC: [2] Missing argument 1 for Admin\Model\NodeModel::getMenu(), called in /var/www/shop/App/Admin/Controller/BaseController.class.php on line 32 and defined /var/www/shop/App/Admin/Model/NodeModel.class.php 第 29 行.
+NOTIC: [8] Undefined variable: id /var/www/shop/App/Admin/Model/NodeModel.class.php 第 32 行.
+SQL: SELECT n.name,n.title,n.id,n.pid,n.icon FROM hx_admin a  left join hx_role r on r.id=a.role_id  left join hx_access ac on ac.role_id=r.id  left join hx_node n on n.id=ac.node_id  WHERE n.status = '开启' AND n.type = '是' AND a.id = null ORDER BY n.sort  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000084s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000137s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013882s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013925s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000124s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000162s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000460s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000506s ]
+
+[ 2015-11-02T16:00:42+08:00 ] 120.131.75.138 /index.php/User/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000307s ]
+NOTIC: [8192] mysql_get_server_info(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /var/www/shop/App/Admin/Conf/config.php 第 18 行.
+NOTIC: [2] mysql_get_server_info(): Access denied for user 'www'@'localhost' (using password: NO) /var/www/shop/App/Admin/Conf/config.php 第 18 行.
+NOTIC: [2] mysql_get_server_info(): A link to the server could not be established /var/www/shop/App/Admin/Conf/config.php 第 18 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000362s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000406s ]
+SQL: SHOW COLUMNS FROM `hx_node` [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `hx_admin` [ RunTime:0.0007s ]
+SQL: SELECT n.name,n.title,n.id,n.pid,n.icon FROM hx_admin a  left join hx_role r on r.id=a.role_id  left join hx_access ac on ac.role_id=r.id  left join hx_node n on n.id=ac.node_id  WHERE n.status = '开启' AND a.id = '1' ORDER BY n.sort  [ RunTime:0.0008s ]
+SQL: SELECT n.name,n.title,n.id,n.pid,n.icon FROM hx_admin a  left join hx_role r on r.id=a.role_id  left join hx_access ac on ac.role_id=r.id  left join hx_node n on n.id=ac.node_id  WHERE n.status = '开启' AND a.id = '1' ORDER BY n.sort  [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `hx_node` [ RunTime:0.0007s ]
+SQL: SELECT `pid` FROM `hx_node` WHERE `name` = 'User' LIMIT 1   [ RunTime:0.0003s ]
+NOTIC: [2] Missing argument 1 for Admin\Model\NodeModel::getMenu(), called in /var/www/shop/App/Admin/Controller/BaseController.class.php on line 32 and defined /var/www/shop/App/Admin/Model/NodeModel.class.php 第 29 行.
+NOTIC: [8] Undefined variable: id /var/www/shop/App/Admin/Model/NodeModel.class.php 第 32 行.
+SQL: SELECT n.name,n.title,n.id,n.pid,n.icon FROM hx_admin a  left join hx_role r on r.id=a.role_id  left join hx_access ac on ac.role_id=r.id  left join hx_node n on n.id=ac.node_id  WHERE n.status = '开启' AND n.type = '是' AND a.id = null ORDER BY n.sort  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `hx_users` [ RunTime:0.0008s ]
+NOTIC: [8] Undefined variable: where /var/www/shop/App/Admin/Controller/UserController.class.php 第 40 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `hx_users` LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `hx_users` ORDER BY `id` desc LIMIT 0,15   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000084s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000127s ]
+NOTIC: [8] Undefined index: name /var/www/shop/Runtime/Cache/Admin/4295d5db477f3199c8db51638416159f.php 第 366 行.
+NOTIC: [8] Undefined index: email /var/www/shop/Runtime/Cache/Admin/4295d5db477f3199c8db51638416159f.php 第 369 行.
+NOTIC: [8] Undefined index: starTime /var/www/shop/Runtime/Cache/Admin/4295d5db477f3199c8db51638416159f.php 第 372 行.
+NOTIC: [8] Undefined index: endTime /var/www/shop/Runtime/Cache/Admin/4295d5db477f3199c8db51638416159f.php 第 375 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /var/www/shop/Runtime/Cache/Admin/4295d5db477f3199c8db51638416159f.php 第 444 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /var/www/shop/Runtime/Cache/Admin/4295d5db477f3199c8db51638416159f.php 第 448 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015267s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015308s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000113s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000150s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000430s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000475s ]
+
+[ 2015-11-02T16:00:45+08:00 ] 120.131.75.138 /index.php/User/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000302s ]
+NOTIC: [8192] mysql_get_server_info(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /var/www/shop/App/Admin/Conf/config.php 第 18 行.
+NOTIC: [2] mysql_get_server_info(): Access denied for user 'www'@'localhost' (using password: NO) /var/www/shop/App/Admin/Conf/config.php 第 18 行.
+NOTIC: [2] mysql_get_server_info(): A link to the server could not be established /var/www/shop/App/Admin/Conf/config.php 第 18 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000386s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000430s ]
+SQL: SHOW COLUMNS FROM `hx_node` [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `hx_admin` [ RunTime:0.0007s ]
+SQL: SELECT n.name,n.title,n.id,n.pid,n.icon FROM hx_admin a  left join hx_role r on r.id=a.role_id  left join hx_access ac on ac.role_id=r.id  left join hx_node n on n.id=ac.node_id  WHERE n.status = '开启' AND a.id = '1' ORDER BY n.sort  [ RunTime:0.0008s ]
+SQL: SELECT n.name,n.title,n.id,n.pid,n.icon FROM hx_admin a  left join hx_role r on r.id=a.role_id  left join hx_access ac on ac.role_id=r.id  left join hx_node n on n.id=ac.node_id  WHERE n.status = '开启' AND a.id = '1' ORDER BY n.sort  [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `hx_node` [ RunTime:0.0008s ]
+SQL: SELECT `pid` FROM `hx_node` WHERE `name` = 'User' LIMIT 1   [ RunTime:0.0003s ]
+NOTIC: [2] Missing argument 1 for Admin\Model\NodeModel::getMenu(), called in /var/www/shop/App/Admin/Controller/BaseController.class.php on line 32 and defined /var/www/shop/App/Admin/Model/NodeModel.class.php 第 29 行.
+NOTIC: [8] Undefined variable: id /var/www/shop/App/Admin/Model/NodeModel.class.php 第 32 行.
+SQL: SELECT n.name,n.title,n.id,n.pid,n.icon FROM hx_admin a  left join hx_role r on r.id=a.role_id  left join hx_access ac on ac.role_id=r.id  left join hx_node n on n.id=ac.node_id  WHERE n.status = '开启' AND n.type = '是' AND a.id = null ORDER BY n.sort  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `hx_users` [ RunTime:0.0008s ]
+NOTIC: [8] Undefined variable: where /var/www/shop/App/Admin/Controller/UserController.class.php 第 40 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `hx_users` LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `hx_users` ORDER BY `id` desc LIMIT 0,15   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000087s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000135s ]
+NOTIC: [8] Undefined index: name /var/www/shop/Runtime/Cache/Admin/4295d5db477f3199c8db51638416159f.php 第 366 行.
+NOTIC: [8] Undefined index: email /var/www/shop/Runtime/Cache/Admin/4295d5db477f3199c8db51638416159f.php 第 369 行.
+NOTIC: [8] Undefined index: starTime /var/www/shop/Runtime/Cache/Admin/4295d5db477f3199c8db51638416159f.php 第 372 行.
+NOTIC: [8] Undefined index: endTime /var/www/shop/Runtime/Cache/Admin/4295d5db477f3199c8db51638416159f.php 第 375 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /var/www/shop/Runtime/Cache/Admin/4295d5db477f3199c8db51638416159f.php 第 444 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /var/www/shop/Runtime/Cache/Admin/4295d5db477f3199c8db51638416159f.php 第 448 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015981s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016020s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000114s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000149s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000449s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000494s ]
+
+[ 2015-11-02T16:01:52+08:00 ] 120.131.75.138 /index.php/User/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000279s ]
+NOTIC: [8192] mysql_get_server_info(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /var/www/shop/App/Admin/Conf/config.php 第 18 行.
+NOTIC: [2] mysql_get_server_info(): Access denied for user 'www'@'localhost' (using password: NO) /var/www/shop/App/Admin/Conf/config.php 第 18 行.
+NOTIC: [2] mysql_get_server_info(): A link to the server could not be established /var/www/shop/App/Admin/Conf/config.php 第 18 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000362s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000404s ]
+SQL: SHOW COLUMNS FROM `hx_node` [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `hx_admin` [ RunTime:0.0007s ]
+SQL: SELECT n.name,n.title,n.id,n.pid,n.icon FROM hx_admin a  left join hx_role r on r.id=a.role_id  left join hx_access ac on ac.role_id=r.id  left join hx_node n on n.id=ac.node_id  WHERE n.status = '开启' AND a.id = '1' ORDER BY n.sort  [ RunTime:0.0008s ]
+SQL: SELECT n.name,n.title,n.id,n.pid,n.icon FROM hx_admin a  left join hx_role r on r.id=a.role_id  left join hx_access ac on ac.role_id=r.id  left join hx_node n on n.id=ac.node_id  WHERE n.status = '开启' AND a.id = '1' ORDER BY n.sort  [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `hx_node` [ RunTime:0.0007s ]
+SQL: SELECT `pid` FROM `hx_node` WHERE `name` = 'User' LIMIT 1   [ RunTime:0.0003s ]
+NOTIC: [2] Missing argument 1 for Admin\Model\NodeModel::getMenu(), called in /var/www/shop/App/Admin/Controller/BaseController.class.php on line 32 and defined /var/www/shop/App/Admin/Model/NodeModel.class.php 第 29 行.
+NOTIC: [8] Undefined variable: id /var/www/shop/App/Admin/Model/NodeModel.class.php 第 32 行.
+SQL: SELECT n.name,n.title,n.id,n.pid,n.icon FROM hx_admin a  left join hx_role r on r.id=a.role_id  left join hx_access ac on ac.role_id=r.id  left join hx_node n on n.id=ac.node_id  WHERE n.status = '开启' AND n.type = '是' AND a.id = null ORDER BY n.sort  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `hx_users` [ RunTime:0.0008s ]
+NOTIC: [8] Undefined variable: where /var/www/shop/App/Admin/Controller/UserController.class.php 第 40 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `hx_users` LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `hx_users` ORDER BY `id` desc LIMIT 0,15   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000086s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000131s ]
+NOTIC: [8] Undefined index: name /var/www/shop/Runtime/Cache/Admin/4295d5db477f3199c8db51638416159f.php 第 366 行.
+NOTIC: [8] Undefined index: email /var/www/shop/Runtime/Cache/Admin/4295d5db477f3199c8db51638416159f.php 第 369 行.
+NOTIC: [8] Undefined index: starTime /var/www/shop/Runtime/Cache/Admin/4295d5db477f3199c8db51638416159f.php 第 372 行.
+NOTIC: [8] Undefined index: endTime /var/www/shop/Runtime/Cache/Admin/4295d5db477f3199c8db51638416159f.php 第 375 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /var/www/shop/Runtime/Cache/Admin/4295d5db477f3199c8db51638416159f.php 第 444 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /var/www/shop/Runtime/Cache/Admin/4295d5db477f3199c8db51638416159f.php 第 448 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015499s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015540s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000139s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000176s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000395s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000441s ]
+
+[ 2015-11-02T16:01:54+08:00 ] 120.131.75.138 /index.php/User/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000274s ]
+NOTIC: [8192] mysql_get_server_info(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /var/www/shop/App/Admin/Conf/config.php 第 18 行.
+NOTIC: [2] mysql_get_server_info(): Access denied for user 'www'@'localhost' (using password: NO) /var/www/shop/App/Admin/Conf/config.php 第 18 行.
+NOTIC: [2] mysql_get_server_info(): A link to the server could not be established /var/www/shop/App/Admin/Conf/config.php 第 18 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000400s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000443s ]
+SQL: SHOW COLUMNS FROM `hx_node` [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `hx_admin` [ RunTime:0.0007s ]
+SQL: SELECT n.name,n.title,n.id,n.pid,n.icon FROM hx_admin a  left join hx_role r on r.id=a.role_id  left join hx_access ac on ac.role_id=r.id  left join hx_node n on n.id=ac.node_id  WHERE n.status = '开启' AND a.id = '1' ORDER BY n.sort  [ RunTime:0.0008s ]
+SQL: SELECT n.name,n.title,n.id,n.pid,n.icon FROM hx_admin a  left join hx_role r on r.id=a.role_id  left join hx_access ac on ac.role_id=r.id  left join hx_node n on n.id=ac.node_id  WHERE n.status = '开启' AND a.id = '1' ORDER BY n.sort  [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `hx_node` [ RunTime:0.0008s ]
+SQL: SELECT `pid` FROM `hx_node` WHERE `name` = 'User' LIMIT 1   [ RunTime:0.0003s ]
+NOTIC: [2] Missing argument 1 for Admin\Model\NodeModel::getMenu(), called in /var/www/shop/App/Admin/Controller/BaseController.class.php on line 32 and defined /var/www/shop/App/Admin/Model/NodeModel.class.php 第 29 行.
+NOTIC: [8] Undefined variable: id /var/www/shop/App/Admin/Model/NodeModel.class.php 第 32 行.
+SQL: SELECT n.name,n.title,n.id,n.pid,n.icon FROM hx_admin a  left join hx_role r on r.id=a.role_id  left join hx_access ac on ac.role_id=r.id  left join hx_node n on n.id=ac.node_id  WHERE n.status = '开启' AND n.type = '是' AND a.id = null ORDER BY n.sort  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `hx_users` [ RunTime:0.0008s ]
+NOTIC: [8] Undefined variable: where /var/www/shop/App/Admin/Controller/UserController.class.php 第 40 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `hx_users` LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `hx_users` ORDER BY `id` desc LIMIT 0,15   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000086s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000130s ]
+NOTIC: [8] Undefined index: name /var/www/shop/Runtime/Cache/Admin/4295d5db477f3199c8db51638416159f.php 第 366 行.
+NOTIC: [8] Undefined index: email /var/www/shop/Runtime/Cache/Admin/4295d5db477f3199c8db51638416159f.php 第 369 行.
+NOTIC: [8] Undefined index: starTime /var/www/shop/Runtime/Cache/Admin/4295d5db477f3199c8db51638416159f.php 第 372 行.
+NOTIC: [8] Undefined index: endTime /var/www/shop/Runtime/Cache/Admin/4295d5db477f3199c8db51638416159f.php 第 375 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /var/www/shop/Runtime/Cache/Admin/4295d5db477f3199c8db51638416159f.php 第 444 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /var/www/shop/Runtime/Cache/Admin/4295d5db477f3199c8db51638416159f.php 第 448 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015234s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015274s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000114s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000149s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000451s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000498s ]
+
+[ 2015-11-02T16:02:19+08:00 ] 120.131.75.138 /index.php/User/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000277s ]
+NOTIC: [8192] mysql_get_server_info(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /var/www/shop/App/Admin/Conf/config.php 第 18 行.
+NOTIC: [2] mysql_get_server_info(): Access denied for user 'www'@'localhost' (using password: NO) /var/www/shop/App/Admin/Conf/config.php 第 18 行.
+NOTIC: [2] mysql_get_server_info(): A link to the server could not be established /var/www/shop/App/Admin/Conf/config.php 第 18 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000369s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000411s ]
+SQL: SHOW COLUMNS FROM `hx_node` [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `hx_admin` [ RunTime:0.0007s ]
+SQL: SELECT n.name,n.title,n.id,n.pid,n.icon FROM hx_admin a  left join hx_role r on r.id=a.role_id  left join hx_access ac on ac.role_id=r.id  left join hx_node n on n.id=ac.node_id  WHERE n.status = '开启' AND a.id = '1' ORDER BY n.sort  [ RunTime:0.0008s ]
+SQL: SELECT n.name,n.title,n.id,n.pid,n.icon FROM hx_admin a  left join hx_role r on r.id=a.role_id  left join hx_access ac on ac.role_id=r.id  left join hx_node n on n.id=ac.node_id  WHERE n.status = '开启' AND a.id = '1' ORDER BY n.sort  [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `hx_node` [ RunTime:0.0007s ]
+SQL: SELECT `pid` FROM `hx_node` WHERE `name` = 'User' LIMIT 1   [ RunTime:0.0003s ]
+NOTIC: [2] Missing argument 1 for Admin\Model\NodeModel::getMenu(), called in /var/www/shop/App/Admin/Controller/BaseController.class.php on line 32 and defined /var/www/shop/App/Admin/Model/NodeModel.class.php 第 29 行.
+NOTIC: [8] Undefined variable: id /var/www/shop/App/Admin/Model/NodeModel.class.php 第 32 行.
+SQL: SELECT n.name,n.title,n.id,n.pid,n.icon FROM hx_admin a  left join hx_role r on r.id=a.role_id  left join hx_access ac on ac.role_id=r.id  left join hx_node n on n.id=ac.node_id  WHERE n.status = '开启' AND n.type = '是' AND a.id = null ORDER BY n.sort  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `hx_users` [ RunTime:0.0009s ]
+NOTIC: [8] Undefined variable: where /var/www/shop/App/Admin/Controller/UserController.class.php 第 40 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `hx_users` LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `hx_users` ORDER BY `id` desc LIMIT 0,15   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000104s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000156s ]
+NOTIC: [8] Undefined index: name /var/www/shop/Runtime/Cache/Admin/4295d5db477f3199c8db51638416159f.php 第 366 行.
+NOTIC: [8] Undefined index: email /var/www/shop/Runtime/Cache/Admin/4295d5db477f3199c8db51638416159f.php 第 369 行.
+NOTIC: [8] Undefined index: starTime /var/www/shop/Runtime/Cache/Admin/4295d5db477f3199c8db51638416159f.php 第 372 行.
+NOTIC: [8] Undefined index: endTime /var/www/shop/Runtime/Cache/Admin/4295d5db477f3199c8db51638416159f.php 第 375 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /var/www/shop/Runtime/Cache/Admin/4295d5db477f3199c8db51638416159f.php 第 444 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /var/www/shop/Runtime/Cache/Admin/4295d5db477f3199c8db51638416159f.php 第 448 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015502s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015543s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000119s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000154s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000442s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000487s ]
+
+[ 2015-11-02T16:02:22+08:00 ] 120.131.75.138 /index.php/User/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000302s ]
+NOTIC: [8192] mysql_get_server_info(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /var/www/shop/App/Admin/Conf/config.php 第 18 行.
+NOTIC: [2] mysql_get_server_info(): Access denied for user 'www'@'localhost' (using password: NO) /var/www/shop/App/Admin/Conf/config.php 第 18 行.
+NOTIC: [2] mysql_get_server_info(): A link to the server could not be established /var/www/shop/App/Admin/Conf/config.php 第 18 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000381s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000434s ]
+SQL: SHOW COLUMNS FROM `hx_node` [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `hx_admin` [ RunTime:0.0007s ]
+SQL: SELECT n.name,n.title,n.id,n.pid,n.icon FROM hx_admin a  left join hx_role r on r.id=a.role_id  left join hx_access ac on ac.role_id=r.id  left join hx_node n on n.id=ac.node_id  WHERE n.status = '开启' AND a.id = '1' ORDER BY n.sort  [ RunTime:0.0009s ]
+SQL: SELECT n.name,n.title,n.id,n.pid,n.icon FROM hx_admin a  left join hx_role r on r.id=a.role_id  left join hx_access ac on ac.role_id=r.id  left join hx_node n on n.id=ac.node_id  WHERE n.status = '开启' AND a.id = '1' ORDER BY n.sort  [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `hx_node` [ RunTime:0.0008s ]
+SQL: SELECT `pid` FROM `hx_node` WHERE `name` = 'User' LIMIT 1   [ RunTime:0.0003s ]
+NOTIC: [2] Missing argument 1 for Admin\Model\NodeModel::getMenu(), called in /var/www/shop/App/Admin/Controller/BaseController.class.php on line 32 and defined /var/www/shop/App/Admin/Model/NodeModel.class.php 第 29 行.
+NOTIC: [8] Undefined variable: id /var/www/shop/App/Admin/Model/NodeModel.class.php 第 32 行.
+SQL: SELECT n.name,n.title,n.id,n.pid,n.icon FROM hx_admin a  left join hx_role r on r.id=a.role_id  left join hx_access ac on ac.role_id=r.id  left join hx_node n on n.id=ac.node_id  WHERE n.status = '开启' AND n.type = '是' AND a.id = null ORDER BY n.sort  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `hx_users` [ RunTime:0.0008s ]
+NOTIC: [8] Undefined variable: where /var/www/shop/App/Admin/Controller/UserController.class.php 第 40 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `hx_users` LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `hx_users` ORDER BY `id` desc LIMIT 0,15   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000086s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000135s ]
+NOTIC: [8] Undefined index: name /var/www/shop/Runtime/Cache/Admin/4295d5db477f3199c8db51638416159f.php 第 366 行.
+NOTIC: [8] Undefined index: email /var/www/shop/Runtime/Cache/Admin/4295d5db477f3199c8db51638416159f.php 第 369 行.
+NOTIC: [8] Undefined index: starTime /var/www/shop/Runtime/Cache/Admin/4295d5db477f3199c8db51638416159f.php 第 372 行.
+NOTIC: [8] Undefined index: endTime /var/www/shop/Runtime/Cache/Admin/4295d5db477f3199c8db51638416159f.php 第 375 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /var/www/shop/Runtime/Cache/Admin/4295d5db477f3199c8db51638416159f.php 第 444 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /var/www/shop/Runtime/Cache/Admin/4295d5db477f3199c8db51638416159f.php 第 448 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015402s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015448s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000121s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000157s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000429s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000481s ]
+
+[ 2015-11-02T16:02:24+08:00 ] 120.131.75.138 /index.php/User/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000037s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000306s ]
+NOTIC: [8192] mysql_get_server_info(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /var/www/shop/App/Admin/Conf/config.php 第 18 行.
+NOTIC: [2] mysql_get_server_info(): Access denied for user 'www'@'localhost' (using password: NO) /var/www/shop/App/Admin/Conf/config.php 第 18 行.
+NOTIC: [2] mysql_get_server_info(): A link to the server could not be established /var/www/shop/App/Admin/Conf/config.php 第 18 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000395s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000438s ]
+SQL: SHOW COLUMNS FROM `hx_node` [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `hx_admin` [ RunTime:0.0007s ]
+SQL: SELECT n.name,n.title,n.id,n.pid,n.icon FROM hx_admin a  left join hx_role r on r.id=a.role_id  left join hx_access ac on ac.role_id=r.id  left join hx_node n on n.id=ac.node_id  WHERE n.status = '开启' AND a.id = '1' ORDER BY n.sort  [ RunTime:0.0008s ]
+SQL: SELECT n.name,n.title,n.id,n.pid,n.icon FROM hx_admin a  left join hx_role r on r.id=a.role_id  left join hx_access ac on ac.role_id=r.id  left join hx_node n on n.id=ac.node_id  WHERE n.status = '开启' AND a.id = '1' ORDER BY n.sort  [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `hx_node` [ RunTime:0.0007s ]
+SQL: SELECT `pid` FROM `hx_node` WHERE `name` = 'User' LIMIT 1   [ RunTime:0.0003s ]
+NOTIC: [2] Missing argument 1 for Admin\Model\NodeModel::getMenu(), called in /var/www/shop/App/Admin/Controller/BaseController.class.php on line 32 and defined /var/www/shop/App/Admin/Model/NodeModel.class.php 第 29 行.
+NOTIC: [8] Undefined variable: id /var/www/shop/App/Admin/Model/NodeModel.class.php 第 32 行.
+SQL: SELECT n.name,n.title,n.id,n.pid,n.icon FROM hx_admin a  left join hx_role r on r.id=a.role_id  left join hx_access ac on ac.role_id=r.id  left join hx_node n on n.id=ac.node_id  WHERE n.status = '开启' AND n.type = '是' AND a.id = null ORDER BY n.sort  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `hx_users` [ RunTime:0.0008s ]
+NOTIC: [8] Undefined variable: where /var/www/shop/App/Admin/Controller/UserController.class.php 第 40 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `hx_users` LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `hx_users` ORDER BY `id` desc LIMIT 0,15   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000086s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000133s ]
+NOTIC: [8] Undefined index: name /var/www/shop/Runtime/Cache/Admin/4295d5db477f3199c8db51638416159f.php 第 366 行.
+NOTIC: [8] Undefined index: email /var/www/shop/Runtime/Cache/Admin/4295d5db477f3199c8db51638416159f.php 第 369 行.
+NOTIC: [8] Undefined index: starTime /var/www/shop/Runtime/Cache/Admin/4295d5db477f3199c8db51638416159f.php 第 372 行.
+NOTIC: [8] Undefined index: endTime /var/www/shop/Runtime/Cache/Admin/4295d5db477f3199c8db51638416159f.php 第 375 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /var/www/shop/Runtime/Cache/Admin/4295d5db477f3199c8db51638416159f.php 第 444 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /var/www/shop/Runtime/Cache/Admin/4295d5db477f3199c8db51638416159f.php 第 448 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015729s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015782s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000118s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000154s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000401s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000459s ]
+
+[ 2015-11-02T16:02:30+08:00 ] 120.131.75.138 /index.php/Cate/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000283s ]
+NOTIC: [8192] mysql_get_server_info(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /var/www/shop/App/Admin/Conf/config.php 第 18 行.
+NOTIC: [2] mysql_get_server_info(): Access denied for user 'www'@'localhost' (using password: NO) /var/www/shop/App/Admin/Conf/config.php 第 18 行.
+NOTIC: [2] mysql_get_server_info(): A link to the server could not be established /var/www/shop/App/Admin/Conf/config.php 第 18 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000510s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000553s ]
+SQL: SHOW COLUMNS FROM `hx_node` [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `hx_admin` [ RunTime:0.0007s ]
+SQL: SELECT n.name,n.title,n.id,n.pid,n.icon FROM hx_admin a  left join hx_role r on r.id=a.role_id  left join hx_access ac on ac.role_id=r.id  left join hx_node n on n.id=ac.node_id  WHERE n.status = '开启' AND a.id = '1' ORDER BY n.sort  [ RunTime:0.0008s ]
+SQL: SELECT n.name,n.title,n.id,n.pid,n.icon FROM hx_admin a  left join hx_role r on r.id=a.role_id  left join hx_access ac on ac.role_id=r.id  left join hx_node n on n.id=ac.node_id  WHERE n.status = '开启' AND a.id = '1' ORDER BY n.sort  [ RunTime:0.0008s ]
+SQL: SHOW COLUMNS FROM `hx_node` [ RunTime:0.0007s ]
+SQL: SELECT `pid` FROM `hx_node` WHERE `name` = 'Cate' LIMIT 1   [ RunTime:0.0002s ]
+NOTIC: [2] Missing argument 1 for Admin\Model\NodeModel::getMenu(), called in /var/www/shop/App/Admin/Controller/BaseController.class.php on line 32 and defined /var/www/shop/App/Admin/Model/NodeModel.class.php 第 29 行.
+NOTIC: [8] Undefined variable: id /var/www/shop/App/Admin/Model/NodeModel.class.php 第 32 行.
+SQL: SELECT n.name,n.title,n.id,n.pid,n.icon FROM hx_admin a  left join hx_role r on r.id=a.role_id  left join hx_access ac on ac.role_id=r.id  left join hx_node n on n.id=ac.node_id  WHERE n.status = '开启' AND n.type = '是' AND a.id = null ORDER BY n.sort  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `hx_cate` [ RunTime:0.0006s ]
+SQL: SELECT * FROM `hx_cate` ORDER BY `sort`,`id` desc  [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000081s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000131s ]
+NOTIC: [8] Undefined variable: data /var/www/shop/Runtime/Cache/Admin/b4acc1a42b3ec0821dc1ef239614af23.php 第 429 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.018756s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.018797s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000118s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000154s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000422s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000467s ]
+
+[ 2015-11-02T16:02:32+08:00 ] 120.131.75.138 /index.php/Article/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000290s ]
+NOTIC: [8192] mysql_get_server_info(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /var/www/shop/App/Admin/Conf/config.php 第 18 行.
+NOTIC: [2] mysql_get_server_info(): Access denied for user 'www'@'localhost' (using password: NO) /var/www/shop/App/Admin/Conf/config.php 第 18 行.
+NOTIC: [2] mysql_get_server_info(): A link to the server could not be established /var/www/shop/App/Admin/Conf/config.php 第 18 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000486s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000550s ]
+SQL: SHOW COLUMNS FROM `hx_node` [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `hx_admin` [ RunTime:0.0007s ]
+SQL: SELECT n.name,n.title,n.id,n.pid,n.icon FROM hx_admin a  left join hx_role r on r.id=a.role_id  left join hx_access ac on ac.role_id=r.id  left join hx_node n on n.id=ac.node_id  WHERE n.status = '开启' AND a.id = '1' ORDER BY n.sort  [ RunTime:0.0008s ]
+SQL: SELECT n.name,n.title,n.id,n.pid,n.icon FROM hx_admin a  left join hx_role r on r.id=a.role_id  left join hx_access ac on ac.role_id=r.id  left join hx_node n on n.id=ac.node_id  WHERE n.status = '开启' AND a.id = '1' ORDER BY n.sort  [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `hx_node` [ RunTime:0.0007s ]
+SQL: SELECT `pid` FROM `hx_node` WHERE `name` = 'Article' LIMIT 1   [ RunTime:0.0002s ]
+NOTIC: [2] Missing argument 1 for Admin\Model\NodeModel::getMenu(), called in /var/www/shop/App/Admin/Controller/BaseController.class.php on line 32 and defined /var/www/shop/App/Admin/Model/NodeModel.class.php 第 29 行.
+NOTIC: [8] Undefined variable: id /var/www/shop/App/Admin/Model/NodeModel.class.php 第 32 行.
+SQL: SELECT n.name,n.title,n.id,n.pid,n.icon FROM hx_admin a  left join hx_role r on r.id=a.role_id  left join hx_access ac on ac.role_id=r.id  left join hx_node n on n.id=ac.node_id  WHERE n.status = '开启' AND n.type = '是' AND a.id = null ORDER BY n.sort  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `hx_article` [ RunTime:0.0008s ]
+SQL: SHOW COLUMNS FROM `hx_cate` [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `hx_article` [ RunTime:0.0008s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `hx_article` WHERE `del` = 0 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `hx_article` WHERE `del` = 0 ORDER BY `sort` desc,`id` desc LIMIT 0,15   [ RunTime:0.0003s ]
+SQL: SELECT `username` FROM `hx_admin` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `cate` FROM `hx_cate` WHERE `id` = 5 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `username` FROM `hx_admin` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `cate` FROM `hx_cate` WHERE `id` = 5 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `username` FROM `hx_admin` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `cate` FROM `hx_cate` WHERE `id` = 5 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `username` FROM `hx_admin` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `cate` FROM `hx_cate` WHERE `id` = 5 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `hx_cate` ORDER BY `sort`,`id` desc  [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000101s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000156s ]
+NOTIC: [8] Undefined index: pid /var/www/shop/Runtime/Cache/Admin/ac492b5605bffa8cac27c5e0dc599b32.php 第 371 行.
+NOTIC: [8] Undefined index: pid /var/www/shop/Runtime/Cache/Admin/ac492b5605bffa8cac27c5e0dc599b32.php 第 372 行.
+NOTIC: [8] Undefined index: pid /var/www/shop/Runtime/Cache/Admin/ac492b5605bffa8cac27c5e0dc599b32.php 第 371 行.
+NOTIC: [8] Undefined index: pid /var/www/shop/Runtime/Cache/Admin/ac492b5605bffa8cac27c5e0dc599b32.php 第 371 行.
+NOTIC: [8] Undefined index: pid /var/www/shop/Runtime/Cache/Admin/ac492b5605bffa8cac27c5e0dc599b32.php 第 372 行.
+NOTIC: [8] Undefined index: pid /var/www/shop/Runtime/Cache/Admin/ac492b5605bffa8cac27c5e0dc599b32.php 第 372 行.
+NOTIC: [8] Undefined index: starTime /var/www/shop/Runtime/Cache/Admin/ac492b5605bffa8cac27c5e0dc599b32.php 第 382 行.
+NOTIC: [8] Undefined index: endTime /var/www/shop/Runtime/Cache/Admin/ac492b5605bffa8cac27c5e0dc599b32.php 第 385 行.
+NOTIC: [8] Undefined index: title /var/www/shop/Runtime/Cache/Admin/ac492b5605bffa8cac27c5e0dc599b32.php 第 388 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /var/www/shop/Runtime/Cache/Admin/ac492b5605bffa8cac27c5e0dc599b32.php 第 476 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /var/www/shop/Runtime/Cache/Admin/ac492b5605bffa8cac27c5e0dc599b32.php 第 476 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /var/www/shop/Runtime/Cache/Admin/ac492b5605bffa8cac27c5e0dc599b32.php 第 476 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /var/www/shop/Runtime/Cache/Admin/ac492b5605bffa8cac27c5e0dc599b32.php 第 476 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.019707s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.019749s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000128s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000165s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000439s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000485s ]
+
+[ 2015-11-02T16:02:33+08:00 ] 120.131.75.138 /index.php/Comment/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000277s ]
+NOTIC: [8192] mysql_get_server_info(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /var/www/shop/App/Admin/Conf/config.php 第 18 行.
+NOTIC: [2] mysql_get_server_info(): Access denied for user 'www'@'localhost' (using password: NO) /var/www/shop/App/Admin/Conf/config.php 第 18 行.
+NOTIC: [2] mysql_get_server_info(): A link to the server could not be established /var/www/shop/App/Admin/Conf/config.php 第 18 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000407s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000451s ]
+SQL: SHOW COLUMNS FROM `hx_node` [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `hx_admin` [ RunTime:0.0007s ]
+SQL: SELECT n.name,n.title,n.id,n.pid,n.icon FROM hx_admin a  left join hx_role r on r.id=a.role_id  left join hx_access ac on ac.role_id=r.id  left join hx_node n on n.id=ac.node_id  WHERE n.status = '开启' AND a.id = '1' ORDER BY n.sort  [ RunTime:0.0008s ]
+SQL: SELECT n.name,n.title,n.id,n.pid,n.icon FROM hx_admin a  left join hx_role r on r.id=a.role_id  left join hx_access ac on ac.role_id=r.id  left join hx_node n on n.id=ac.node_id  WHERE n.status = '开启' AND a.id = '1' ORDER BY n.sort  [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `hx_node` [ RunTime:0.0007s ]
+SQL: SELECT `pid` FROM `hx_node` WHERE `name` = 'Comment' LIMIT 1   [ RunTime:0.0003s ]
+NOTIC: [2] Missing argument 1 for Admin\Model\NodeModel::getMenu(), called in /var/www/shop/App/Admin/Controller/BaseController.class.php on line 32 and defined /var/www/shop/App/Admin/Model/NodeModel.class.php 第 29 行.
+NOTIC: [8] Undefined variable: id /var/www/shop/App/Admin/Model/NodeModel.class.php 第 32 行.
+SQL: SELECT n.name,n.title,n.id,n.pid,n.icon FROM hx_admin a  left join hx_role r on r.id=a.role_id  left join hx_access ac on ac.role_id=r.id  left join hx_node n on n.id=ac.node_id  WHERE n.status = '开启' AND n.type = '是' AND a.id = null ORDER BY n.sort  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `hx_comments` [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `hx_comments` [ RunTime:0.0007s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `hx_comments` LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `hx_comments` LIMIT 0,15   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000080s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000128s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014063s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014110s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000121s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000159s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000427s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000475s ]
+
+[ 2015-11-02T16:02:35+08:00 ] 120.131.75.138 /index.php/Comment/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000291s ]
+NOTIC: [8192] mysql_get_server_info(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /var/www/shop/App/Admin/Conf/config.php 第 18 行.
+NOTIC: [2] mysql_get_server_info(): Access denied for user 'www'@'localhost' (using password: NO) /var/www/shop/App/Admin/Conf/config.php 第 18 行.
+NOTIC: [2] mysql_get_server_info(): A link to the server could not be established /var/www/shop/App/Admin/Conf/config.php 第 18 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000371s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000415s ]
+SQL: SHOW COLUMNS FROM `hx_node` [ RunTime:0.0011s ]
+SQL: SHOW COLUMNS FROM `hx_admin` [ RunTime:0.0007s ]
+SQL: SELECT n.name,n.title,n.id,n.pid,n.icon FROM hx_admin a  left join hx_role r on r.id=a.role_id  left join hx_access ac on ac.role_id=r.id  left join hx_node n on n.id=ac.node_id  WHERE n.status = '开启' AND a.id = '1' ORDER BY n.sort  [ RunTime:0.0008s ]
+SQL: SELECT n.name,n.title,n.id,n.pid,n.icon FROM hx_admin a  left join hx_role r on r.id=a.role_id  left join hx_access ac on ac.role_id=r.id  left join hx_node n on n.id=ac.node_id  WHERE n.status = '开启' AND a.id = '1' ORDER BY n.sort  [ RunTime:0.0008s ]
+SQL: SHOW COLUMNS FROM `hx_node` [ RunTime:0.0008s ]
+SQL: SELECT `pid` FROM `hx_node` WHERE `name` = 'Comment' LIMIT 1   [ RunTime:0.0003s ]
+NOTIC: [2] Missing argument 1 for Admin\Model\NodeModel::getMenu(), called in /var/www/shop/App/Admin/Controller/BaseController.class.php on line 32 and defined /var/www/shop/App/Admin/Model/NodeModel.class.php 第 29 行.
+NOTIC: [8] Undefined variable: id /var/www/shop/App/Admin/Model/NodeModel.class.php 第 32 行.
+SQL: SELECT n.name,n.title,n.id,n.pid,n.icon FROM hx_admin a  left join hx_role r on r.id=a.role_id  left join hx_access ac on ac.role_id=r.id  left join hx_node n on n.id=ac.node_id  WHERE n.status = '开启' AND n.type = '是' AND a.id = null ORDER BY n.sort  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `hx_comments` [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `hx_comments` [ RunTime:0.0007s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `hx_comments` LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `hx_comments` LIMIT 0,15   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000103s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000156s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014012s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014056s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000140s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000180s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000428s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000476s ]
+
+[ 2015-11-02T16:02:36+08:00 ] 120.131.75.138 /index.php/Comment/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000304s ]
+NOTIC: [8192] mysql_get_server_info(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /var/www/shop/App/Admin/Conf/config.php 第 18 行.
+NOTIC: [2] mysql_get_server_info(): Access denied for user 'www'@'localhost' (using password: NO) /var/www/shop/App/Admin/Conf/config.php 第 18 行.
+NOTIC: [2] mysql_get_server_info(): A link to the server could not be established /var/www/shop/App/Admin/Conf/config.php 第 18 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000388s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000432s ]
+SQL: SHOW COLUMNS FROM `hx_node` [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `hx_admin` [ RunTime:0.0007s ]
+SQL: SELECT n.name,n.title,n.id,n.pid,n.icon FROM hx_admin a  left join hx_role r on r.id=a.role_id  left join hx_access ac on ac.role_id=r.id  left join hx_node n on n.id=ac.node_id  WHERE n.status = '开启' AND a.id = '1' ORDER BY n.sort  [ RunTime:0.0009s ]
+SQL: SELECT n.name,n.title,n.id,n.pid,n.icon FROM hx_admin a  left join hx_role r on r.id=a.role_id  left join hx_access ac on ac.role_id=r.id  left join hx_node n on n.id=ac.node_id  WHERE n.status = '开启' AND a.id = '1' ORDER BY n.sort  [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `hx_node` [ RunTime:0.0007s ]
+SQL: SELECT `pid` FROM `hx_node` WHERE `name` = 'Comment' LIMIT 1   [ RunTime:0.0002s ]
+NOTIC: [2] Missing argument 1 for Admin\Model\NodeModel::getMenu(), called in /var/www/shop/App/Admin/Controller/BaseController.class.php on line 32 and defined /var/www/shop/App/Admin/Model/NodeModel.class.php 第 29 行.
+NOTIC: [8] Undefined variable: id /var/www/shop/App/Admin/Model/NodeModel.class.php 第 32 行.
+SQL: SELECT n.name,n.title,n.id,n.pid,n.icon FROM hx_admin a  left join hx_role r on r.id=a.role_id  left join hx_access ac on ac.role_id=r.id  left join hx_node n on n.id=ac.node_id  WHERE n.status = '开启' AND n.type = '是' AND a.id = null ORDER BY n.sort  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `hx_comments` [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `hx_comments` [ RunTime:0.0007s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `hx_comments` LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `hx_comments` LIMIT 0,15   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000081s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000130s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013798s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013843s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000125s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000163s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000489s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000538s ]
+
+[ 2015-11-02T16:02:57+08:00 ] 120.131.75.138 /index.php/Comment/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000292s ]
+NOTIC: [8192] mysql_get_server_info(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /var/www/shop/App/Admin/Conf/config.php 第 18 行.
+NOTIC: [2] mysql_get_server_info(): Access denied for user 'www'@'localhost' (using password: NO) /var/www/shop/App/Admin/Conf/config.php 第 18 行.
+NOTIC: [2] mysql_get_server_info(): A link to the server could not be established /var/www/shop/App/Admin/Conf/config.php 第 18 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000368s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000411s ]
+SQL: SHOW COLUMNS FROM `hx_node` [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `hx_admin` [ RunTime:0.0007s ]
+SQL: SELECT n.name,n.title,n.id,n.pid,n.icon FROM hx_admin a  left join hx_role r on r.id=a.role_id  left join hx_access ac on ac.role_id=r.id  left join hx_node n on n.id=ac.node_id  WHERE n.status = '开启' AND a.id = '1' ORDER BY n.sort  [ RunTime:0.0008s ]
+SQL: SELECT n.name,n.title,n.id,n.pid,n.icon FROM hx_admin a  left join hx_role r on r.id=a.role_id  left join hx_access ac on ac.role_id=r.id  left join hx_node n on n.id=ac.node_id  WHERE n.status = '开启' AND a.id = '1' ORDER BY n.sort  [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `hx_node` [ RunTime:0.0007s ]
+SQL: SELECT `pid` FROM `hx_node` WHERE `name` = 'Comment' LIMIT 1   [ RunTime:0.0003s ]
+NOTIC: [2] Missing argument 1 for Admin\Model\NodeModel::getMenu(), called in /var/www/shop/App/Admin/Controller/BaseController.class.php on line 32 and defined /var/www/shop/App/Admin/Model/NodeModel.class.php 第 29 行.
+NOTIC: [8] Undefined variable: id /var/www/shop/App/Admin/Model/NodeModel.class.php 第 32 行.
+SQL: SELECT n.name,n.title,n.id,n.pid,n.icon FROM hx_admin a  left join hx_role r on r.id=a.role_id  left join hx_access ac on ac.role_id=r.id  left join hx_node n on n.id=ac.node_id  WHERE n.status = '开启' AND n.type = '是' AND a.id = null ORDER BY n.sort  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `hx_comments` [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `hx_comments` [ RunTime:0.0007s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `hx_comments` LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `hx_comments` LIMIT 0,15   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000084s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000129s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013507s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013552s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000115s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000160s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000396s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000442s ]
+
+[ 2015-11-02T16:02:59+08:00 ] 120.131.75.138 /index.php/Recycle/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000324s ]
+NOTIC: [8192] mysql_get_server_info(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /var/www/shop/App/Admin/Conf/config.php 第 18 行.
+NOTIC: [2] mysql_get_server_info(): Access denied for user 'www'@'localhost' (using password: NO) /var/www/shop/App/Admin/Conf/config.php 第 18 行.
+NOTIC: [2] mysql_get_server_info(): A link to the server could not be established /var/www/shop/App/Admin/Conf/config.php 第 18 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000417s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000461s ]
+SQL: SHOW COLUMNS FROM `hx_node` [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `hx_admin` [ RunTime:0.0007s ]
+SQL: SELECT n.name,n.title,n.id,n.pid,n.icon FROM hx_admin a  left join hx_role r on r.id=a.role_id  left join hx_access ac on ac.role_id=r.id  left join hx_node n on n.id=ac.node_id  WHERE n.status = '开启' AND a.id = '1' ORDER BY n.sort  [ RunTime:0.0008s ]
+SQL: SELECT n.name,n.title,n.id,n.pid,n.icon FROM hx_admin a  left join hx_role r on r.id=a.role_id  left join hx_access ac on ac.role_id=r.id  left join hx_node n on n.id=ac.node_id  WHERE n.status = '开启' AND a.id = '1' ORDER BY n.sort  [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `hx_node` [ RunTime:0.0008s ]
+SQL: SELECT `pid` FROM `hx_node` WHERE `name` = 'Recycle' LIMIT 1   [ RunTime:0.0003s ]
+NOTIC: [2] Missing argument 1 for Admin\Model\NodeModel::getMenu(), called in /var/www/shop/App/Admin/Controller/BaseController.class.php on line 32 and defined /var/www/shop/App/Admin/Model/NodeModel.class.php 第 29 行.
+NOTIC: [8] Undefined variable: id /var/www/shop/App/Admin/Model/NodeModel.class.php 第 32 行.
+SQL: SELECT n.name,n.title,n.id,n.pid,n.icon FROM hx_admin a  left join hx_role r on r.id=a.role_id  left join hx_access ac on ac.role_id=r.id  left join hx_node n on n.id=ac.node_id  WHERE n.status = '开启' AND n.type = '是' AND a.id = null ORDER BY n.sort  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `hx_article` [ RunTime:0.0009s ]
+SQL: SHOW COLUMNS FROM `hx_cate` [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `hx_article` [ RunTime:0.0008s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `hx_article` WHERE `del` = 1 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `hx_article` WHERE `del` = 1 ORDER BY `sort` desc,`id` desc LIMIT 0,25   [ RunTime:0.0003s ]
+SQL: SELECT `username` FROM `hx_admin` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `cate` FROM `hx_cate` WHERE `id` = 3 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `username` FROM `hx_admin` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `cate` FROM `hx_cate` WHERE `id` = 3 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `hx_cate` ORDER BY `sort`,`id` desc  [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000096s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000147s ]
+NOTIC: [8] Undefined index: pid /var/www/shop/Runtime/Cache/Admin/3cdbc0f2b9e2e49e4fbb31118f30a919.php 第 370 行.
+NOTIC: [8] Undefined index: pid /var/www/shop/Runtime/Cache/Admin/3cdbc0f2b9e2e49e4fbb31118f30a919.php 第 371 行.
+NOTIC: [8] Undefined index: pid /var/www/shop/Runtime/Cache/Admin/3cdbc0f2b9e2e49e4fbb31118f30a919.php 第 370 行.
+NOTIC: [8] Undefined index: pid /var/www/shop/Runtime/Cache/Admin/3cdbc0f2b9e2e49e4fbb31118f30a919.php 第 370 行.
+NOTIC: [8] Undefined index: pid /var/www/shop/Runtime/Cache/Admin/3cdbc0f2b9e2e49e4fbb31118f30a919.php 第 371 行.
+NOTIC: [8] Undefined index: pid /var/www/shop/Runtime/Cache/Admin/3cdbc0f2b9e2e49e4fbb31118f30a919.php 第 371 行.
+NOTIC: [8] Undefined index: starTime /var/www/shop/Runtime/Cache/Admin/3cdbc0f2b9e2e49e4fbb31118f30a919.php 第 381 行.
+NOTIC: [8] Undefined index: endTime /var/www/shop/Runtime/Cache/Admin/3cdbc0f2b9e2e49e4fbb31118f30a919.php 第 384 行.
+NOTIC: [8] Undefined index: title /var/www/shop/Runtime/Cache/Admin/3cdbc0f2b9e2e49e4fbb31118f30a919.php 第 387 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /var/www/shop/Runtime/Cache/Admin/3cdbc0f2b9e2e49e4fbb31118f30a919.php 第 463 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /var/www/shop/Runtime/Cache/Admin/3cdbc0f2b9e2e49e4fbb31118f30a919.php 第 467 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /var/www/shop/Runtime/Cache/Admin/3cdbc0f2b9e2e49e4fbb31118f30a919.php 第 463 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /var/www/shop/Runtime/Cache/Admin/3cdbc0f2b9e2e49e4fbb31118f30a919.php 第 467 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.019503s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.019544s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000149s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000186s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000444s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000498s ]
+
+[ 2015-11-02T16:03:00+08:00 ] 120.131.75.138 /index.php/Article/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000282s ]
+NOTIC: [8192] mysql_get_server_info(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /var/www/shop/App/Admin/Conf/config.php 第 18 行.
+NOTIC: [2] mysql_get_server_info(): Access denied for user 'www'@'localhost' (using password: NO) /var/www/shop/App/Admin/Conf/config.php 第 18 行.
+NOTIC: [2] mysql_get_server_info(): A link to the server could not be established /var/www/shop/App/Admin/Conf/config.php 第 18 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000443s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000488s ]
+SQL: SHOW COLUMNS FROM `hx_node` [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `hx_admin` [ RunTime:0.0007s ]
+SQL: SELECT n.name,n.title,n.id,n.pid,n.icon FROM hx_admin a  left join hx_role r on r.id=a.role_id  left join hx_access ac on ac.role_id=r.id  left join hx_node n on n.id=ac.node_id  WHERE n.status = '开启' AND a.id = '1' ORDER BY n.sort  [ RunTime:0.0008s ]
+SQL: SELECT n.name,n.title,n.id,n.pid,n.icon FROM hx_admin a  left join hx_role r on r.id=a.role_id  left join hx_access ac on ac.role_id=r.id  left join hx_node n on n.id=ac.node_id  WHERE n.status = '开启' AND a.id = '1' ORDER BY n.sort  [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `hx_node` [ RunTime:0.0008s ]
+SQL: SELECT `pid` FROM `hx_node` WHERE `name` = 'Article' LIMIT 1   [ RunTime:0.0003s ]
+NOTIC: [2] Missing argument 1 for Admin\Model\NodeModel::getMenu(), called in /var/www/shop/App/Admin/Controller/BaseController.class.php on line 32 and defined /var/www/shop/App/Admin/Model/NodeModel.class.php 第 29 行.
+NOTIC: [8] Undefined variable: id /var/www/shop/App/Admin/Model/NodeModel.class.php 第 32 行.
+SQL: SELECT n.name,n.title,n.id,n.pid,n.icon FROM hx_admin a  left join hx_role r on r.id=a.role_id  left join hx_access ac on ac.role_id=r.id  left join hx_node n on n.id=ac.node_id  WHERE n.status = '开启' AND n.type = '是' AND a.id = null ORDER BY n.sort  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `hx_article` [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `hx_cate` [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `hx_article` [ RunTime:0.0008s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `hx_article` WHERE `del` = 0 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `hx_article` WHERE `del` = 0 ORDER BY `sort` desc,`id` desc LIMIT 0,15   [ RunTime:0.0003s ]
+SQL: SELECT `username` FROM `hx_admin` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `cate` FROM `hx_cate` WHERE `id` = 5 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `username` FROM `hx_admin` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `cate` FROM `hx_cate` WHERE `id` = 5 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `username` FROM `hx_admin` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `cate` FROM `hx_cate` WHERE `id` = 5 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `username` FROM `hx_admin` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `cate` FROM `hx_cate` WHERE `id` = 5 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `hx_cate` ORDER BY `sort`,`id` desc  [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000113s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000164s ]
+NOTIC: [8] Undefined index: pid /var/www/shop/Runtime/Cache/Admin/ac492b5605bffa8cac27c5e0dc599b32.php 第 371 行.
+NOTIC: [8] Undefined index: pid /var/www/shop/Runtime/Cache/Admin/ac492b5605bffa8cac27c5e0dc599b32.php 第 372 行.
+NOTIC: [8] Undefined index: pid /var/www/shop/Runtime/Cache/Admin/ac492b5605bffa8cac27c5e0dc599b32.php 第 371 行.
+NOTIC: [8] Undefined index: pid /var/www/shop/Runtime/Cache/Admin/ac492b5605bffa8cac27c5e0dc599b32.php 第 371 行.
+NOTIC: [8] Undefined index: pid /var/www/shop/Runtime/Cache/Admin/ac492b5605bffa8cac27c5e0dc599b32.php 第 372 行.
+NOTIC: [8] Undefined index: pid /var/www/shop/Runtime/Cache/Admin/ac492b5605bffa8cac27c5e0dc599b32.php 第 372 行.
+NOTIC: [8] Undefined index: starTime /var/www/shop/Runtime/Cache/Admin/ac492b5605bffa8cac27c5e0dc599b32.php 第 382 行.
+NOTIC: [8] Undefined index: endTime /var/www/shop/Runtime/Cache/Admin/ac492b5605bffa8cac27c5e0dc599b32.php 第 385 行.
+NOTIC: [8] Undefined index: title /var/www/shop/Runtime/Cache/Admin/ac492b5605bffa8cac27c5e0dc599b32.php 第 388 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /var/www/shop/Runtime/Cache/Admin/ac492b5605bffa8cac27c5e0dc599b32.php 第 476 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /var/www/shop/Runtime/Cache/Admin/ac492b5605bffa8cac27c5e0dc599b32.php 第 476 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /var/www/shop/Runtime/Cache/Admin/ac492b5605bffa8cac27c5e0dc599b32.php 第 476 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /var/www/shop/Runtime/Cache/Admin/ac492b5605bffa8cac27c5e0dc599b32.php 第 476 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.019938s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.019980s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000119s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000156s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000416s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000475s ]
+
+[ 2015-11-02T16:03:01+08:00 ] 120.131.75.138 /index.php/Cate/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000317s ]
+NOTIC: [8192] mysql_get_server_info(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /var/www/shop/App/Admin/Conf/config.php 第 18 行.
+NOTIC: [2] mysql_get_server_info(): Access denied for user 'www'@'localhost' (using password: NO) /var/www/shop/App/Admin/Conf/config.php 第 18 行.
+NOTIC: [2] mysql_get_server_info(): A link to the server could not be established /var/www/shop/App/Admin/Conf/config.php 第 18 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000380s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000429s ]
+SQL: SHOW COLUMNS FROM `hx_node` [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `hx_admin` [ RunTime:0.0007s ]
+SQL: SELECT n.name,n.title,n.id,n.pid,n.icon FROM hx_admin a  left join hx_role r on r.id=a.role_id  left join hx_access ac on ac.role_id=r.id  left join hx_node n on n.id=ac.node_id  WHERE n.status = '开启' AND a.id = '1' ORDER BY n.sort  [ RunTime:0.0008s ]
+SQL: SELECT n.name,n.title,n.id,n.pid,n.icon FROM hx_admin a  left join hx_role r on r.id=a.role_id  left join hx_access ac on ac.role_id=r.id  left join hx_node n on n.id=ac.node_id  WHERE n.status = '开启' AND a.id = '1' ORDER BY n.sort  [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `hx_node` [ RunTime:0.0007s ]
+SQL: SELECT `pid` FROM `hx_node` WHERE `name` = 'Cate' LIMIT 1   [ RunTime:0.0003s ]
+NOTIC: [2] Missing argument 1 for Admin\Model\NodeModel::getMenu(), called in /var/www/shop/App/Admin/Controller/BaseController.class.php on line 32 and defined /var/www/shop/App/Admin/Model/NodeModel.class.php 第 29 行.
+NOTIC: [8] Undefined variable: id /var/www/shop/App/Admin/Model/NodeModel.class.php 第 32 行.
+SQL: SELECT n.name,n.title,n.id,n.pid,n.icon FROM hx_admin a  left join hx_role r on r.id=a.role_id  left join hx_access ac on ac.role_id=r.id  left join hx_node n on n.id=ac.node_id  WHERE n.status = '开启' AND n.type = '是' AND a.id = null ORDER BY n.sort  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `hx_cate` [ RunTime:0.0006s ]
+SQL: SELECT * FROM `hx_cate` ORDER BY `sort`,`id` desc  [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000078s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000123s ]
+NOTIC: [8] Undefined variable: data /var/www/shop/Runtime/Cache/Admin/b4acc1a42b3ec0821dc1ef239614af23.php 第 429 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.016965s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017006s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000117s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000153s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000451s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000498s ]
+
+[ 2015-11-02T16:07:30+08:00 ] 120.131.75.138 /index.php/Role/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000318s ]
+NOTIC: [8192] mysql_get_server_info(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /var/www/shop/App/Admin/Conf/config.php 第 18 行.
+NOTIC: [2] mysql_get_server_info(): Access denied for user 'www'@'localhost' (using password: NO) /var/www/shop/App/Admin/Conf/config.php 第 18 行.
+NOTIC: [2] mysql_get_server_info(): A link to the server could not be established /var/www/shop/App/Admin/Conf/config.php 第 18 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000385s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000429s ]
+SQL: SHOW COLUMNS FROM `hx_node` [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `hx_admin` [ RunTime:0.0007s ]
+SQL: SELECT n.name,n.title,n.id,n.pid,n.icon FROM hx_admin a  left join hx_role r on r.id=a.role_id  left join hx_access ac on ac.role_id=r.id  left join hx_node n on n.id=ac.node_id  WHERE n.status = '开启' AND a.id = '1' ORDER BY n.sort  [ RunTime:0.0009s ]
+SQL: SELECT n.name,n.title,n.id,n.pid,n.icon FROM hx_admin a  left join hx_role r on r.id=a.role_id  left join hx_access ac on ac.role_id=r.id  left join hx_node n on n.id=ac.node_id  WHERE n.status = '开启' AND a.id = '1' ORDER BY n.sort  [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `hx_node` [ RunTime:0.0007s ]
+SQL: SELECT `pid` FROM `hx_node` WHERE `name` = 'Role' LIMIT 1   [ RunTime:0.0003s ]
+NOTIC: [2] Missing argument 1 for Admin\Model\NodeModel::getMenu(), called in /var/www/shop/App/Admin/Controller/BaseController.class.php on line 32 and defined /var/www/shop/App/Admin/Model/NodeModel.class.php 第 29 行.
+NOTIC: [8] Undefined variable: id /var/www/shop/App/Admin/Model/NodeModel.class.php 第 32 行.
+SQL: SELECT n.name,n.title,n.id,n.pid,n.icon FROM hx_admin a  left join hx_role r on r.id=a.role_id  left join hx_access ac on ac.role_id=r.id  left join hx_node n on n.id=ac.node_id  WHERE n.status = '开启' AND n.type = '是' AND a.id = null ORDER BY n.sort  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `hx_role` [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `hx_node` [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `hx_access` [ RunTime:0.0006s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `hx_role` LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `hx_role` ORDER BY `sort`,`id` desc LIMIT 0,15   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000081s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000131s ]
+NOTIC: [8] Use of undefined constant id - assumed 'id' /var/www/shop/Runtime/Cache/Admin/a0a7524eab22c3693baad75fbdbe707e.php 第 423 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /var/www/shop/Runtime/Cache/Admin/a0a7524eab22c3693baad75fbdbe707e.php 第 423 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /var/www/shop/Runtime/Cache/Admin/a0a7524eab22c3693baad75fbdbe707e.php 第 423 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015097s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015136s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000124s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000164s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000422s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000484s ]
+
+[ 2015-11-02T16:07:50+08:00 ] 120.131.75.138 /index.php/Role/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000301s ]
+NOTIC: [8192] mysql_get_server_info(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /var/www/shop/App/Admin/Conf/config.php 第 18 行.
+NOTIC: [2] mysql_get_server_info(): Access denied for user 'www'@'localhost' (using password: NO) /var/www/shop/App/Admin/Conf/config.php 第 18 行.
+NOTIC: [2] mysql_get_server_info(): A link to the server could not be established /var/www/shop/App/Admin/Conf/config.php 第 18 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000380s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000423s ]
+SQL: SHOW COLUMNS FROM `hx_node` [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `hx_admin` [ RunTime:0.0007s ]
+SQL: SELECT n.name,n.title,n.id,n.pid,n.icon FROM hx_admin a  left join hx_role r on r.id=a.role_id  left join hx_access ac on ac.role_id=r.id  left join hx_node n on n.id=ac.node_id  WHERE n.status = '开启' AND a.id = '1' ORDER BY n.sort  [ RunTime:0.0008s ]
+SQL: SELECT n.name,n.title,n.id,n.pid,n.icon FROM hx_admin a  left join hx_role r on r.id=a.role_id  left join hx_access ac on ac.role_id=r.id  left join hx_node n on n.id=ac.node_id  WHERE n.status = '开启' AND a.id = '1' ORDER BY n.sort  [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `hx_node` [ RunTime:0.0007s ]
+SQL: SELECT `pid` FROM `hx_node` WHERE `name` = 'Role' LIMIT 1   [ RunTime:0.0003s ]
+NOTIC: [2] Missing argument 1 for Admin\Model\NodeModel::getMenu(), called in /var/www/shop/App/Admin/Controller/BaseController.class.php on line 32 and defined /var/www/shop/App/Admin/Model/NodeModel.class.php 第 29 行.
+NOTIC: [8] Undefined variable: id /var/www/shop/App/Admin/Model/NodeModel.class.php 第 32 行.
+SQL: SELECT n.name,n.title,n.id,n.pid,n.icon FROM hx_admin a  left join hx_role r on r.id=a.role_id  left join hx_access ac on ac.role_id=r.id  left join hx_node n on n.id=ac.node_id  WHERE n.status = '开启' AND n.type = '是' AND a.id = null ORDER BY n.sort  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `hx_role` [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `hx_node` [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `hx_access` [ RunTime:0.0006s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `hx_role` LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `hx_role` ORDER BY `sort`,`id` desc LIMIT 0,15   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000080s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000143s ]
+NOTIC: [8] Use of undefined constant id - assumed 'id' /var/www/shop/Runtime/Cache/Admin/a0a7524eab22c3693baad75fbdbe707e.php 第 423 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /var/www/shop/Runtime/Cache/Admin/a0a7524eab22c3693baad75fbdbe707e.php 第 423 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /var/www/shop/Runtime/Cache/Admin/a0a7524eab22c3693baad75fbdbe707e.php 第 423 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015101s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015141s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000123s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000161s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000417s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000462s ]
+
+[ 2015-11-02T16:07:52+08:00 ] 120.131.75.138 /index.php/Role/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000302s ]
+NOTIC: [8192] mysql_get_server_info(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /var/www/shop/App/Admin/Conf/config.php 第 18 行.
+NOTIC: [2] mysql_get_server_info(): Access denied for user 'www'@'localhost' (using password: NO) /var/www/shop/App/Admin/Conf/config.php 第 18 行.
+NOTIC: [2] mysql_get_server_info(): A link to the server could not be established /var/www/shop/App/Admin/Conf/config.php 第 18 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000418s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000468s ]
+SQL: SHOW COLUMNS FROM `hx_node` [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `hx_admin` [ RunTime:0.0007s ]
+SQL: SELECT n.name,n.title,n.id,n.pid,n.icon FROM hx_admin a  left join hx_role r on r.id=a.role_id  left join hx_access ac on ac.role_id=r.id  left join hx_node n on n.id=ac.node_id  WHERE n.status = '开启' AND a.id = '1' ORDER BY n.sort  [ RunTime:0.0008s ]
+SQL: SELECT n.name,n.title,n.id,n.pid,n.icon FROM hx_admin a  left join hx_role r on r.id=a.role_id  left join hx_access ac on ac.role_id=r.id  left join hx_node n on n.id=ac.node_id  WHERE n.status = '开启' AND a.id = '1' ORDER BY n.sort  [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `hx_node` [ RunTime:0.0007s ]
+SQL: SELECT `pid` FROM `hx_node` WHERE `name` = 'Role' LIMIT 1   [ RunTime:0.0003s ]
+NOTIC: [2] Missing argument 1 for Admin\Model\NodeModel::getMenu(), called in /var/www/shop/App/Admin/Controller/BaseController.class.php on line 32 and defined /var/www/shop/App/Admin/Model/NodeModel.class.php 第 29 行.
+NOTIC: [8] Undefined variable: id /var/www/shop/App/Admin/Model/NodeModel.class.php 第 32 行.
+SQL: SELECT n.name,n.title,n.id,n.pid,n.icon FROM hx_admin a  left join hx_role r on r.id=a.role_id  left join hx_access ac on ac.role_id=r.id  left join hx_node n on n.id=ac.node_id  WHERE n.status = '开启' AND n.type = '是' AND a.id = null ORDER BY n.sort  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `hx_role` [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `hx_node` [ RunTime:0.0008s ]
+SQL: SHOW COLUMNS FROM `hx_access` [ RunTime:0.0006s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `hx_role` LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `hx_role` ORDER BY `sort`,`id` desc LIMIT 0,15   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000097s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000143s ]
+NOTIC: [8] Use of undefined constant id - assumed 'id' /var/www/shop/Runtime/Cache/Admin/a0a7524eab22c3693baad75fbdbe707e.php 第 423 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /var/www/shop/Runtime/Cache/Admin/a0a7524eab22c3693baad75fbdbe707e.php 第 423 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /var/www/shop/Runtime/Cache/Admin/a0a7524eab22c3693baad75fbdbe707e.php 第 423 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014703s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014743s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000120s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000156s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000418s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000464s ]
+
+[ 2015-11-02T16:07:53+08:00 ] 120.131.75.138 /index.php/Admin/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000273s ]
+NOTIC: [8192] mysql_get_server_info(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /var/www/shop/App/Admin/Conf/config.php 第 18 行.
+NOTIC: [2] mysql_get_server_info(): Access denied for user 'www'@'localhost' (using password: NO) /var/www/shop/App/Admin/Conf/config.php 第 18 行.
+NOTIC: [2] mysql_get_server_info(): A link to the server could not be established /var/www/shop/App/Admin/Conf/config.php 第 18 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000357s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000399s ]
+SQL: SHOW COLUMNS FROM `hx_node` [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `hx_admin` [ RunTime:0.0007s ]
+SQL: SELECT n.name,n.title,n.id,n.pid,n.icon FROM hx_admin a  left join hx_role r on r.id=a.role_id  left join hx_access ac on ac.role_id=r.id  left join hx_node n on n.id=ac.node_id  WHERE n.status = '开启' AND a.id = '1' ORDER BY n.sort  [ RunTime:0.0008s ]
+SQL: SELECT n.name,n.title,n.id,n.pid,n.icon FROM hx_admin a  left join hx_role r on r.id=a.role_id  left join hx_access ac on ac.role_id=r.id  left join hx_node n on n.id=ac.node_id  WHERE n.status = '开启' AND a.id = '1' ORDER BY n.sort  [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `hx_node` [ RunTime:0.0007s ]
+SQL: SELECT `pid` FROM `hx_node` WHERE `name` = 'Index' LIMIT 1   [ RunTime:0.0003s ]
+NOTIC: [2] Missing argument 1 for Admin\Model\NodeModel::getMenu(), called in /var/www/shop/App/Admin/Controller/BaseController.class.php on line 32 and defined /var/www/shop/App/Admin/Model/NodeModel.class.php 第 29 行.
+NOTIC: [8] Undefined variable: id /var/www/shop/App/Admin/Model/NodeModel.class.php 第 32 行.
+SQL: SELECT n.name,n.title,n.id,n.pid,n.icon FROM hx_admin a  left join hx_role r on r.id=a.role_id  left join hx_access ac on ac.role_id=r.id  left join hx_node n on n.id=ac.node_id  WHERE n.status = '开启' AND n.type = '是' AND a.id = null ORDER BY n.sort  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000081s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000130s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013496s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013540s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000113s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000149s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000408s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000454s ]
+
+[ 2015-11-02T16:08:00+08:00 ] 120.131.75.138 /index.php/Admin/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000290s ]
+NOTIC: [8192] mysql_get_server_info(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /var/www/shop/App/Admin/Conf/config.php 第 18 行.
+NOTIC: [2] mysql_get_server_info(): Access denied for user 'www'@'localhost' (using password: NO) /var/www/shop/App/Admin/Conf/config.php 第 18 行.
+NOTIC: [2] mysql_get_server_info(): A link to the server could not be established /var/www/shop/App/Admin/Conf/config.php 第 18 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000438s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000483s ]
+SQL: SHOW COLUMNS FROM `hx_node` [ RunTime:0.0013s ]
+SQL: SHOW COLUMNS FROM `hx_admin` [ RunTime:0.0010s ]
+SQL: SELECT n.name,n.title,n.id,n.pid,n.icon FROM hx_admin a  left join hx_role r on r.id=a.role_id  left join hx_access ac on ac.role_id=r.id  left join hx_node n on n.id=ac.node_id  WHERE n.status = '开启' AND a.id = '1' ORDER BY n.sort  [ RunTime:0.0008s ]
+SQL: SELECT n.name,n.title,n.id,n.pid,n.icon FROM hx_admin a  left join hx_role r on r.id=a.role_id  left join hx_access ac on ac.role_id=r.id  left join hx_node n on n.id=ac.node_id  WHERE n.status = '开启' AND a.id = '1' ORDER BY n.sort  [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `hx_node` [ RunTime:0.0008s ]
+SQL: SELECT `pid` FROM `hx_node` WHERE `name` = 'Index' LIMIT 1   [ RunTime:0.0003s ]
+NOTIC: [2] Missing argument 1 for Admin\Model\NodeModel::getMenu(), called in /var/www/shop/App/Admin/Controller/BaseController.class.php on line 32 and defined /var/www/shop/App/Admin/Model/NodeModel.class.php 第 29 行.
+NOTIC: [8] Undefined variable: id /var/www/shop/App/Admin/Model/NodeModel.class.php 第 32 行.
+SQL: SELECT n.name,n.title,n.id,n.pid,n.icon FROM hx_admin a  left join hx_role r on r.id=a.role_id  left join hx_access ac on ac.role_id=r.id  left join hx_node n on n.id=ac.node_id  WHERE n.status = '开启' AND n.type = '是' AND a.id = null ORDER BY n.sort  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000086s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000142s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013877s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013927s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000121s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000157s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000441s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000501s ]
+
+[ 2015-11-02T16:08:06+08:00 ] 120.131.75.138 /index.php/Node/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000279s ]
+NOTIC: [8192] mysql_get_server_info(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /var/www/shop/App/Admin/Conf/config.php 第 18 行.
+NOTIC: [2] mysql_get_server_info(): Access denied for user 'www'@'localhost' (using password: NO) /var/www/shop/App/Admin/Conf/config.php 第 18 行.
+NOTIC: [2] mysql_get_server_info(): A link to the server could not be established /var/www/shop/App/Admin/Conf/config.php 第 18 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000396s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000442s ]
+SQL: SHOW COLUMNS FROM `hx_node` [ RunTime:0.0011s ]
+SQL: SHOW COLUMNS FROM `hx_admin` [ RunTime:0.0007s ]
+SQL: SELECT n.name,n.title,n.id,n.pid,n.icon FROM hx_admin a  left join hx_role r on r.id=a.role_id  left join hx_access ac on ac.role_id=r.id  left join hx_node n on n.id=ac.node_id  WHERE n.status = '开启' AND a.id = '1' ORDER BY n.sort  [ RunTime:0.0008s ]
+SQL: SELECT n.name,n.title,n.id,n.pid,n.icon FROM hx_admin a  left join hx_role r on r.id=a.role_id  left join hx_access ac on ac.role_id=r.id  left join hx_node n on n.id=ac.node_id  WHERE n.status = '开启' AND a.id = '1' ORDER BY n.sort  [ RunTime:0.0008s ]
+SQL: SHOW COLUMNS FROM `hx_node` [ RunTime:0.0008s ]
+SQL: SELECT `pid` FROM `hx_node` WHERE `name` = 'Node' LIMIT 1   [ RunTime:0.0003s ]
+NOTIC: [2] Missing argument 1 for Admin\Model\NodeModel::getMenu(), called in /var/www/shop/App/Admin/Controller/BaseController.class.php on line 32 and defined /var/www/shop/App/Admin/Model/NodeModel.class.php 第 29 行.
+NOTIC: [8] Undefined variable: id /var/www/shop/App/Admin/Model/NodeModel.class.php 第 32 行.
+SQL: SELECT n.name,n.title,n.id,n.pid,n.icon FROM hx_admin a  left join hx_role r on r.id=a.role_id  left join hx_access ac on ac.role_id=r.id  left join hx_node n on n.id=ac.node_id  WHERE n.status = '开启' AND n.type = '是' AND a.id = null ORDER BY n.sort  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `hx_node` [ RunTime:0.0007s ]
+SQL: SELECT * FROM `hx_node` ORDER BY `sort`,`id` desc  [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000083s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000142s ]
+NOTIC: [8] Use of undefined constant id - assumed 'id' /var/www/shop/Runtime/Cache/Admin/f5d9020a722c182cb3cb2a19ed19b4d3.php 第 391 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /var/www/shop/Runtime/Cache/Admin/f5d9020a722c182cb3cb2a19ed19b4d3.php 第 394 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /var/www/shop/Runtime/Cache/Admin/f5d9020a722c182cb3cb2a19ed19b4d3.php 第 395 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /var/www/shop/Runtime/Cache/Admin/f5d9020a722c182cb3cb2a19ed19b4d3.php 第 395 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /var/www/shop/Runtime/Cache/Admin/f5d9020a722c182cb3cb2a19ed19b4d3.php 第 395 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /var/www/shop/Runtime/Cache/Admin/f5d9020a722c182cb3cb2a19ed19b4d3.php 第 395 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /var/www/shop/Runtime/Cache/Admin/f5d9020a722c182cb3cb2a19ed19b4d3.php 第 394 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /var/www/shop/Runtime/Cache/Admin/f5d9020a722c182cb3cb2a19ed19b4d3.php 第 395 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /var/www/shop/Runtime/Cache/Admin/f5d9020a722c182cb3cb2a19ed19b4d3.php 第 395 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /var/www/shop/Runtime/Cache/Admin/f5d9020a722c182cb3cb2a19ed19b4d3.php 第 395 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /var/www/shop/Runtime/Cache/Admin/f5d9020a722c182cb3cb2a19ed19b4d3.php 第 395 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /var/www/shop/Runtime/Cache/Admin/f5d9020a722c182cb3cb2a19ed19b4d3.php 第 394 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /var/www/shop/Runtime/Cache/Admin/f5d9020a722c182cb3cb2a19ed19b4d3.php 第 395 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /var/www/shop/Runtime/Cache/Admin/f5d9020a722c182cb3cb2a19ed19b4d3.php 第 395 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /var/www/shop/Runtime/Cache/Admin/f5d9020a722c182cb3cb2a19ed19b4d3.php 第 394 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /var/www/shop/Runtime/Cache/Admin/f5d9020a722c182cb3cb2a19ed19b4d3.php 第 395 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /var/www/shop/Runtime/Cache/Admin/f5d9020a722c182cb3cb2a19ed19b4d3.php 第 395 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /var/www/shop/Runtime/Cache/Admin/f5d9020a722c182cb3cb2a19ed19b4d3.php 第 395 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /var/www/shop/Runtime/Cache/Admin/f5d9020a722c182cb3cb2a19ed19b4d3.php 第 391 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /var/www/shop/Runtime/Cache/Admin/f5d9020a722c182cb3cb2a19ed19b4d3.php 第 394 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /var/www/shop/Runtime/Cache/Admin/f5d9020a722c182cb3cb2a19ed19b4d3.php 第 395 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /var/www/shop/Runtime/Cache/Admin/f5d9020a722c182cb3cb2a19ed19b4d3.php 第 395 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /var/www/shop/Runtime/Cache/Admin/f5d9020a722c182cb3cb2a19ed19b4d3.php 第 395 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /var/www/shop/Runtime/Cache/Admin/f5d9020a722c182cb3cb2a19ed19b4d3.php 第 391 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /var/www/shop/Runtime/Cache/Admin/f5d9020a722c182cb3cb2a19ed19b4d3.php 第 394 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /var/www/shop/Runtime/Cache/Admin/f5d9020a722c182cb3cb2a19ed19b4d3.php 第 395 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /var/www/shop/Runtime/Cache/Admin/f5d9020a722c182cb3cb2a19ed19b4d3.php 第 395 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /var/www/shop/Runtime/Cache/Admin/f5d9020a722c182cb3cb2a19ed19b4d3.php 第 395 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /var/www/shop/Runtime/Cache/Admin/f5d9020a722c182cb3cb2a19ed19b4d3.php 第 395 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /var/www/shop/Runtime/Cache/Admin/f5d9020a722c182cb3cb2a19ed19b4d3.php 第 394 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /var/www/shop/Runtime/Cache/Admin/f5d9020a722c182cb3cb2a19ed19b4d3.php 第 395 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /var/www/shop/Runtime/Cache/Admin/f5d9020a722c182cb3cb2a19ed19b4d3.php 第 395 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /var/www/shop/Runtime/Cache/Admin/f5d9020a722c182cb3cb2a19ed19b4d3.php 第 395 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /var/www/shop/Runtime/Cache/Admin/f5d9020a722c182cb3cb2a19ed19b4d3.php 第 395 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /var/www/shop/Runtime/Cache/Admin/f5d9020a722c182cb3cb2a19ed19b4d3.php 第 395 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /var/www/shop/Runtime/Cache/Admin/f5d9020a722c182cb3cb2a19ed19b4d3.php 第 394 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /var/www/shop/Runtime/Cache/Admin/f5d9020a722c182cb3cb2a19ed19b4d3.php 第 395 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /var/www/shop/Runtime/Cache/Admin/f5d9020a722c182cb3cb2a19ed19b4d3.php 第 395 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /var/www/shop/Runtime/Cache/Admin/f5d9020a722c182cb3cb2a19ed19b4d3.php 第 395 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /var/www/shop/Runtime/Cache/Admin/f5d9020a722c182cb3cb2a19ed19b4d3.php 第 395 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /var/www/shop/Runtime/Cache/Admin/f5d9020a722c182cb3cb2a19ed19b4d3.php 第 391 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /var/www/shop/Runtime/Cache/Admin/f5d9020a722c182cb3cb2a19ed19b4d3.php 第 394 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /var/www/shop/Runtime/Cache/Admin/f5d9020a722c182cb3cb2a19ed19b4d3.php 第 395 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /var/www/shop/Runtime/Cache/Admin/f5d9020a722c182cb3cb2a19ed19b4d3.php 第 395 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /var/www/shop/Runtime/Cache/Admin/f5d9020a722c182cb3cb2a19ed19b4d3.php 第 395 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /var/www/shop/Runtime/Cache/Admin/f5d9020a722c182cb3cb2a19ed19b4d3.php 第 395 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /var/www/shop/Runtime/Cache/Admin/f5d9020a722c182cb3cb2a19ed19b4d3.php 第 394 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /var/www/shop/Runtime/Cache/Admin/f5d9020a722c182cb3cb2a19ed19b4d3.php 第 395 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /var/www/shop/Runtime/Cache/Admin/f5d9020a722c182cb3cb2a19ed19b4d3.php 第 395 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /var/www/shop/Runtime/Cache/Admin/f5d9020a722c182cb3cb2a19ed19b4d3.php 第 395 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /var/www/shop/Runtime/Cache/Admin/f5d9020a722c182cb3cb2a19ed19b4d3.php 第 395 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /var/www/shop/Runtime/Cache/Admin/f5d9020a722c182cb3cb2a19ed19b4d3.php 第 391 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /var/www/shop/Runtime/Cache/Admin/f5d9020a722c182cb3cb2a19ed19b4d3.php 第 394 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /var/www/shop/Runtime/Cache/Admin/f5d9020a722c182cb3cb2a19ed19b4d3.php 第 395 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /var/www/shop/Runtime/Cache/Admin/f5d9020a722c182cb3cb2a19ed19b4d3.php 第 395 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /var/www/shop/Runtime/Cache/Admin/f5d9020a722c182cb3cb2a19ed19b4d3.php 第 395 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /var/www/shop/Runtime/Cache/Admin/f5d9020a722c182cb3cb2a19ed19b4d3.php 第 395 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /var/www/shop/Runtime/Cache/Admin/f5d9020a722c182cb3cb2a19ed19b4d3.php 第 391 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /var/www/shop/Runtime/Cache/Admin/f5d9020a722c182cb3cb2a19ed19b4d3.php 第 394 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /var/www/shop/Runtime/Cache/Admin/f5d9020a722c182cb3cb2a19ed19b4d3.php 第 395 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /var/www/shop/Runtime/Cache/Admin/f5d9020a722c182cb3cb2a19ed19b4d3.php 第 394 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /var/www/shop/Runtime/Cache/Admin/f5d9020a722c182cb3cb2a19ed19b4d3.php 第 395 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /var/www/shop/Runtime/Cache/Admin/f5d9020a722c182cb3cb2a19ed19b4d3.php 第 395 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /var/www/shop/Runtime/Cache/Admin/f5d9020a722c182cb3cb2a19ed19b4d3.php 第 395 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /var/www/shop/Runtime/Cache/Admin/f5d9020a722c182cb3cb2a19ed19b4d3.php 第 395 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /var/www/shop/Runtime/Cache/Admin/f5d9020a722c182cb3cb2a19ed19b4d3.php 第 391 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /var/www/shop/Runtime/Cache/Admin/f5d9020a722c182cb3cb2a19ed19b4d3.php 第 394 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /var/www/shop/Runtime/Cache/Admin/f5d9020a722c182cb3cb2a19ed19b4d3.php 第 395 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /var/www/shop/Runtime/Cache/Admin/f5d9020a722c182cb3cb2a19ed19b4d3.php 第 395 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /var/www/shop/Runtime/Cache/Admin/f5d9020a722c182cb3cb2a19ed19b4d3.php 第 394 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /var/www/shop/Runtime/Cache/Admin/f5d9020a722c182cb3cb2a19ed19b4d3.php 第 395 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /var/www/shop/Runtime/Cache/Admin/f5d9020a722c182cb3cb2a19ed19b4d3.php 第 395 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /var/www/shop/Runtime/Cache/Admin/f5d9020a722c182cb3cb2a19ed19b4d3.php 第 395 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /var/www/shop/Runtime/Cache/Admin/f5d9020a722c182cb3cb2a19ed19b4d3.php 第 395 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /var/www/shop/Runtime/Cache/Admin/f5d9020a722c182cb3cb2a19ed19b4d3.php 第 394 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /var/www/shop/Runtime/Cache/Admin/f5d9020a722c182cb3cb2a19ed19b4d3.php 第 395 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /var/www/shop/Runtime/Cache/Admin/f5d9020a722c182cb3cb2a19ed19b4d3.php 第 394 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /var/www/shop/Runtime/Cache/Admin/f5d9020a722c182cb3cb2a19ed19b4d3.php 第 395 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.023106s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.023149s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000155s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000194s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000529s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000584s ]
+
+[ 2015-11-02T16:08:39+08:00 ] 120.131.75.138 /index.php/Node/edit/id/2.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000279s ]
+NOTIC: [8192] mysql_get_server_info(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /var/www/shop/App/Admin/Conf/config.php 第 18 行.
+NOTIC: [2] mysql_get_server_info(): Access denied for user 'www'@'localhost' (using password: NO) /var/www/shop/App/Admin/Conf/config.php 第 18 行.
+NOTIC: [2] mysql_get_server_info(): A link to the server could not be established /var/www/shop/App/Admin/Conf/config.php 第 18 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000382s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000425s ]
+SQL: SHOW COLUMNS FROM `hx_node` [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `hx_admin` [ RunTime:0.0007s ]
+SQL: SELECT n.name,n.title,n.id,n.pid,n.icon FROM hx_admin a  left join hx_role r on r.id=a.role_id  left join hx_access ac on ac.role_id=r.id  left join hx_node n on n.id=ac.node_id  WHERE n.status = '开启' AND a.id = '1' ORDER BY n.sort  [ RunTime:0.0008s ]
+SQL: SELECT n.name,n.title,n.id,n.pid,n.icon FROM hx_admin a  left join hx_role r on r.id=a.role_id  left join hx_access ac on ac.role_id=r.id  left join hx_node n on n.id=ac.node_id  WHERE n.status = '开启' AND a.id = '1' ORDER BY n.sort  [ RunTime:0.0008s ]
+SQL: SHOW COLUMNS FROM `hx_node` [ RunTime:0.0008s ]
+SQL: SELECT `pid` FROM `hx_node` WHERE `name` = 'Node' LIMIT 1   [ RunTime:0.0003s ]
+NOTIC: [2] Missing argument 1 for Admin\Model\NodeModel::getMenu(), called in /var/www/shop/App/Admin/Controller/BaseController.class.php on line 32 and defined /var/www/shop/App/Admin/Model/NodeModel.class.php 第 29 行.
+NOTIC: [8] Undefined variable: id /var/www/shop/App/Admin/Model/NodeModel.class.php 第 32 行.
+SQL: SELECT n.name,n.title,n.id,n.pid,n.icon FROM hx_admin a  left join hx_role r on r.id=a.role_id  left join hx_access ac on ac.role_id=r.id  left join hx_node n on n.id=ac.node_id  WHERE n.status = '开启' AND n.type = '是' AND a.id = null ORDER BY n.sort  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `hx_node` [ RunTime:0.0007s ]
+SQL: SELECT * FROM `hx_node` WHERE `status` = '开启' ORDER BY `sort`,`id` desc  [ RunTime:0.0005s ]
+SQL: SELECT * FROM `hx_node` WHERE `id` = 2 LIMIT 1   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000134s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000207s ]
+NOTIC: [8] Undefined index: icom /var/www/shop/Runtime/Cache/Admin/3dc70eb2a14d18a144b0764e08dbd03a.php 第 438 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.017543s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017584s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000141s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000178s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000427s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000474s ]
+
+[ 2015-11-02T16:08:46+08:00 ] 120.131.75.138 /index.php/Node/edit/id/2.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000387s ]
+NOTIC: [8192] mysql_get_server_info(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /var/www/shop/App/Admin/Conf/config.php 第 18 行.
+NOTIC: [2] mysql_get_server_info(): Access denied for user 'www'@'localhost' (using password: NO) /var/www/shop/App/Admin/Conf/config.php 第 18 行.
+NOTIC: [2] mysql_get_server_info(): A link to the server could not be established /var/www/shop/App/Admin/Conf/config.php 第 18 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000439s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000488s ]
+SQL: SHOW COLUMNS FROM `hx_node` [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `hx_admin` [ RunTime:0.0007s ]
+SQL: SELECT n.name,n.title,n.id,n.pid,n.icon FROM hx_admin a  left join hx_role r on r.id=a.role_id  left join hx_access ac on ac.role_id=r.id  left join hx_node n on n.id=ac.node_id  WHERE n.status = '开启' AND a.id = '1' ORDER BY n.sort  [ RunTime:0.0009s ]
+SQL: SELECT n.name,n.title,n.id,n.pid,n.icon FROM hx_admin a  left join hx_role r on r.id=a.role_id  left join hx_access ac on ac.role_id=r.id  left join hx_node n on n.id=ac.node_id  WHERE n.status = '开启' AND a.id = '1' ORDER BY n.sort  [ RunTime:0.0008s ]
+SQL: SHOW COLUMNS FROM `hx_node` [ RunTime:0.0007s ]
+SQL: SELECT `pid` FROM `hx_node` WHERE `name` = 'Node' LIMIT 1   [ RunTime:0.0003s ]
+NOTIC: [2] Missing argument 1 for Admin\Model\NodeModel::getMenu(), called in /var/www/shop/App/Admin/Controller/BaseController.class.php on line 32 and defined /var/www/shop/App/Admin/Model/NodeModel.class.php 第 29 行.
+NOTIC: [8] Undefined variable: id /var/www/shop/App/Admin/Model/NodeModel.class.php 第 32 行.
+SQL: SELECT n.name,n.title,n.id,n.pid,n.icon FROM hx_admin a  left join hx_role r on r.id=a.role_id  left join hx_access ac on ac.role_id=r.id  left join hx_node n on n.id=ac.node_id  WHERE n.status = '开启' AND n.type = '是' AND a.id = null ORDER BY n.sort  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `hx_node` [ RunTime:0.0007s ]
+SQL: UPDATE `hx_node` SET `pid`='1',`name`='AdminUser',`title`='管理员管理',`sort`='1',`status`='开启',`type`='是',`id`='2',`time`='1446451725' WHERE `id` = 2 [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000095s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000173s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012677s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012754s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000144s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000187s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000479s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000535s ]
+
+[ 2015-11-02T16:08:47+08:00 ] 120.131.75.138 /index.php/Node/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000330s ]
+NOTIC: [8192] mysql_get_server_info(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /var/www/shop/App/Admin/Conf/config.php 第 18 行.
+NOTIC: [2] mysql_get_server_info(): Access denied for user 'www'@'localhost' (using password: NO) /var/www/shop/App/Admin/Conf/config.php 第 18 行.
+NOTIC: [2] mysql_get_server_info(): A link to the server could not be established /var/www/shop/App/Admin/Conf/config.php 第 18 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000388s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000432s ]
+SQL: SHOW COLUMNS FROM `hx_node` [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `hx_admin` [ RunTime:0.0007s ]
+SQL: SELECT n.name,n.title,n.id,n.pid,n.icon FROM hx_admin a  left join hx_role r on r.id=a.role_id  left join hx_access ac on ac.role_id=r.id  left join hx_node n on n.id=ac.node_id  WHERE n.status = '开启' AND a.id = '1' ORDER BY n.sort  [ RunTime:0.0008s ]
+SQL: SELECT n.name,n.title,n.id,n.pid,n.icon FROM hx_admin a  left join hx_role r on r.id=a.role_id  left join hx_access ac on ac.role_id=r.id  left join hx_node n on n.id=ac.node_id  WHERE n.status = '开启' AND a.id = '1' ORDER BY n.sort  [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `hx_node` [ RunTime:0.0007s ]
+SQL: SELECT `pid` FROM `hx_node` WHERE `name` = 'Node' LIMIT 1   [ RunTime:0.0003s ]
+NOTIC: [2] Missing argument 1 for Admin\Model\NodeModel::getMenu(), called in /var/www/shop/App/Admin/Controller/BaseController.class.php on line 32 and defined /var/www/shop/App/Admin/Model/NodeModel.class.php 第 29 行.
+NOTIC: [8] Undefined variable: id /var/www/shop/App/Admin/Model/NodeModel.class.php 第 32 行.
+SQL: SELECT n.name,n.title,n.id,n.pid,n.icon FROM hx_admin a  left join hx_role r on r.id=a.role_id  left join hx_access ac on ac.role_id=r.id  left join hx_node n on n.id=ac.node_id  WHERE n.status = '开启' AND n.type = '是' AND a.id = null ORDER BY n.sort  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `hx_node` [ RunTime:0.0007s ]
+SQL: SELECT * FROM `hx_node` ORDER BY `sort`,`id` desc  [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000084s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000131s ]
+NOTIC: [8] Use of undefined constant id - assumed 'id' /var/www/shop/Runtime/Cache/Admin/f5d9020a722c182cb3cb2a19ed19b4d3.php 第 391 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /var/www/shop/Runtime/Cache/Admin/f5d9020a722c182cb3cb2a19ed19b4d3.php 第 394 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /var/www/shop/Runtime/Cache/Admin/f5d9020a722c182cb3cb2a19ed19b4d3.php 第 395 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /var/www/shop/Runtime/Cache/Admin/f5d9020a722c182cb3cb2a19ed19b4d3.php 第 395 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /var/www/shop/Runtime/Cache/Admin/f5d9020a722c182cb3cb2a19ed19b4d3.php 第 395 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /var/www/shop/Runtime/Cache/Admin/f5d9020a722c182cb3cb2a19ed19b4d3.php 第 395 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /var/www/shop/Runtime/Cache/Admin/f5d9020a722c182cb3cb2a19ed19b4d3.php 第 394 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /var/www/shop/Runtime/Cache/Admin/f5d9020a722c182cb3cb2a19ed19b4d3.php 第 395 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /var/www/shop/Runtime/Cache/Admin/f5d9020a722c182cb3cb2a19ed19b4d3.php 第 395 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /var/www/shop/Runtime/Cache/Admin/f5d9020a722c182cb3cb2a19ed19b4d3.php 第 395 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /var/www/shop/Runtime/Cache/Admin/f5d9020a722c182cb3cb2a19ed19b4d3.php 第 395 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /var/www/shop/Runtime/Cache/Admin/f5d9020a722c182cb3cb2a19ed19b4d3.php 第 394 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /var/www/shop/Runtime/Cache/Admin/f5d9020a722c182cb3cb2a19ed19b4d3.php 第 395 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /var/www/shop/Runtime/Cache/Admin/f5d9020a722c182cb3cb2a19ed19b4d3.php 第 395 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /var/www/shop/Runtime/Cache/Admin/f5d9020a722c182cb3cb2a19ed19b4d3.php 第 394 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /var/www/shop/Runtime/Cache/Admin/f5d9020a722c182cb3cb2a19ed19b4d3.php 第 395 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /var/www/shop/Runtime/Cache/Admin/f5d9020a722c182cb3cb2a19ed19b4d3.php 第 395 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /var/www/shop/Runtime/Cache/Admin/f5d9020a722c182cb3cb2a19ed19b4d3.php 第 395 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /var/www/shop/Runtime/Cache/Admin/f5d9020a722c182cb3cb2a19ed19b4d3.php 第 391 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /var/www/shop/Runtime/Cache/Admin/f5d9020a722c182cb3cb2a19ed19b4d3.php 第 394 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /var/www/shop/Runtime/Cache/Admin/f5d9020a722c182cb3cb2a19ed19b4d3.php 第 395 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /var/www/shop/Runtime/Cache/Admin/f5d9020a722c182cb3cb2a19ed19b4d3.php 第 395 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /var/www/shop/Runtime/Cache/Admin/f5d9020a722c182cb3cb2a19ed19b4d3.php 第 395 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /var/www/shop/Runtime/Cache/Admin/f5d9020a722c182cb3cb2a19ed19b4d3.php 第 391 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /var/www/shop/Runtime/Cache/Admin/f5d9020a722c182cb3cb2a19ed19b4d3.php 第 394 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /var/www/shop/Runtime/Cache/Admin/f5d9020a722c182cb3cb2a19ed19b4d3.php 第 395 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /var/www/shop/Runtime/Cache/Admin/f5d9020a722c182cb3cb2a19ed19b4d3.php 第 395 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /var/www/shop/Runtime/Cache/Admin/f5d9020a722c182cb3cb2a19ed19b4d3.php 第 395 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /var/www/shop/Runtime/Cache/Admin/f5d9020a722c182cb3cb2a19ed19b4d3.php 第 395 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /var/www/shop/Runtime/Cache/Admin/f5d9020a722c182cb3cb2a19ed19b4d3.php 第 394 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /var/www/shop/Runtime/Cache/Admin/f5d9020a722c182cb3cb2a19ed19b4d3.php 第 395 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /var/www/shop/Runtime/Cache/Admin/f5d9020a722c182cb3cb2a19ed19b4d3.php 第 395 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /var/www/shop/Runtime/Cache/Admin/f5d9020a722c182cb3cb2a19ed19b4d3.php 第 395 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /var/www/shop/Runtime/Cache/Admin/f5d9020a722c182cb3cb2a19ed19b4d3.php 第 395 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /var/www/shop/Runtime/Cache/Admin/f5d9020a722c182cb3cb2a19ed19b4d3.php 第 395 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /var/www/shop/Runtime/Cache/Admin/f5d9020a722c182cb3cb2a19ed19b4d3.php 第 394 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /var/www/shop/Runtime/Cache/Admin/f5d9020a722c182cb3cb2a19ed19b4d3.php 第 395 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /var/www/shop/Runtime/Cache/Admin/f5d9020a722c182cb3cb2a19ed19b4d3.php 第 395 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /var/www/shop/Runtime/Cache/Admin/f5d9020a722c182cb3cb2a19ed19b4d3.php 第 395 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /var/www/shop/Runtime/Cache/Admin/f5d9020a722c182cb3cb2a19ed19b4d3.php 第 395 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /var/www/shop/Runtime/Cache/Admin/f5d9020a722c182cb3cb2a19ed19b4d3.php 第 391 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /var/www/shop/Runtime/Cache/Admin/f5d9020a722c182cb3cb2a19ed19b4d3.php 第 394 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /var/www/shop/Runtime/Cache/Admin/f5d9020a722c182cb3cb2a19ed19b4d3.php 第 395 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /var/www/shop/Runtime/Cache/Admin/f5d9020a722c182cb3cb2a19ed19b4d3.php 第 395 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /var/www/shop/Runtime/Cache/Admin/f5d9020a722c182cb3cb2a19ed19b4d3.php 第 395 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /var/www/shop/Runtime/Cache/Admin/f5d9020a722c182cb3cb2a19ed19b4d3.php 第 395 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /var/www/shop/Runtime/Cache/Admin/f5d9020a722c182cb3cb2a19ed19b4d3.php 第 394 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /var/www/shop/Runtime/Cache/Admin/f5d9020a722c182cb3cb2a19ed19b4d3.php 第 395 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /var/www/shop/Runtime/Cache/Admin/f5d9020a722c182cb3cb2a19ed19b4d3.php 第 395 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /var/www/shop/Runtime/Cache/Admin/f5d9020a722c182cb3cb2a19ed19b4d3.php 第 395 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /var/www/shop/Runtime/Cache/Admin/f5d9020a722c182cb3cb2a19ed19b4d3.php 第 395 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /var/www/shop/Runtime/Cache/Admin/f5d9020a722c182cb3cb2a19ed19b4d3.php 第 391 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /var/www/shop/Runtime/Cache/Admin/f5d9020a722c182cb3cb2a19ed19b4d3.php 第 394 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /var/www/shop/Runtime/Cache/Admin/f5d9020a722c182cb3cb2a19ed19b4d3.php 第 395 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /var/www/shop/Runtime/Cache/Admin/f5d9020a722c182cb3cb2a19ed19b4d3.php 第 395 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /var/www/shop/Runtime/Cache/Admin/f5d9020a722c182cb3cb2a19ed19b4d3.php 第 395 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /var/www/shop/Runtime/Cache/Admin/f5d9020a722c182cb3cb2a19ed19b4d3.php 第 395 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /var/www/shop/Runtime/Cache/Admin/f5d9020a722c182cb3cb2a19ed19b4d3.php 第 391 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /var/www/shop/Runtime/Cache/Admin/f5d9020a722c182cb3cb2a19ed19b4d3.php 第 394 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /var/www/shop/Runtime/Cache/Admin/f5d9020a722c182cb3cb2a19ed19b4d3.php 第 395 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /var/www/shop/Runtime/Cache/Admin/f5d9020a722c182cb3cb2a19ed19b4d3.php 第 394 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /var/www/shop/Runtime/Cache/Admin/f5d9020a722c182cb3cb2a19ed19b4d3.php 第 395 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /var/www/shop/Runtime/Cache/Admin/f5d9020a722c182cb3cb2a19ed19b4d3.php 第 395 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /var/www/shop/Runtime/Cache/Admin/f5d9020a722c182cb3cb2a19ed19b4d3.php 第 395 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /var/www/shop/Runtime/Cache/Admin/f5d9020a722c182cb3cb2a19ed19b4d3.php 第 395 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /var/www/shop/Runtime/Cache/Admin/f5d9020a722c182cb3cb2a19ed19b4d3.php 第 391 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /var/www/shop/Runtime/Cache/Admin/f5d9020a722c182cb3cb2a19ed19b4d3.php 第 394 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /var/www/shop/Runtime/Cache/Admin/f5d9020a722c182cb3cb2a19ed19b4d3.php 第 395 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /var/www/shop/Runtime/Cache/Admin/f5d9020a722c182cb3cb2a19ed19b4d3.php 第 395 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /var/www/shop/Runtime/Cache/Admin/f5d9020a722c182cb3cb2a19ed19b4d3.php 第 394 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /var/www/shop/Runtime/Cache/Admin/f5d9020a722c182cb3cb2a19ed19b4d3.php 第 395 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /var/www/shop/Runtime/Cache/Admin/f5d9020a722c182cb3cb2a19ed19b4d3.php 第 395 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /var/www/shop/Runtime/Cache/Admin/f5d9020a722c182cb3cb2a19ed19b4d3.php 第 395 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /var/www/shop/Runtime/Cache/Admin/f5d9020a722c182cb3cb2a19ed19b4d3.php 第 395 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /var/www/shop/Runtime/Cache/Admin/f5d9020a722c182cb3cb2a19ed19b4d3.php 第 394 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /var/www/shop/Runtime/Cache/Admin/f5d9020a722c182cb3cb2a19ed19b4d3.php 第 395 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /var/www/shop/Runtime/Cache/Admin/f5d9020a722c182cb3cb2a19ed19b4d3.php 第 394 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /var/www/shop/Runtime/Cache/Admin/f5d9020a722c182cb3cb2a19ed19b4d3.php 第 395 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.022857s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.022899s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000121s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000157s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000408s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000453s ]
+
+[ 2015-11-02T16:08:50+08:00 ] 120.131.75.138 /index.php/Node/edit/id/3.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000295s ]
+NOTIC: [8192] mysql_get_server_info(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /var/www/shop/App/Admin/Conf/config.php 第 18 行.
+NOTIC: [2] mysql_get_server_info(): Access denied for user 'www'@'localhost' (using password: NO) /var/www/shop/App/Admin/Conf/config.php 第 18 行.
+NOTIC: [2] mysql_get_server_info(): A link to the server could not be established /var/www/shop/App/Admin/Conf/config.php 第 18 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000359s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000403s ]
+SQL: SHOW COLUMNS FROM `hx_node` [ RunTime:0.0011s ]
+SQL: SHOW COLUMNS FROM `hx_admin` [ RunTime:0.0007s ]
+SQL: SELECT n.name,n.title,n.id,n.pid,n.icon FROM hx_admin a  left join hx_role r on r.id=a.role_id  left join hx_access ac on ac.role_id=r.id  left join hx_node n on n.id=ac.node_id  WHERE n.status = '开启' AND a.id = '1' ORDER BY n.sort  [ RunTime:0.0008s ]
+SQL: SELECT n.name,n.title,n.id,n.pid,n.icon FROM hx_admin a  left join hx_role r on r.id=a.role_id  left join hx_access ac on ac.role_id=r.id  left join hx_node n on n.id=ac.node_id  WHERE n.status = '开启' AND a.id = '1' ORDER BY n.sort  [ RunTime:0.0008s ]
+SQL: SHOW COLUMNS FROM `hx_node` [ RunTime:0.0008s ]
+SQL: SELECT `pid` FROM `hx_node` WHERE `name` = 'Node' LIMIT 1   [ RunTime:0.0003s ]
+NOTIC: [2] Missing argument 1 for Admin\Model\NodeModel::getMenu(), called in /var/www/shop/App/Admin/Controller/BaseController.class.php on line 32 and defined /var/www/shop/App/Admin/Model/NodeModel.class.php 第 29 行.
+NOTIC: [8] Undefined variable: id /var/www/shop/App/Admin/Model/NodeModel.class.php 第 32 行.
+SQL: SELECT n.name,n.title,n.id,n.pid,n.icon FROM hx_admin a  left join hx_role r on r.id=a.role_id  left join hx_access ac on ac.role_id=r.id  left join hx_node n on n.id=ac.node_id  WHERE n.status = '开启' AND n.type = '是' AND a.id = null ORDER BY n.sort  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `hx_node` [ RunTime:0.0007s ]
+SQL: SELECT * FROM `hx_node` WHERE `status` = '开启' ORDER BY `sort`,`id` desc  [ RunTime:0.0004s ]
+SQL: SELECT * FROM `hx_node` WHERE `id` = 3 LIMIT 1   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000087s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000131s ]
+NOTIC: [8] Undefined index: icom /var/www/shop/Runtime/Cache/Admin/3dc70eb2a14d18a144b0764e08dbd03a.php 第 438 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015816s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015857s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000116s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000153s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000395s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000473s ]
+
+[ 2015-11-02T16:08:53+08:00 ] 120.131.75.138 /index.php/Node/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000282s ]
+NOTIC: [8192] mysql_get_server_info(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /var/www/shop/App/Admin/Conf/config.php 第 18 行.
+NOTIC: [2] mysql_get_server_info(): Access denied for user 'www'@'localhost' (using password: NO) /var/www/shop/App/Admin/Conf/config.php 第 18 行.
+NOTIC: [2] mysql_get_server_info(): A link to the server could not be established /var/www/shop/App/Admin/Conf/config.php 第 18 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000496s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000541s ]
+SQL: SHOW COLUMNS FROM `hx_node` [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `hx_admin` [ RunTime:0.0007s ]
+SQL: SELECT n.name,n.title,n.id,n.pid,n.icon FROM hx_admin a  left join hx_role r on r.id=a.role_id  left join hx_access ac on ac.role_id=r.id  left join hx_node n on n.id=ac.node_id  WHERE n.status = '开启' AND a.id = '1' ORDER BY n.sort  [ RunTime:0.0008s ]
+SQL: SELECT n.name,n.title,n.id,n.pid,n.icon FROM hx_admin a  left join hx_role r on r.id=a.role_id  left join hx_access ac on ac.role_id=r.id  left join hx_node n on n.id=ac.node_id  WHERE n.status = '开启' AND a.id = '1' ORDER BY n.sort  [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `hx_node` [ RunTime:0.0007s ]
+SQL: SELECT `pid` FROM `hx_node` WHERE `name` = 'Node' LIMIT 1   [ RunTime:0.0003s ]
+NOTIC: [2] Missing argument 1 for Admin\Model\NodeModel::getMenu(), called in /var/www/shop/App/Admin/Controller/BaseController.class.php on line 32 and defined /var/www/shop/App/Admin/Model/NodeModel.class.php 第 29 行.
+NOTIC: [8] Undefined variable: id /var/www/shop/App/Admin/Model/NodeModel.class.php 第 32 行.
+SQL: SELECT n.name,n.title,n.id,n.pid,n.icon FROM hx_admin a  left join hx_role r on r.id=a.role_id  left join hx_access ac on ac.role_id=r.id  left join hx_node n on n.id=ac.node_id  WHERE n.status = '开启' AND n.type = '是' AND a.id = null ORDER BY n.sort  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `hx_node` [ RunTime:0.0007s ]
+SQL: SELECT * FROM `hx_node` ORDER BY `sort`,`id` desc  [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000084s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000128s ]
+NOTIC: [8] Use of undefined constant id - assumed 'id' /var/www/shop/Runtime/Cache/Admin/f5d9020a722c182cb3cb2a19ed19b4d3.php 第 391 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /var/www/shop/Runtime/Cache/Admin/f5d9020a722c182cb3cb2a19ed19b4d3.php 第 394 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /var/www/shop/Runtime/Cache/Admin/f5d9020a722c182cb3cb2a19ed19b4d3.php 第 395 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /var/www/shop/Runtime/Cache/Admin/f5d9020a722c182cb3cb2a19ed19b4d3.php 第 395 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /var/www/shop/Runtime/Cache/Admin/f5d9020a722c182cb3cb2a19ed19b4d3.php 第 395 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /var/www/shop/Runtime/Cache/Admin/f5d9020a722c182cb3cb2a19ed19b4d3.php 第 395 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /var/www/shop/Runtime/Cache/Admin/f5d9020a722c182cb3cb2a19ed19b4d3.php 第 394 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /var/www/shop/Runtime/Cache/Admin/f5d9020a722c182cb3cb2a19ed19b4d3.php 第 395 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /var/www/shop/Runtime/Cache/Admin/f5d9020a722c182cb3cb2a19ed19b4d3.php 第 395 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /var/www/shop/Runtime/Cache/Admin/f5d9020a722c182cb3cb2a19ed19b4d3.php 第 395 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /var/www/shop/Runtime/Cache/Admin/f5d9020a722c182cb3cb2a19ed19b4d3.php 第 395 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /var/www/shop/Runtime/Cache/Admin/f5d9020a722c182cb3cb2a19ed19b4d3.php 第 394 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /var/www/shop/Runtime/Cache/Admin/f5d9020a722c182cb3cb2a19ed19b4d3.php 第 395 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /var/www/shop/Runtime/Cache/Admin/f5d9020a722c182cb3cb2a19ed19b4d3.php 第 395 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /var/www/shop/Runtime/Cache/Admin/f5d9020a722c182cb3cb2a19ed19b4d3.php 第 394 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /var/www/shop/Runtime/Cache/Admin/f5d9020a722c182cb3cb2a19ed19b4d3.php 第 395 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /var/www/shop/Runtime/Cache/Admin/f5d9020a722c182cb3cb2a19ed19b4d3.php 第 395 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /var/www/shop/Runtime/Cache/Admin/f5d9020a722c182cb3cb2a19ed19b4d3.php 第 395 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /var/www/shop/Runtime/Cache/Admin/f5d9020a722c182cb3cb2a19ed19b4d3.php 第 391 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /var/www/shop/Runtime/Cache/Admin/f5d9020a722c182cb3cb2a19ed19b4d3.php 第 394 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /var/www/shop/Runtime/Cache/Admin/f5d9020a722c182cb3cb2a19ed19b4d3.php 第 395 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /var/www/shop/Runtime/Cache/Admin/f5d9020a722c182cb3cb2a19ed19b4d3.php 第 395 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /var/www/shop/Runtime/Cache/Admin/f5d9020a722c182cb3cb2a19ed19b4d3.php 第 395 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /var/www/shop/Runtime/Cache/Admin/f5d9020a722c182cb3cb2a19ed19b4d3.php 第 391 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /var/www/shop/Runtime/Cache/Admin/f5d9020a722c182cb3cb2a19ed19b4d3.php 第 394 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /var/www/shop/Runtime/Cache/Admin/f5d9020a722c182cb3cb2a19ed19b4d3.php 第 395 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /var/www/shop/Runtime/Cache/Admin/f5d9020a722c182cb3cb2a19ed19b4d3.php 第 395 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /var/www/shop/Runtime/Cache/Admin/f5d9020a722c182cb3cb2a19ed19b4d3.php 第 395 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /var/www/shop/Runtime/Cache/Admin/f5d9020a722c182cb3cb2a19ed19b4d3.php 第 395 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /var/www/shop/Runtime/Cache/Admin/f5d9020a722c182cb3cb2a19ed19b4d3.php 第 394 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /var/www/shop/Runtime/Cache/Admin/f5d9020a722c182cb3cb2a19ed19b4d3.php 第 395 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /var/www/shop/Runtime/Cache/Admin/f5d9020a722c182cb3cb2a19ed19b4d3.php 第 395 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /var/www/shop/Runtime/Cache/Admin/f5d9020a722c182cb3cb2a19ed19b4d3.php 第 395 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /var/www/shop/Runtime/Cache/Admin/f5d9020a722c182cb3cb2a19ed19b4d3.php 第 395 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /var/www/shop/Runtime/Cache/Admin/f5d9020a722c182cb3cb2a19ed19b4d3.php 第 395 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /var/www/shop/Runtime/Cache/Admin/f5d9020a722c182cb3cb2a19ed19b4d3.php 第 394 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /var/www/shop/Runtime/Cache/Admin/f5d9020a722c182cb3cb2a19ed19b4d3.php 第 395 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /var/www/shop/Runtime/Cache/Admin/f5d9020a722c182cb3cb2a19ed19b4d3.php 第 395 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /var/www/shop/Runtime/Cache/Admin/f5d9020a722c182cb3cb2a19ed19b4d3.php 第 395 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /var/www/shop/Runtime/Cache/Admin/f5d9020a722c182cb3cb2a19ed19b4d3.php 第 395 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /var/www/shop/Runtime/Cache/Admin/f5d9020a722c182cb3cb2a19ed19b4d3.php 第 391 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /var/www/shop/Runtime/Cache/Admin/f5d9020a722c182cb3cb2a19ed19b4d3.php 第 394 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /var/www/shop/Runtime/Cache/Admin/f5d9020a722c182cb3cb2a19ed19b4d3.php 第 395 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /var/www/shop/Runtime/Cache/Admin/f5d9020a722c182cb3cb2a19ed19b4d3.php 第 395 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /var/www/shop/Runtime/Cache/Admin/f5d9020a722c182cb3cb2a19ed19b4d3.php 第 395 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /var/www/shop/Runtime/Cache/Admin/f5d9020a722c182cb3cb2a19ed19b4d3.php 第 395 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /var/www/shop/Runtime/Cache/Admin/f5d9020a722c182cb3cb2a19ed19b4d3.php 第 394 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /var/www/shop/Runtime/Cache/Admin/f5d9020a722c182cb3cb2a19ed19b4d3.php 第 395 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /var/www/shop/Runtime/Cache/Admin/f5d9020a722c182cb3cb2a19ed19b4d3.php 第 395 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /var/www/shop/Runtime/Cache/Admin/f5d9020a722c182cb3cb2a19ed19b4d3.php 第 395 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /var/www/shop/Runtime/Cache/Admin/f5d9020a722c182cb3cb2a19ed19b4d3.php 第 395 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /var/www/shop/Runtime/Cache/Admin/f5d9020a722c182cb3cb2a19ed19b4d3.php 第 391 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /var/www/shop/Runtime/Cache/Admin/f5d9020a722c182cb3cb2a19ed19b4d3.php 第 394 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /var/www/shop/Runtime/Cache/Admin/f5d9020a722c182cb3cb2a19ed19b4d3.php 第 395 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /var/www/shop/Runtime/Cache/Admin/f5d9020a722c182cb3cb2a19ed19b4d3.php 第 395 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /var/www/shop/Runtime/Cache/Admin/f5d9020a722c182cb3cb2a19ed19b4d3.php 第 395 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /var/www/shop/Runtime/Cache/Admin/f5d9020a722c182cb3cb2a19ed19b4d3.php 第 395 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /var/www/shop/Runtime/Cache/Admin/f5d9020a722c182cb3cb2a19ed19b4d3.php 第 391 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /var/www/shop/Runtime/Cache/Admin/f5d9020a722c182cb3cb2a19ed19b4d3.php 第 394 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /var/www/shop/Runtime/Cache/Admin/f5d9020a722c182cb3cb2a19ed19b4d3.php 第 395 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /var/www/shop/Runtime/Cache/Admin/f5d9020a722c182cb3cb2a19ed19b4d3.php 第 394 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /var/www/shop/Runtime/Cache/Admin/f5d9020a722c182cb3cb2a19ed19b4d3.php 第 395 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /var/www/shop/Runtime/Cache/Admin/f5d9020a722c182cb3cb2a19ed19b4d3.php 第 395 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /var/www/shop/Runtime/Cache/Admin/f5d9020a722c182cb3cb2a19ed19b4d3.php 第 395 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /var/www/shop/Runtime/Cache/Admin/f5d9020a722c182cb3cb2a19ed19b4d3.php 第 395 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /var/www/shop/Runtime/Cache/Admin/f5d9020a722c182cb3cb2a19ed19b4d3.php 第 391 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /var/www/shop/Runtime/Cache/Admin/f5d9020a722c182cb3cb2a19ed19b4d3.php 第 394 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /var/www/shop/Runtime/Cache/Admin/f5d9020a722c182cb3cb2a19ed19b4d3.php 第 395 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /var/www/shop/Runtime/Cache/Admin/f5d9020a722c182cb3cb2a19ed19b4d3.php 第 395 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /var/www/shop/Runtime/Cache/Admin/f5d9020a722c182cb3cb2a19ed19b4d3.php 第 394 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /var/www/shop/Runtime/Cache/Admin/f5d9020a722c182cb3cb2a19ed19b4d3.php 第 395 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /var/www/shop/Runtime/Cache/Admin/f5d9020a722c182cb3cb2a19ed19b4d3.php 第 395 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /var/www/shop/Runtime/Cache/Admin/f5d9020a722c182cb3cb2a19ed19b4d3.php 第 395 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /var/www/shop/Runtime/Cache/Admin/f5d9020a722c182cb3cb2a19ed19b4d3.php 第 395 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /var/www/shop/Runtime/Cache/Admin/f5d9020a722c182cb3cb2a19ed19b4d3.php 第 394 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /var/www/shop/Runtime/Cache/Admin/f5d9020a722c182cb3cb2a19ed19b4d3.php 第 395 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /var/www/shop/Runtime/Cache/Admin/f5d9020a722c182cb3cb2a19ed19b4d3.php 第 394 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /var/www/shop/Runtime/Cache/Admin/f5d9020a722c182cb3cb2a19ed19b4d3.php 第 395 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.022582s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.022623s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000125s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000162s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000429s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000475s ]
+
+[ 2015-11-02T16:08:55+08:00 ] 120.131.75.138 /index.php/AdminUser/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000299s ]
+NOTIC: [8192] mysql_get_server_info(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /var/www/shop/App/Admin/Conf/config.php 第 18 行.
+NOTIC: [2] mysql_get_server_info(): Access denied for user 'www'@'localhost' (using password: NO) /var/www/shop/App/Admin/Conf/config.php 第 18 行.
+NOTIC: [2] mysql_get_server_info(): A link to the server could not be established /var/www/shop/App/Admin/Conf/config.php 第 18 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000358s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000400s ]
+SQL: SHOW COLUMNS FROM `hx_node` [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `hx_admin` [ RunTime:0.0007s ]
+SQL: SELECT n.name,n.title,n.id,n.pid,n.icon FROM hx_admin a  left join hx_role r on r.id=a.role_id  left join hx_access ac on ac.role_id=r.id  left join hx_node n on n.id=ac.node_id  WHERE n.status = '开启' AND a.id = '1' ORDER BY n.sort  [ RunTime:0.0008s ]
+SQL: SELECT n.name,n.title,n.id,n.pid,n.icon FROM hx_admin a  left join hx_role r on r.id=a.role_id  left join hx_access ac on ac.role_id=r.id  left join hx_node n on n.id=ac.node_id  WHERE n.status = '开启' AND a.id = '1' ORDER BY n.sort  [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `hx_node` [ RunTime:0.0008s ]
+SQL: SELECT `pid` FROM `hx_node` WHERE `name` = 'AdminUser' LIMIT 1   [ RunTime:0.0003s ]
+NOTIC: [2] Missing argument 1 for Admin\Model\NodeModel::getMenu(), called in /var/www/shop/App/Admin/Controller/BaseController.class.php on line 32 and defined /var/www/shop/App/Admin/Model/NodeModel.class.php 第 29 行.
+NOTIC: [8] Undefined variable: id /var/www/shop/App/Admin/Model/NodeModel.class.php 第 32 行.
+SQL: SELECT n.name,n.title,n.id,n.pid,n.icon FROM hx_admin a  left join hx_role r on r.id=a.role_id  left join hx_access ac on ac.role_id=r.id  left join hx_node n on n.id=ac.node_id  WHERE n.status = '开启' AND n.type = '是' AND a.id = null ORDER BY n.sort  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `hx_role` [ RunTime:0.0006s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `hx_admin` LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `hx_admin` ORDER BY `sort`,`id` desc LIMIT 0,15   [ RunTime:0.0002s ]
+SQL: SELECT `name` FROM `hx_role` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `name` FROM `hx_role` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `name` FROM `hx_role` WHERE `id` = 7 LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000080s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000125s ]
+NOTIC: [8] Use of undefined constant id - assumed 'id' /var/www/shop/Runtime/Cache/Admin/3978959a548ca82a531c0bbb94f92175.php 第 431 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /var/www/shop/Runtime/Cache/Admin/3978959a548ca82a531c0bbb94f92175.php 第 431 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /var/www/shop/Runtime/Cache/Admin/3978959a548ca82a531c0bbb94f92175.php 第 431 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015033s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015073s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000142s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000180s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000417s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000463s ]
+
+[ 2015-11-02T16:08:59+08:00 ] 120.131.75.138 /index.php/Ad/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000272s ]
+NOTIC: [8192] mysql_get_server_info(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /var/www/shop/App/Admin/Conf/config.php 第 18 行.
+NOTIC: [2] mysql_get_server_info(): Access denied for user 'www'@'localhost' (using password: NO) /var/www/shop/App/Admin/Conf/config.php 第 18 行.
+NOTIC: [2] mysql_get_server_info(): A link to the server could not be established /var/www/shop/App/Admin/Conf/config.php 第 18 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000393s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000437s ]
+SQL: SHOW COLUMNS FROM `hx_node` [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `hx_admin` [ RunTime:0.0007s ]
+SQL: SELECT n.name,n.title,n.id,n.pid,n.icon FROM hx_admin a  left join hx_role r on r.id=a.role_id  left join hx_access ac on ac.role_id=r.id  left join hx_node n on n.id=ac.node_id  WHERE n.status = '开启' AND a.id = '1' ORDER BY n.sort  [ RunTime:0.0008s ]
+SQL: SELECT n.name,n.title,n.id,n.pid,n.icon FROM hx_admin a  left join hx_role r on r.id=a.role_id  left join hx_access ac on ac.role_id=r.id  left join hx_node n on n.id=ac.node_id  WHERE n.status = '开启' AND a.id = '1' ORDER BY n.sort  [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `hx_node` [ RunTime:0.0007s ]
+SQL: SELECT `pid` FROM `hx_node` WHERE `name` = 'Ad' LIMIT 1   [ RunTime:0.0002s ]
+NOTIC: [2] Missing argument 1 for Admin\Model\NodeModel::getMenu(), called in /var/www/shop/App/Admin/Controller/BaseController.class.php on line 32 and defined /var/www/shop/App/Admin/Model/NodeModel.class.php 第 29 行.
+NOTIC: [8] Undefined variable: id /var/www/shop/App/Admin/Model/NodeModel.class.php 第 32 行.
+SQL: SELECT n.name,n.title,n.id,n.pid,n.icon FROM hx_admin a  left join hx_role r on r.id=a.role_id  left join hx_access ac on ac.role_id=r.id  left join hx_node n on n.id=ac.node_id  WHERE n.status = '开启' AND n.type = '是' AND a.id = null ORDER BY n.sort  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `hx_ad` [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `hx_adpos` [ RunTime:0.0006s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `hx_ad` LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `hx_ad` ORDER BY `sort`,`ad_id` desc LIMIT 0,15   [ RunTime:0.0016s ]
+SQL: SELECT `name` FROM `hx_adpos` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `name` FROM `hx_adpos` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000080s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000124s ]
+NOTIC: [8] Use of undefined constant ad_id - assumed 'ad_id' /var/www/shop/Runtime/Cache/Admin/3247bbb39216a6ecfdbda3bfdaa34211.php 第 417 行.
+NOTIC: [8] Use of undefined constant ad_id - assumed 'ad_id' /var/www/shop/Runtime/Cache/Admin/3247bbb39216a6ecfdbda3bfdaa34211.php 第 417 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014198s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014238s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000116s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000156s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000453s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000499s ]
+
+[ 2015-11-02T16:09:00+08:00 ] 120.131.75.138 /index.php/AdPos/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000281s ]
+NOTIC: [8192] mysql_get_server_info(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /var/www/shop/App/Admin/Conf/config.php 第 18 行.
+NOTIC: [2] mysql_get_server_info(): Access denied for user 'www'@'localhost' (using password: NO) /var/www/shop/App/Admin/Conf/config.php 第 18 行.
+NOTIC: [2] mysql_get_server_info(): A link to the server could not be established /var/www/shop/App/Admin/Conf/config.php 第 18 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000388s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000432s ]
+SQL: SHOW COLUMNS FROM `hx_node` [ RunTime:0.0011s ]
+SQL: SHOW COLUMNS FROM `hx_admin` [ RunTime:0.0008s ]
+SQL: SELECT n.name,n.title,n.id,n.pid,n.icon FROM hx_admin a  left join hx_role r on r.id=a.role_id  left join hx_access ac on ac.role_id=r.id  left join hx_node n on n.id=ac.node_id  WHERE n.status = '开启' AND a.id = '1' ORDER BY n.sort  [ RunTime:0.0009s ]
+SQL: SELECT n.name,n.title,n.id,n.pid,n.icon FROM hx_admin a  left join hx_role r on r.id=a.role_id  left join hx_access ac on ac.role_id=r.id  left join hx_node n on n.id=ac.node_id  WHERE n.status = '开启' AND a.id = '1' ORDER BY n.sort  [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `hx_node` [ RunTime:0.0008s ]
+SQL: SELECT `pid` FROM `hx_node` WHERE `name` = 'AdPos' LIMIT 1   [ RunTime:0.0002s ]
+NOTIC: [2] Missing argument 1 for Admin\Model\NodeModel::getMenu(), called in /var/www/shop/App/Admin/Controller/BaseController.class.php on line 32 and defined /var/www/shop/App/Admin/Model/NodeModel.class.php 第 29 行.
+NOTIC: [8] Undefined variable: id /var/www/shop/App/Admin/Model/NodeModel.class.php 第 32 行.
+SQL: SELECT n.name,n.title,n.id,n.pid,n.icon FROM hx_admin a  left join hx_role r on r.id=a.role_id  left join hx_access ac on ac.role_id=r.id  left join hx_node n on n.id=ac.node_id  WHERE n.status = '开启' AND n.type = '是' AND a.id = null ORDER BY n.sort  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `hx_adpos` [ RunTime:0.0007s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `hx_adpos` LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `hx_adpos` ORDER BY `sort`,`id` desc LIMIT 0,15   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000086s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000135s ]
+NOTIC: [8] Use of undefined constant id - assumed 'id' /var/www/shop/Runtime/Cache/Admin/fdcaea5cae83fadbe028e5b840f7895d.php 第 409 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014293s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014336s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000122s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000158s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000440s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000490s ]
+
+[ 2015-11-02T16:09:05+08:00 ] 120.131.75.138 /index.php/Nav/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000278s ]
+NOTIC: [8192] mysql_get_server_info(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /var/www/shop/App/Admin/Conf/config.php 第 18 行.
+NOTIC: [2] mysql_get_server_info(): Access denied for user 'www'@'localhost' (using password: NO) /var/www/shop/App/Admin/Conf/config.php 第 18 行.
+NOTIC: [2] mysql_get_server_info(): A link to the server could not be established /var/www/shop/App/Admin/Conf/config.php 第 18 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000360s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000403s ]
+SQL: SHOW COLUMNS FROM `hx_node` [ RunTime:0.0012s ]
+SQL: SHOW COLUMNS FROM `hx_admin` [ RunTime:0.0007s ]
+SQL: SELECT n.name,n.title,n.id,n.pid,n.icon FROM hx_admin a  left join hx_role r on r.id=a.role_id  left join hx_access ac on ac.role_id=r.id  left join hx_node n on n.id=ac.node_id  WHERE n.status = '开启' AND a.id = '1' ORDER BY n.sort  [ RunTime:0.0008s ]
+SQL: SELECT n.name,n.title,n.id,n.pid,n.icon FROM hx_admin a  left join hx_role r on r.id=a.role_id  left join hx_access ac on ac.role_id=r.id  left join hx_node n on n.id=ac.node_id  WHERE n.status = '开启' AND a.id = '1' ORDER BY n.sort  [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `hx_node` [ RunTime:0.0007s ]
+SQL: SELECT `pid` FROM `hx_node` WHERE `name` = 'Nav' LIMIT 1   [ RunTime:0.0003s ]
+NOTIC: [2] Missing argument 1 for Admin\Model\NodeModel::getMenu(), called in /var/www/shop/App/Admin/Controller/BaseController.class.php on line 32 and defined /var/www/shop/App/Admin/Model/NodeModel.class.php 第 29 行.
+NOTIC: [8] Undefined variable: id /var/www/shop/App/Admin/Model/NodeModel.class.php 第 32 行.
+SQL: SELECT n.name,n.title,n.id,n.pid,n.icon FROM hx_admin a  left join hx_role r on r.id=a.role_id  left join hx_access ac on ac.role_id=r.id  left join hx_node n on n.id=ac.node_id  WHERE n.status = '开启' AND n.type = '是' AND a.id = null ORDER BY n.sort  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `hx_nav` [ RunTime:0.0007s ]
+SQL: SELECT * FROM `hx_nav` ORDER BY `sort`,`id` desc  [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000082s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000125s ]
+NOTIC: [8] Undefined variable: data /var/www/shop/Runtime/Cache/Admin/aa0684b69849b425696ad57104561490.php 第 446 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.018497s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.018538s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000116s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000153s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000388s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000463s ]
+
+[ 2015-11-02T16:09:07+08:00 ] 120.131.75.138 /index.php/Nav/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000326s ]
+NOTIC: [8192] mysql_get_server_info(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /var/www/shop/App/Admin/Conf/config.php 第 18 行.
+NOTIC: [2] mysql_get_server_info(): Access denied for user 'www'@'localhost' (using password: NO) /var/www/shop/App/Admin/Conf/config.php 第 18 行.
+NOTIC: [2] mysql_get_server_info(): A link to the server could not be established /var/www/shop/App/Admin/Conf/config.php 第 18 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000476s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000519s ]
+SQL: SHOW COLUMNS FROM `hx_node` [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `hx_admin` [ RunTime:0.0007s ]
+SQL: SELECT n.name,n.title,n.id,n.pid,n.icon FROM hx_admin a  left join hx_role r on r.id=a.role_id  left join hx_access ac on ac.role_id=r.id  left join hx_node n on n.id=ac.node_id  WHERE n.status = '开启' AND a.id = '1' ORDER BY n.sort  [ RunTime:0.0008s ]
+SQL: SELECT n.name,n.title,n.id,n.pid,n.icon FROM hx_admin a  left join hx_role r on r.id=a.role_id  left join hx_access ac on ac.role_id=r.id  left join hx_node n on n.id=ac.node_id  WHERE n.status = '开启' AND a.id = '1' ORDER BY n.sort  [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `hx_node` [ RunTime:0.0008s ]
+SQL: SELECT `pid` FROM `hx_node` WHERE `name` = 'Nav' LIMIT 1   [ RunTime:0.0003s ]
+NOTIC: [2] Missing argument 1 for Admin\Model\NodeModel::getMenu(), called in /var/www/shop/App/Admin/Controller/BaseController.class.php on line 32 and defined /var/www/shop/App/Admin/Model/NodeModel.class.php 第 29 行.
+NOTIC: [8] Undefined variable: id /var/www/shop/App/Admin/Model/NodeModel.class.php 第 32 行.
+SQL: SELECT n.name,n.title,n.id,n.pid,n.icon FROM hx_admin a  left join hx_role r on r.id=a.role_id  left join hx_access ac on ac.role_id=r.id  left join hx_node n on n.id=ac.node_id  WHERE n.status = '开启' AND n.type = '是' AND a.id = null ORDER BY n.sort  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `hx_nav` [ RunTime:0.0006s ]
+SQL: SELECT * FROM `hx_nav` ORDER BY `sort`,`id` desc  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000086s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000143s ]
+NOTIC: [8] Undefined variable: data /var/www/shop/Runtime/Cache/Admin/aa0684b69849b425696ad57104561490.php 第 446 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.019118s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.019159s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000123s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000159s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000446s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000494s ]
+
+[ 2015-11-02T16:09:09+08:00 ] 120.131.75.138 /index.php/BackUp/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000322s ]
+NOTIC: [8192] mysql_get_server_info(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /var/www/shop/App/Admin/Conf/config.php 第 18 行.
+NOTIC: [2] mysql_get_server_info(): Access denied for user 'www'@'localhost' (using password: NO) /var/www/shop/App/Admin/Conf/config.php 第 18 行.
+NOTIC: [2] mysql_get_server_info(): A link to the server could not be established /var/www/shop/App/Admin/Conf/config.php 第 18 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000365s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000408s ]
+SQL: SHOW COLUMNS FROM `hx_node` [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `hx_admin` [ RunTime:0.0007s ]
+SQL: SELECT n.name,n.title,n.id,n.pid,n.icon FROM hx_admin a  left join hx_role r on r.id=a.role_id  left join hx_access ac on ac.role_id=r.id  left join hx_node n on n.id=ac.node_id  WHERE n.status = '开启' AND a.id = '1' ORDER BY n.sort  [ RunTime:0.0009s ]
+SQL: SELECT n.name,n.title,n.id,n.pid,n.icon FROM hx_admin a  left join hx_role r on r.id=a.role_id  left join hx_access ac on ac.role_id=r.id  left join hx_node n on n.id=ac.node_id  WHERE n.status = '开启' AND a.id = '1' ORDER BY n.sort  [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `hx_node` [ RunTime:0.0008s ]
+SQL: SELECT `pid` FROM `hx_node` WHERE `name` = 'BackUp' LIMIT 1   [ RunTime:0.0003s ]
+NOTIC: [2] Missing argument 1 for Admin\Model\NodeModel::getMenu(), called in /var/www/shop/App/Admin/Controller/BaseController.class.php on line 32 and defined /var/www/shop/App/Admin/Model/NodeModel.class.php 第 29 行.
+NOTIC: [8] Undefined variable: id /var/www/shop/App/Admin/Model/NodeModel.class.php 第 32 行.
+SQL: SELECT n.name,n.title,n.id,n.pid,n.icon FROM hx_admin a  left join hx_role r on r.id=a.role_id  left join hx_access ac on ac.role_id=r.id  left join hx_node n on n.id=ac.node_id  WHERE n.status = '开启' AND n.type = '是' AND a.id = null ORDER BY n.sort  [ RunTime:0.0003s ]
+SQL: SHOW TABLES  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000087s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000137s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013902s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013945s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000141s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000179s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000408s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000455s ]
+
+[ 2015-11-02T16:09:13+08:00 ] 120.131.75.138 /index.php/Restore/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000324s ]
+NOTIC: [8192] mysql_get_server_info(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /var/www/shop/App/Admin/Conf/config.php 第 18 行.
+NOTIC: [2] mysql_get_server_info(): Access denied for user 'www'@'localhost' (using password: NO) /var/www/shop/App/Admin/Conf/config.php 第 18 行.
+NOTIC: [2] mysql_get_server_info(): A link to the server could not be established /var/www/shop/App/Admin/Conf/config.php 第 18 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000385s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000433s ]
+SQL: SHOW COLUMNS FROM `hx_node` [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `hx_admin` [ RunTime:0.0007s ]
+SQL: SELECT n.name,n.title,n.id,n.pid,n.icon FROM hx_admin a  left join hx_role r on r.id=a.role_id  left join hx_access ac on ac.role_id=r.id  left join hx_node n on n.id=ac.node_id  WHERE n.status = '开启' AND a.id = '1' ORDER BY n.sort  [ RunTime:0.0008s ]
+SQL: SELECT n.name,n.title,n.id,n.pid,n.icon FROM hx_admin a  left join hx_role r on r.id=a.role_id  left join hx_access ac on ac.role_id=r.id  left join hx_node n on n.id=ac.node_id  WHERE n.status = '开启' AND a.id = '1' ORDER BY n.sort  [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `hx_node` [ RunTime:0.0008s ]
+SQL: SELECT `pid` FROM `hx_node` WHERE `name` = 'Restore' LIMIT 1   [ RunTime:0.0004s ]
+NOTIC: [2] Missing argument 1 for Admin\Model\NodeModel::getMenu(), called in /var/www/shop/App/Admin/Controller/BaseController.class.php on line 32 and defined /var/www/shop/App/Admin/Model/NodeModel.class.php 第 29 行.
+NOTIC: [8] Undefined variable: id /var/www/shop/App/Admin/Model/NodeModel.class.php 第 32 行.
+SQL: SELECT n.name,n.title,n.id,n.pid,n.icon FROM hx_admin a  left join hx_role r on r.id=a.role_id  left join hx_access ac on ac.role_id=r.id  left join hx_node n on n.id=ac.node_id  WHERE n.status = '开启' AND n.type = '是' AND a.id = null ORDER BY n.sort  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000101s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000181s ]
+NOTIC: [8] Undefined variable: page /var/www/shop/Runtime/Cache/Admin/a5bd8e0244eda004d53fc553f3c4fd03.php 第 413 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.016650s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016726s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000146s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000183s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000472s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000522s ]
+
+[ 2015-11-02T16:09:16+08:00 ] 120.131.75.138 /index.php/BackUp/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000279s ]
+NOTIC: [8192] mysql_get_server_info(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /var/www/shop/App/Admin/Conf/config.php 第 18 行.
+NOTIC: [2] mysql_get_server_info(): Access denied for user 'www'@'localhost' (using password: NO) /var/www/shop/App/Admin/Conf/config.php 第 18 行.
+NOTIC: [2] mysql_get_server_info(): A link to the server could not be established /var/www/shop/App/Admin/Conf/config.php 第 18 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000362s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000404s ]
+SQL: SHOW COLUMNS FROM `hx_node` [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `hx_admin` [ RunTime:0.0007s ]
+SQL: SELECT n.name,n.title,n.id,n.pid,n.icon FROM hx_admin a  left join hx_role r on r.id=a.role_id  left join hx_access ac on ac.role_id=r.id  left join hx_node n on n.id=ac.node_id  WHERE n.status = '开启' AND a.id = '1' ORDER BY n.sort  [ RunTime:0.0008s ]
+SQL: SELECT n.name,n.title,n.id,n.pid,n.icon FROM hx_admin a  left join hx_role r on r.id=a.role_id  left join hx_access ac on ac.role_id=r.id  left join hx_node n on n.id=ac.node_id  WHERE n.status = '开启' AND a.id = '1' ORDER BY n.sort  [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `hx_node` [ RunTime:0.0010s ]
+SQL: SELECT `pid` FROM `hx_node` WHERE `name` = 'BackUp' LIMIT 1   [ RunTime:0.0003s ]
+NOTIC: [2] Missing argument 1 for Admin\Model\NodeModel::getMenu(), called in /var/www/shop/App/Admin/Controller/BaseController.class.php on line 32 and defined /var/www/shop/App/Admin/Model/NodeModel.class.php 第 29 行.
+NOTIC: [8] Undefined variable: id /var/www/shop/App/Admin/Model/NodeModel.class.php 第 32 行.
+SQL: SELECT n.name,n.title,n.id,n.pid,n.icon FROM hx_admin a  left join hx_role r on r.id=a.role_id  left join hx_access ac on ac.role_id=r.id  left join hx_node n on n.id=ac.node_id  WHERE n.status = '开启' AND n.type = '是' AND a.id = null ORDER BY n.sort  [ RunTime:0.0003s ]
+SQL: SHOW TABLES  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000114s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000179s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014193s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014240s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000146s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000184s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000470s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000522s ]
+
+[ 2015-11-02T16:09:20+08:00 ] 120.131.75.138 /index.php/Setting/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000297s ]
+NOTIC: [8192] mysql_get_server_info(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /var/www/shop/App/Admin/Conf/config.php 第 18 行.
+NOTIC: [2] mysql_get_server_info(): Access denied for user 'www'@'localhost' (using password: NO) /var/www/shop/App/Admin/Conf/config.php 第 18 行.
+NOTIC: [2] mysql_get_server_info(): A link to the server could not be established /var/www/shop/App/Admin/Conf/config.php 第 18 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000403s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000491s ]
+SQL: SHOW COLUMNS FROM `hx_node` [ RunTime:0.0011s ]
+SQL: SHOW COLUMNS FROM `hx_admin` [ RunTime:0.0007s ]
+SQL: SELECT n.name,n.title,n.id,n.pid,n.icon FROM hx_admin a  left join hx_role r on r.id=a.role_id  left join hx_access ac on ac.role_id=r.id  left join hx_node n on n.id=ac.node_id  WHERE n.status = '开启' AND a.id = '1' ORDER BY n.sort  [ RunTime:0.0008s ]
+SQL: SELECT n.name,n.title,n.id,n.pid,n.icon FROM hx_admin a  left join hx_role r on r.id=a.role_id  left join hx_access ac on ac.role_id=r.id  left join hx_node n on n.id=ac.node_id  WHERE n.status = '开启' AND a.id = '1' ORDER BY n.sort  [ RunTime:0.0008s ]
+SQL: SHOW COLUMNS FROM `hx_node` [ RunTime:0.0007s ]
+SQL: SELECT `pid` FROM `hx_node` WHERE `name` = 'Setting' LIMIT 1   [ RunTime:0.0003s ]
+NOTIC: [2] Missing argument 1 for Admin\Model\NodeModel::getMenu(), called in /var/www/shop/App/Admin/Controller/BaseController.class.php on line 32 and defined /var/www/shop/App/Admin/Model/NodeModel.class.php 第 29 行.
+NOTIC: [8] Undefined variable: id /var/www/shop/App/Admin/Model/NodeModel.class.php 第 32 行.
+SQL: SELECT n.name,n.title,n.id,n.pid,n.icon FROM hx_admin a  left join hx_role r on r.id=a.role_id  left join hx_access ac on ac.role_id=r.id  left join hx_node n on n.id=ac.node_id  WHERE n.status = '开启' AND n.type = '是' AND a.id = null ORDER BY n.sort  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `hx_system` [ RunTime:0.0008s ]
+SQL: SELECT * FROM `hx_system` LIMIT 1   [ RunTime:0.0016s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000084s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000130s ]
+NOTIC: [8] Undefined index: iphone /var/www/shop/Runtime/Cache/Admin/35d94690a2482e280480b163e403b1b2.php 第 448 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014275s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014316s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000117s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000154s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000447s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000492s ]
+
+[ 2015-11-02T16:09:25+08:00 ] 120.131.75.138 /index.php/Comment/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000277s ]
+NOTIC: [8192] mysql_get_server_info(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /var/www/shop/App/Admin/Conf/config.php 第 18 行.
+NOTIC: [2] mysql_get_server_info(): Access denied for user 'www'@'localhost' (using password: NO) /var/www/shop/App/Admin/Conf/config.php 第 18 行.
+NOTIC: [2] mysql_get_server_info(): A link to the server could not be established /var/www/shop/App/Admin/Conf/config.php 第 18 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000369s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000412s ]
+SQL: SHOW COLUMNS FROM `hx_node` [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `hx_admin` [ RunTime:0.0007s ]
+SQL: SELECT n.name,n.title,n.id,n.pid,n.icon FROM hx_admin a  left join hx_role r on r.id=a.role_id  left join hx_access ac on ac.role_id=r.id  left join hx_node n on n.id=ac.node_id  WHERE n.status = '开启' AND a.id = '1' ORDER BY n.sort  [ RunTime:0.0008s ]
+SQL: SELECT n.name,n.title,n.id,n.pid,n.icon FROM hx_admin a  left join hx_role r on r.id=a.role_id  left join hx_access ac on ac.role_id=r.id  left join hx_node n on n.id=ac.node_id  WHERE n.status = '开启' AND a.id = '1' ORDER BY n.sort  [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `hx_node` [ RunTime:0.0007s ]
+SQL: SELECT `pid` FROM `hx_node` WHERE `name` = 'Comment' LIMIT 1   [ RunTime:0.0002s ]
+NOTIC: [2] Missing argument 1 for Admin\Model\NodeModel::getMenu(), called in /var/www/shop/App/Admin/Controller/BaseController.class.php on line 32 and defined /var/www/shop/App/Admin/Model/NodeModel.class.php 第 29 行.
+NOTIC: [8] Undefined variable: id /var/www/shop/App/Admin/Model/NodeModel.class.php 第 32 行.
+SQL: SELECT n.name,n.title,n.id,n.pid,n.icon FROM hx_admin a  left join hx_role r on r.id=a.role_id  left join hx_access ac on ac.role_id=r.id  left join hx_node n on n.id=ac.node_id  WHERE n.status = '开启' AND n.type = '是' AND a.id = null ORDER BY n.sort  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `hx_comments` [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `hx_comments` [ RunTime:0.0007s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `hx_comments` LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `hx_comments` LIMIT 0,15   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000077s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000120s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013600s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013647s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000115s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000153s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000440s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000494s ]
+
+[ 2015-11-02T16:09:26+08:00 ] 120.131.75.138 /index.php/Article/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000285s ]
+NOTIC: [8192] mysql_get_server_info(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /var/www/shop/App/Admin/Conf/config.php 第 18 行.
+NOTIC: [2] mysql_get_server_info(): Access denied for user 'www'@'localhost' (using password: NO) /var/www/shop/App/Admin/Conf/config.php 第 18 行.
+NOTIC: [2] mysql_get_server_info(): A link to the server could not be established /var/www/shop/App/Admin/Conf/config.php 第 18 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000464s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000507s ]
+SQL: SHOW COLUMNS FROM `hx_node` [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `hx_admin` [ RunTime:0.0007s ]
+SQL: SELECT n.name,n.title,n.id,n.pid,n.icon FROM hx_admin a  left join hx_role r on r.id=a.role_id  left join hx_access ac on ac.role_id=r.id  left join hx_node n on n.id=ac.node_id  WHERE n.status = '开启' AND a.id = '1' ORDER BY n.sort  [ RunTime:0.0008s ]
+SQL: SELECT n.name,n.title,n.id,n.pid,n.icon FROM hx_admin a  left join hx_role r on r.id=a.role_id  left join hx_access ac on ac.role_id=r.id  left join hx_node n on n.id=ac.node_id  WHERE n.status = '开启' AND a.id = '1' ORDER BY n.sort  [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `hx_node` [ RunTime:0.0007s ]
+SQL: SELECT `pid` FROM `hx_node` WHERE `name` = 'Article' LIMIT 1   [ RunTime:0.0002s ]
+NOTIC: [2] Missing argument 1 for Admin\Model\NodeModel::getMenu(), called in /var/www/shop/App/Admin/Controller/BaseController.class.php on line 32 and defined /var/www/shop/App/Admin/Model/NodeModel.class.php 第 29 行.
+NOTIC: [8] Undefined variable: id /var/www/shop/App/Admin/Model/NodeModel.class.php 第 32 行.
+SQL: SELECT n.name,n.title,n.id,n.pid,n.icon FROM hx_admin a  left join hx_role r on r.id=a.role_id  left join hx_access ac on ac.role_id=r.id  left join hx_node n on n.id=ac.node_id  WHERE n.status = '开启' AND n.type = '是' AND a.id = null ORDER BY n.sort  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `hx_article` [ RunTime:0.0008s ]
+SQL: SHOW COLUMNS FROM `hx_cate` [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `hx_article` [ RunTime:0.0007s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `hx_article` WHERE `del` = 0 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `hx_article` WHERE `del` = 0 ORDER BY `sort` desc,`id` desc LIMIT 0,15   [ RunTime:0.0003s ]
+SQL: SELECT `username` FROM `hx_admin` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `cate` FROM `hx_cate` WHERE `id` = 5 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `username` FROM `hx_admin` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `cate` FROM `hx_cate` WHERE `id` = 5 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `username` FROM `hx_admin` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `cate` FROM `hx_cate` WHERE `id` = 5 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `username` FROM `hx_admin` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `cate` FROM `hx_cate` WHERE `id` = 5 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `hx_cate` ORDER BY `sort`,`id` desc  [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000099s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000144s ]
+NOTIC: [8] Undefined index: pid /var/www/shop/Runtime/Cache/Admin/ac492b5605bffa8cac27c5e0dc599b32.php 第 371 行.
+NOTIC: [8] Undefined index: pid /var/www/shop/Runtime/Cache/Admin/ac492b5605bffa8cac27c5e0dc599b32.php 第 372 行.
+NOTIC: [8] Undefined index: pid /var/www/shop/Runtime/Cache/Admin/ac492b5605bffa8cac27c5e0dc599b32.php 第 371 行.
+NOTIC: [8] Undefined index: pid /var/www/shop/Runtime/Cache/Admin/ac492b5605bffa8cac27c5e0dc599b32.php 第 371 行.
+NOTIC: [8] Undefined index: pid /var/www/shop/Runtime/Cache/Admin/ac492b5605bffa8cac27c5e0dc599b32.php 第 372 行.
+NOTIC: [8] Undefined index: pid /var/www/shop/Runtime/Cache/Admin/ac492b5605bffa8cac27c5e0dc599b32.php 第 372 行.
+NOTIC: [8] Undefined index: starTime /var/www/shop/Runtime/Cache/Admin/ac492b5605bffa8cac27c5e0dc599b32.php 第 382 行.
+NOTIC: [8] Undefined index: endTime /var/www/shop/Runtime/Cache/Admin/ac492b5605bffa8cac27c5e0dc599b32.php 第 385 行.
+NOTIC: [8] Undefined index: title /var/www/shop/Runtime/Cache/Admin/ac492b5605bffa8cac27c5e0dc599b32.php 第 388 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /var/www/shop/Runtime/Cache/Admin/ac492b5605bffa8cac27c5e0dc599b32.php 第 476 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /var/www/shop/Runtime/Cache/Admin/ac492b5605bffa8cac27c5e0dc599b32.php 第 476 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /var/www/shop/Runtime/Cache/Admin/ac492b5605bffa8cac27c5e0dc599b32.php 第 476 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /var/www/shop/Runtime/Cache/Admin/ac492b5605bffa8cac27c5e0dc599b32.php 第 476 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.019610s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.019651s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000116s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000153s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000416s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000464s ]
+

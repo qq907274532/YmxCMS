@@ -1,0 +1,69 @@
+[ 2015-11-07T15:36:01+08:00 ] 119.147.146.193 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000412s ]
+NOTIC: [8192] mysql_get_server_info(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /var/www/shop/App/Admin/Conf/config.php 第 18 行.
+NOTIC: [2] mysql_get_server_info(): Access denied for user 'www'@'localhost' (using password: NO) /var/www/shop/App/Admin/Conf/config.php 第 18 行.
+NOTIC: [2] mysql_get_server_info(): A link to the server could not be established /var/www/shop/App/Admin/Conf/config.php 第 18 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000422s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000466s ]
+
+[ 2015-11-07T15:36:01+08:00 ] 119.147.146.193 /Login/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000323s ]
+NOTIC: [8192] mysql_get_server_info(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /var/www/shop/App/Admin/Conf/config.php 第 18 行.
+NOTIC: [2] mysql_get_server_info(): Access denied for user 'www'@'localhost' (using password: NO) /var/www/shop/App/Admin/Conf/config.php 第 18 行.
+NOTIC: [2] mysql_get_server_info(): A link to the server could not be established /var/www/shop/App/Admin/Conf/config.php 第 18 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000371s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000413s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000054s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000136s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.027510s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.027552s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000160s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000198s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000407s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000447s ]
+
+[ 2015-11-07T15:36:01+08:00 ] 119.147.146.193 /Login/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000311s ]
+NOTIC: [8192] mysql_get_server_info(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /var/www/shop/App/Admin/Conf/config.php 第 18 行.
+NOTIC: [2] mysql_get_server_info(): Access denied for user 'www'@'localhost' (using password: NO) /var/www/shop/App/Admin/Conf/config.php 第 18 行.
+NOTIC: [2] mysql_get_server_info(): A link to the server could not be established /var/www/shop/App/Admin/Conf/config.php 第 18 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000467s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000510s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000043s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000086s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006272s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006314s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000115s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000152s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000367s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000406s ]
+
+[ 2015-11-07T15:36:05+08:00 ] 119.147.146.193 /'+b.content[0]+'
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000292s ]
+NOTIC: [8192] mysql_get_server_info(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /var/www/shop/App/Admin/Conf/config.php 第 18 行.
+NOTIC: [2] mysql_get_server_info(): Access denied for user 'www'@'localhost' (using password: NO) /var/www/shop/App/Admin/Conf/config.php 第 18 行.
+NOTIC: [2] mysql_get_server_info(): A link to the server could not be established /var/www/shop/App/Admin/Conf/config.php 第 18 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000428s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000478s ]
+ERR: 无法加载控制器:'+b.content[0]+'
+
