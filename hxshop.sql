@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50620
 File Encoding         : 65001
 
-Date: 2015-11-15 14:50:28
+Date: 2015-11-15 19:13:54
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -57,7 +57,7 @@ CREATE TABLE `hx_admin` (
 -- ----------------------------
 -- Records of hx_admin
 -- ----------------------------
-INSERT INTO `hx_admin` VALUES ('1', 'admin', 'e10adc3949ba59abbe56e057f20f883e', '1447566527', '127.0.0.1', '0', '开启', '1437654152');
+INSERT INTO `hx_admin` VALUES ('1', 'admin', 'e10adc3949ba59abbe56e057f20f883e', '1447584322', '127.0.0.1', '0', '开启', '1437654152');
 INSERT INTO `hx_admin` VALUES ('2', 'zhangxin', 'e10adc3949ba59abbe56e057f20f883e', '0', '', '2', '开启', '1447483984');
 INSERT INTO `hx_admin` VALUES ('5', 'demo', 'e10adc3949ba59abbe56e057f20f883e', '1447516852', '127.0.0.1', '50', '开启', '1447484046');
 
@@ -124,7 +124,7 @@ CREATE TABLE `hx_auth_group` (
 -- ----------------------------
 -- Records of hx_auth_group
 -- ----------------------------
-INSERT INTO `hx_auth_group` VALUES ('1', '超级管理员', '1', '54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,1,2,3,4,5,6,12,13,14,15,16,23,7,8,9,10,11,17,18,19,20,21,72,73,74,75,76,77,78,79,43,44,45,46,47,48,49,50,51,52,53,37,38,39,40,41,42,24,25,26,27,28,29,30,31,32,33,34,35,36', '1');
+INSERT INTO `hx_auth_group` VALUES ('1', '超级管理员', '1', '54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,1,2,3,4,5,6,12,13,14,15,16,23,7,8,9,10,11,17,18,19,20,21,80,81,82,83,84,85,87,72,73,74,75,76,77,78,79,43,44,45,46,47,48,49,50,51,52,53,37,38,39,40,41,42,24,25,26,27,28,29,30,31,32,33,34,35,36', '1');
 INSERT INTO `hx_auth_group` VALUES ('2', '普通管理员', '1', '54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,17,18,19,20,21,43,44,45,46,47,48,49,50,51,52,53,37,38,39,40,41,42,24,25,26,27,28,29,30,31,32,33,34,35,36', '2');
 
 -- ----------------------------
@@ -134,9 +134,9 @@ DROP TABLE IF EXISTS `hx_auth_group_access`;
 CREATE TABLE `hx_auth_group_access` (
   `uid` mediumint(8) unsigned NOT NULL,
   `group_id` mediumint(8) unsigned NOT NULL,
-  UNIQUE KEY `uid_group_id` (`uid`,`group_id`),
-  KEY `uid` (`uid`),
-  KEY `group_id` (`group_id`)
+  UNIQUE KEY `uid_group_id` (`uid`,`group_id`) USING BTREE,
+  KEY `uid` (`uid`) USING BTREE,
+  KEY `group_id` (`group_id`) USING BTREE
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 -- ----------------------------
@@ -163,17 +163,17 @@ CREATE TABLE `hx_auth_rule` (
   `menu` int(1) DEFAULT '0' COMMENT '是否是菜单,1是菜单 2：不是',
   `icon` varchar(150) DEFAULT NULL COMMENT '图标',
   PRIMARY KEY (`id`),
-  UNIQUE KEY `name` (`name`)
-) ENGINE=MyISAM AUTO_INCREMENT=80 DEFAULT CHARSET=utf8;
+  UNIQUE KEY `name` (`name`) USING BTREE
+) ENGINE=MyISAM AUTO_INCREMENT=88 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of hx_auth_rule
 -- ----------------------------
-INSERT INTO `hx_auth_rule` VALUES ('1', 'Manageer/Rbac/index', '权限管理', '1', '1', '', '0', 'Rbac/index', '0', '1', 'desktop');
+INSERT INTO `hx_auth_rule` VALUES ('1', 'Manageer/Rbac/index', '权限管理', '1', '1', '', '0', 'Rbac/index', '0', '1', 'group');
 INSERT INTO `hx_auth_rule` VALUES ('2', 'Manageer/Admin/list', '管理员管理', '1', '1', '', '1', 'Admin/index', '1', '1', '');
 INSERT INTO `hx_auth_rule` VALUES ('3', 'Manager/Admin/index', '列表', '1', '1', '', '2', 'Admin/index', '0', '0', '');
-INSERT INTO `hx_auth_rule` VALUES ('4', 'Manageer/Admin/add', '添加', '1', '1', '', '2', 'Admin/add', '1', '0', '');
-INSERT INTO `hx_auth_rule` VALUES ('5', 'Manageer/Admin/edit', '修改', '1', '1', '', '2', 'Admin/edit', '2', '0', '');
+INSERT INTO `hx_auth_rule` VALUES ('4', 'Manager/Admin/add', '添加', '1', '1', '', '2', 'Admin/add', '1', '0', '');
+INSERT INTO `hx_auth_rule` VALUES ('5', 'Manager/Admin/edit', '修改', '1', '1', '', '2', 'Admin/edit', '2', '0', '');
 INSERT INTO `hx_auth_rule` VALUES ('6', 'Manager/Admin/del', '删除', '1', '1', '', '2', 'Admin/del', '4', '0', '');
 INSERT INTO `hx_auth_rule` VALUES ('7', 'Manager/Node/list', '节点管理', '1', '1', '', '1', 'Node/index', '2', '1', 'cogs');
 INSERT INTO `hx_auth_rule` VALUES ('8', 'Manager/Node/index', '列表', '1', '1', '', '7', 'Node/index', '0', '0', '');
@@ -191,7 +191,7 @@ INSERT INTO `hx_auth_rule` VALUES ('19', 'Manager/User/index', '列表', '1', '1
 INSERT INTO `hx_auth_rule` VALUES ('20', 'Manager/User/enable', '启用', '1', '1', '', '18', 'User/enable', '2', '0', '');
 INSERT INTO `hx_auth_rule` VALUES ('21', 'Manager/User/shield', '禁用', '1', '1', '', '18', 'User/shield', '3', '0', '');
 INSERT INTO `hx_auth_rule` VALUES ('23', 'Manager/Role/rbac', '授权', '1', '1', '', '12', 'Role/rbac', '5', '0', '');
-INSERT INTO `hx_auth_rule` VALUES ('24', 'Manager/System/list', '基本设置', '1', '0', '', '0', 'System/list', '12', '1', 'cogs');
+INSERT INTO `hx_auth_rule` VALUES ('24', 'Manager/System/list', '基本设置', '1', '0', '', '0', 'System/list', '12', '1', 'cog');
 INSERT INTO `hx_auth_rule` VALUES ('25', 'Manager/Setting/list', '网站设置', '1', '1', '', '24', 'Setting/index', '1', '1', '');
 INSERT INTO `hx_auth_rule` VALUES ('26', 'Manager/Setting/index', '显示', '1', '1', '', '25', 'Setting/index', '1', '0', '');
 INSERT INTO `hx_auth_rule` VALUES ('27', 'Manager/UserInfo/list', '个人信息', '1', '1', '', '24', 'UserInfo/index', '2', '1', '');
@@ -204,13 +204,13 @@ INSERT INTO `hx_auth_rule` VALUES ('33', 'Manager/Link/edit', '修改', '1', '1'
 INSERT INTO `hx_auth_rule` VALUES ('34', 'Manager/Link/del', '删除', '1', '1', '', '30', 'Link/del', '4', '0', '');
 INSERT INTO `hx_auth_rule` VALUES ('35', 'Manager/Cache/list', '缓存管理', '1', '1', '', '24', 'Cache/index', '4', '1', '');
 INSERT INTO `hx_auth_rule` VALUES ('36', 'Manager/Cache/index', '清理缓存', '1', '1', '', '35', 'Cache/index', '1', '0', '');
-INSERT INTO `hx_auth_rule` VALUES ('37', 'Manager/Nav/list', '导航管理', '1', '1', '', '0', 'Nav/index', '7', '1', 'camera');
+INSERT INTO `hx_auth_rule` VALUES ('37', 'Manager/Nav/list', '导航管理', '1', '1', '', '0', 'Nav/index', '7', '1', 'desktop');
 INSERT INTO `hx_auth_rule` VALUES ('38', 'Manager/Nav/Common', '导航栏管理', '1', '1', '', '37', 'Nav/index', '1', '1', '');
 INSERT INTO `hx_auth_rule` VALUES ('39', 'Manager/Nav/index', '列表', '1', '1', '', '38', 'Nav/index', '1', '0', '');
 INSERT INTO `hx_auth_rule` VALUES ('40', 'Manager/Nav/add', '添加', '1', '1', '', '38', 'Nav/add', '2', '0', '');
 INSERT INTO `hx_auth_rule` VALUES ('41', 'Manager/Nav/edit', '修改', '1', '1', '', '38', 'Nav/edit', '3', '0', '');
 INSERT INTO `hx_auth_rule` VALUES ('42', 'Manager/Nav/del', '删除', '1', '1', '', '38', 'Nav/del', '4', '0', '');
-INSERT INTO `hx_auth_rule` VALUES ('43', 'Manager/Ad/list', '广告管理', '1', '1', '', '0', 'Ad/list', '6', '1', 'comments');
+INSERT INTO `hx_auth_rule` VALUES ('43', 'Manager/Ad/list', '广告管理', '1', '1', '', '0', 'Ad/list', '6', '1', 'flag');
 INSERT INTO `hx_auth_rule` VALUES ('44', 'Manager/AdPos/list', '广告位', '1', '1', '', '43', 'AdPos/index', '1', '1', '');
 INSERT INTO `hx_auth_rule` VALUES ('45', 'Manager/AdPos/index', '列表', '1', '1', '', '44', 'AdPos/index', '1', '0', '');
 INSERT INTO `hx_auth_rule` VALUES ('46', 'Manager/AdPos/add', '列表', '1', '1', '', '44', 'AdPos/add', '2', '0', '');
@@ -223,10 +223,10 @@ INSERT INTO `hx_auth_rule` VALUES ('52', 'Manager/Ad/edit', '修改', '1', '0', 
 INSERT INTO `hx_auth_rule` VALUES ('53', 'Manager/Ad/del', '删除', '1', '0', '', '49', 'Ad/del', '4', '0', '');
 INSERT INTO `hx_auth_rule` VALUES ('54', 'Manager/Com/list', '内容管理', '1', '1', '', '0', 'Com/list', '0', '1', 'tasks');
 INSERT INTO `hx_auth_rule` VALUES ('55', 'Manager/Cate/list', '文章分类', '1', '1', '', '54', 'Cate/index', '1', '1', '');
-INSERT INTO `hx_auth_rule` VALUES ('56', 'Manager/Cate/index', '列表', '0', '1', '', '55', 'Cate/index', '1', '0', '');
-INSERT INTO `hx_auth_rule` VALUES ('57', 'Manager/Cate/add', '添加', '0', '1', '', '55', 'Cate/add', '2', '0', '');
-INSERT INTO `hx_auth_rule` VALUES ('58', 'Manager/Cate/edit', '修改', '0', '1', '', '55', 'Cate/edit', '3', '0', '');
-INSERT INTO `hx_auth_rule` VALUES ('59', 'Manager/Cate/del', '删除', '0', '1', '', '55', 'Cate/del', '4', '0', '');
+INSERT INTO `hx_auth_rule` VALUES ('56', 'Manager/Cate/index', '列表', '1', '1', '', '55', 'Cate/index', '1', '0', '');
+INSERT INTO `hx_auth_rule` VALUES ('57', 'Manager/Cate/add', '添加', '1', '1', '', '55', 'Cate/add', '2', '0', '');
+INSERT INTO `hx_auth_rule` VALUES ('58', 'Manager/Cate/edit', '修改', '1', '1', '', '55', 'Cate/edit', '3', '0', '');
+INSERT INTO `hx_auth_rule` VALUES ('59', 'Manager/Cate/del', '删除', '1', '1', '', '55', 'Cate/del', '4', '0', '');
 INSERT INTO `hx_auth_rule` VALUES ('60', 'Manager/Article/list', '文章管理', '1', '1', '', '54', 'Article/index', '2', '1', '');
 INSERT INTO `hx_auth_rule` VALUES ('61', 'Manager/Article/index', '列表', '1', '1', '', '60', 'Article/index', '1', '0', '');
 INSERT INTO `hx_auth_rule` VALUES ('62', 'Manager/Article/add', '添加', '1', '1', '', '60', 'Article/add', '2', '0', '');
@@ -239,7 +239,7 @@ INSERT INTO `hx_auth_rule` VALUES ('68', 'Manager/Recycle/list', '回收站', '1
 INSERT INTO `hx_auth_rule` VALUES ('69', 'Manager/Recycle/index', '列表', '1', '1', '', '68', 'Recycle/index', '1', '0', '');
 INSERT INTO `hx_auth_rule` VALUES ('70', 'Manager/Recycle/restore', '恢复', '1', '1', '', '68', 'Recycle/restore', '2', '0', '');
 INSERT INTO `hx_auth_rule` VALUES ('71', 'Manager/Recycle/del', '删除', '1', '1', '', '68', 'Recycle/del', '3', '0', '');
-INSERT INTO `hx_auth_rule` VALUES ('72', 'Manager/Back/list', '备份管理', '1', '0', '', '0', 'Back/list', '6', '1', 'comment-alt');
+INSERT INTO `hx_auth_rule` VALUES ('72', 'Manager/Back/list', '备份管理', '1', '0', '', '0', 'Back/list', '6', '1', 'cloud');
 INSERT INTO `hx_auth_rule` VALUES ('73', 'Manager/BackUp/list', '数据备份', '1', '0', '', '72', 'BackUp/index', '1', '1', '');
 INSERT INTO `hx_auth_rule` VALUES ('74', 'Manager/BackUp/index', '备份', '1', '1', '', '73', 'BackUp/index', '1', '0', '');
 INSERT INTO `hx_auth_rule` VALUES ('75', 'Manager/Restore/list', '数据恢复', '1', '1', '', '72', 'Restore/index', '2', '1', '');
@@ -247,6 +247,13 @@ INSERT INTO `hx_auth_rule` VALUES ('76', 'Manager/Restore/index', '列表', '1',
 INSERT INTO `hx_auth_rule` VALUES ('77', 'Manager/Restore/import', '恢复', '1', '1', '', '75', 'Restore/import', '2', '0', '');
 INSERT INTO `hx_auth_rule` VALUES ('78', 'Manager/Restore/download', '下载', '1', '1', '', '75', 'Restore/download', '3', '0', '');
 INSERT INTO `hx_auth_rule` VALUES ('79', 'Manager/Restore/del', '删除', '1', '1', '', '75', 'Restore/del', '4', '0', '');
+INSERT INTO `hx_auth_rule` VALUES ('80', 'Manager/Log/list', '日志管理', '1', '1', '', '0', 'Log/list', '6', '1', 'envelope-alt');
+INSERT INTO `hx_auth_rule` VALUES ('81', 'Manager/Log/lists', '操作日志', '1', '1', '', '80', 'Log/index', '1', '1', '');
+INSERT INTO `hx_auth_rule` VALUES ('82', 'Manager/Log/index', '列表', '1', '1', '', '81', 'Log/index', '1', '0', '');
+INSERT INTO `hx_auth_rule` VALUES ('83', 'Manager/Log/del', '删除', '1', '1', '', '81', 'Log/del', '2', '0', '');
+INSERT INTO `hx_auth_rule` VALUES ('84', 'Manager/LoginLog/list', '登录日志', '1', '1', '', '80', 'LoginLog/index', '2', '1', '');
+INSERT INTO `hx_auth_rule` VALUES ('85', 'Manager/LoginLog/index', '列表', '1', '1', '', '84', 'LoginLog/index', '1', '0', '');
+INSERT INTO `hx_auth_rule` VALUES ('87', 'Manager/LoginLog/del', '删除', '1', '1', '', '84', 'LoginLog/del', '2', '0', '');
 
 -- ----------------------------
 -- Table structure for hx_cate
@@ -315,6 +322,51 @@ CREATE TABLE `hx_links` (
 -- ----------------------------
 INSERT INTO `hx_links` VALUES ('2', 'http://www.phpercode.com', '百度', '/Uploads/link/20150814/20150814203522.jpg', '', '1', '50', '1439555722');
 INSERT INTO `hx_links` VALUES ('3', 'http://www.baidu.com', '百度', '/Uploads/link/20150814/20150814202239.jpg', '', '1', '50', '1439554959');
+
+-- ----------------------------
+-- Table structure for hx_log
+-- ----------------------------
+DROP TABLE IF EXISTS `hx_log`;
+CREATE TABLE `hx_log` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `uid` int(11) DEFAULT NULL COMMENT '管理员远',
+  `time` int(11) DEFAULT NULL,
+  `name` varchar(255) DEFAULT NULL,
+  `ip` varchar(20) DEFAULT NULL COMMENT '登录ip',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of hx_log
+-- ----------------------------
+INSERT INTO `hx_log` VALUES ('1', '1', '1447579218', 'Manager/Node/edit', '127.0.0.1');
+INSERT INTO `hx_log` VALUES ('3', '1', '1447581530', '/index.php/Log/index', '127.0.0.1');
+INSERT INTO `hx_log` VALUES ('4', '1', '1447581534', '/index.php/Log/index', '127.0.0.1');
+INSERT INTO `hx_log` VALUES ('5', '1', '1447581545', '/index.php/Admin/index', '127.0.0.1');
+INSERT INTO `hx_log` VALUES ('6', '1', '1447581548', '/index.php/Admin/edit/id/1.html', '127.0.0.1');
+
+-- ----------------------------
+-- Table structure for hx_lolog
+-- ----------------------------
+DROP TABLE IF EXISTS `hx_lolog`;
+CREATE TABLE `hx_lolog` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(15) DEFAULT NULL COMMENT '用户名',
+  `status` tinyint(1) DEFAULT '1' COMMENT '1：登录成功0，登录失败',
+  `ip` varchar(20) DEFAULT NULL,
+  `mess` varchar(20) DEFAULT NULL,
+  `time` int(11) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of hx_lolog
+-- ----------------------------
+INSERT INTO `hx_lolog` VALUES ('1', 'admin', '0', '127.0.0.1', '验证码不正确', '1447583955');
+INSERT INTO `hx_lolog` VALUES ('2', 'admin', '0', '127.0.0.1', '用户名或密码不正确', '1447583955');
+INSERT INTO `hx_lolog` VALUES ('3', 'admin', '0', '127.0.0.1', '验证码不正确', '1447583955');
+INSERT INTO `hx_lolog` VALUES ('4', 'admin', '0', '127.0.0.1', '用户名或密码不正确', '1447583955');
+INSERT INTO `hx_lolog` VALUES ('5', 'admin', '1', '127.0.0.1', '登陆成功', '1447583982');
 
 -- ----------------------------
 -- Table structure for hx_nav
