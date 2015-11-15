@@ -245,23 +245,6 @@
 				</div><!-- /.navbar-header -->
 			</div><!-- /.container -->
 		</div>
-
-		<style type="text/css">
-		
-		.onShow{
-			height:30px;display:block;float:right;margin-right:336px;width:138px
-		}
-		.onError{
-			height:30px;display:block;float:right;margin-right:336px;width:138px
-		}
-		.onFocus{
-			height:30px;display:block;float:right;margin-right:336px;width:138px
-		}
-		.onCorrect{
-			height:30px;display:block;float:right;margin-right:336px;width:138px
-		}
-
-	</style>	
 		<div class="main-container" id="main-container">
 			<script type="text/javascript">
 				try{ace.settings.check('main-container' , 'fixed')}catch(e){}
@@ -368,158 +351,128 @@
 						<script type="text/javascript">
 							try{ace.settings.check('breadcrumbs' , 'fixed')}catch(e){}
 						</script>
-
+						  
 						<ul class="breadcrumb">
 							<li>
 								<i class="icon-home home-icon"></i>
-								<a href="#">首页</a>
+								<a href="<?php echo U('Index/index');?>">首页</a>
 							</li>
 
-							<li>
-								<a href="<?php echo U('Node/index');?>">节点列表</a>
-							</li>
-							<li class="active">添加节点</li>
+							 <li>日志管理</li>
+                            <li class="active">操作日志</li>
 						</ul><!-- .breadcrumb -->
 
-					
+						
 					</div>
 
 					<div class="page-content">
-						<div class="page-header">
-						 <a class="label label-xlg label-primary arrowed " href="<?php echo U('Node/index');?>">
-							返回列表</a>
-							
-						</div><!-- /.page-header -->
+					<div style="height:50px;" class="page-header">
+						 <form action="" method="get">
+										<div style="margin-bottom:10px;" class="col-sm-11">
+										
+										
+										<div class="col-sm-3" style="margin-left:-24px;">
+											
+											<select   class="form-control"  style="width:110px" name="group_id" id="pid">
+												<option value="0">请选择分类</option>
+												 <?php if(is_array($list)): $i = 0; $__LIST__ = $list;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$v): $mod = ($i % 2 );++$i;?><option value="<?php echo ($v["id"]); ?>"<?php if($_GET['group_id']== $v['id']): ?>selected=selected<?php endif; ?>><?php echo ($v["username"]); ?></option>
+													 <volist name="v.child" id="vo"><?php endforeach; endif; else: echo "" ;endif; ?>
+											</select>
+											 
+										</div>
+
+										
+									
+										<span class="input-icon input-icon-right" style="margin-left:-107px;">
+											<input  type="text" id="starTime" placeholder="开始时间" name="starTime" style="height:32px;" value="<?php echo ($_GET['starTime']); ?>">
+											</span>
+											<span class="input-icon input-icon-right">
+											<input  type="text" id="endTime" placeholder="结束时间" name="endTime"  style="height:32px;" value="<?php echo ($_GET['endTime']); ?>">
+											</span>
+											
+											<input  class=" btn-lg btn-success btn btn-xs btn-danger" type="submit" value="搜索">
+										</div>
+										
+										
+						</form>
+						</div>
+						
+						<!-- /.page-header -->
+
+
+					
 
 						<div class="row">
 							<div class="col-xs-12">
 								<!-- PAGE CONTENT BEGINS -->
 
-								<form class="form-horizontal" action="" method="post" onsubmit="return check()">
-								<div class="form-group">
-										<label class="col-sm-3 control-label no-padding-right" for="form-field-2"> 选择父级： </label>
-									
-										<div class="col-sm-3">
-											
-											<select class="form-control" name="pid" id="role">
-                                                <option value="0">请选择父级</option>
-                                                 <?php if(is_array($list)): $i = 0; $__LIST__ = $list;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$v): $mod = ($i % 2 );++$i;?><option value="<?php echo ($v["id"]); ?>"><?php echo ($v["title"]); ?></option>
-                                                    <?php if(is_array($v["child"])): $i = 0; $__LIST__ = $v["child"];if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><option value="<?php echo ($vo["id"]); ?>"> &nbsp;└-<?php echo ($vo["title"]); ?></option><?php endforeach; endif; else: echo "" ;endif; endforeach; endif; else: echo "" ;endif; ?>
-                                            </select>
-											 
-										</div>
+								<div class="row">
+									<div class="col-xs-12">
+										<div class="table-responsive">
+											<table id="sample-table-1" class="table table-striped table-bordered table-hover">
+												<thead>
+													 <tr>         
+			                                           <th>ID</th>
+			                                            <th>管理员名称</th>
+			                                            <th class="hidden-480">操作时间</th>
+			                                            <th class="hidden-480">ip</th>
+			                                            
+			                                            <th class="hidden-480">模块</th>
+			                                            <th>操作</th>
+			                                        </tr>
+												</thead>
 
-										
-									</div>
+												<tbody>
+												 <?php if(is_array($data["list"])): $i = 0; $__LIST__ = $data["list"];if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$v): $mod = ($i % 2 );++$i;?><tr>
+														  <td>
+                                                <?php echo ($v["id"]); ?>
+                                            </td>
+                                            <td><?php echo ($v["username"]); ?></td>
+                                            <td class="hidden-480">
+                                          
+                                             <?php echo (date('Y-m-d H:i:s',$v["time"])); ?>
+                                                
+                                            </td>
+                                            <td class="hidden-480"><?php echo ($v["ip"]); ?></td>
+                                            
 
-									 <div class="form-group">
-                                        <label class="col-sm-3 control-label">规则名称：</label>
-                                        <div class="col-sm-4">
-                                            <input type="text" class="form-control" name="title" id="title" placeholder="规则名称" value="">
-                                        </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <label class="col-sm-3 control-label">规则标识：</label>
-                                        <div class="col-sm-4">
-                                            <input type="text" class="form-control" name="name" id="name"  placeholder="模块/控制器/方法" value="">
-                                        </div>
-                                    </div>
-                                   <div class="form-group">
-                                        <label class="col-sm-3 control-label">URL：</label>
-                                        <div class="col-sm-4">
-                                            <input type="text" class="form-control" name="url" id='url' value="" placeholder="控制器/方法">
-                                        </div>
-                                    </div>
-                                     <div class="form-group">
-                                        <label class="col-sm-3 control-label">ICON图标：</label>
-                                        <div class="col-sm-4">
-                                            <input type="text" class="form-control" name="icon" id='icon' value="" placeholder="fa-camera">
-                                        </div>
-                                    </div>
-                                      <div class="form-group">
-                                        <label class="col-sm-3 control-label">排序：</label>
-                                        <div class="col-sm-4">
-                                            <input type="text" class="form-control" name="sort" id='icon' value="50" >
-                                        </div>
-                                    </div>
-                                    <div class="form-group">
-										<label class="col-sm-3 control-label no-padding-right" for="form-field-1"> 状态： </label>
+                                            <td class="hidden-480">
+                                                <?php echo ($v["name"]); ?>
+                                                
+                                            </td>
+                                            
+														<td>
+															<div class="visible-md visible-lg hidden-sm hidden-xs btn-group">
+																
 
-										<div class="col-sm-9">
-										<label>
-											<input name="status" type="radio" class="ace" value="1" />
-											<span class="lbl">&nbsp;正常</span>
-										</label>
-										<label>	
-											<input name="status" type="radio" class="ace" value="1" />
-											<span class="lbl">&nbsp;禁用</span>
-										</label>	
-									
-										</div>
-									</div>
-                                    
-                                  <div class="form-group">
-                                        <label class="col-sm-3 control-label">是否启用附加规则：</label>
-                                        <div class="col-sm-6">
-                                            <label class="checkbox-inline">
-												<input   type="checkbox" class="ace" style="margin-left: 20px;"name="type"/>
-												<span class="lbl" style="color:grey;"> 启用之后附加规则才能生效</span>
+																
+
+																<a onclick="if(confirm('确认要删除吗?')) location.href='<?php echo U('Log/del',array('id'=>$v[id]));?>'"  href="javascript:;"  class="btn btn-xs btn-danger">
+																	<i class="icon-trash bigger-120"></i>
+																</a>
+
+																
+															</div>
+
+															
+														</td>
+													</tr><?php endforeach; endif; else: echo "" ;endif; ?>
 												
-												
-                                        </div>
-                                    </div>
-                                    <div class="form-group">
-										<label class="col-sm-3 control-label no-padding-right" for="form-field-1"> 是否是菜单： </label>
-
-										<div class="col-sm-9">
-										<label>
-											<input name="menu" type="radio" class="ace" value="1" />
-											<span class="lbl">&nbsp;是</span>
-										</label>
-										&nbsp;
-										<label>
-											<input name="menu" type="radio" class="ace" value="0" />
-											<span class="lbl">&nbsp;否</span>
-										</label>	
-									
-										</div>
-									</div>
-                                    
-                                    <div class="form-group">
-
+												</tbody>
+											</table>
 											
-
-												
-											
-                                        <label class="col-sm-3 control-label">附加规则：</label>
-                                        <div class="col-sm-4">
-
-                                            <input type="text" class="form-control" name="condition" id='icon' value="" placeholder="附加规则">
-                                        </div>
-                                    </div>
-								
-
-									<div class="clearfix form-actions">
-										<div class="col-md-offset-3 col-md-9">
-											<button class="btn btn-info" id="button" type="submit">
-												<i class="icon-ok bigger-110"></i>
-												提交
-											</button>
-
-											&nbsp; &nbsp; &nbsp;
-											<button class="btn" type="reset">
-												<i class="icon-undo bigger-110"></i>
-												重置
-											</button>
+										</div><!-- /.table-responsive -->
+										<div class="col-sm-6 pull-right">
+											<div class="dataTables_paginate paging_bootstrap ">
+												<ul class="pagination ">
+												<?php echo ($data["page"]); ?>
+												</ul>
+											</div>
 										</div>
-									</div>
+									</div><!-- /span -->
+								</div><!-- /row -->
 
-								
-
-									
-								</form>
-
-								
+							
 
 							
 							</div><!-- /.col -->
@@ -527,11 +480,9 @@
 					</div><!-- /.page-content -->
 				</div><!-- /.main-content -->
 
-				
+			
 			</div><!-- /.main-container-inner -->
-
-
-	<a href="#" id="btn-scroll-up" class="btn-scroll-up btn btn-sm btn-inverse">
+<a href="#" id="btn-scroll-up" class="btn-scroll-up btn btn-sm btn-inverse">
 				<i class="icon-double-angle-up icon-only bigger-110"></i>
 			</a>
 		</div><!-- /.main-container -->
@@ -598,36 +549,27 @@
 	</body>
 </html>
 
-<script type="text/javascript">function check(){
-   
-        var name=$("#title").val();
-            
-        var title=$("#name").val();
-        var url=$("#url").val();
-       
-        if(name==''){
-            layer.msg('规则名称必须填写', {
-                    icon: 5,
-                    time: 2000 //2秒关闭（如果不配置，默认是3秒）
-                }); 
-            //layer.alert('分类必须选择', {icon: 5});
-            return false;
-        }else if(title==''){
-            layer.msg('规则标识必须填写', {
-                    icon: 5,
-                    time: 2000 //2秒关闭（如果不配置，默认是3秒）
-                }); 
-            //layer.alert('文章标题必须填写', {icon: 5});
-            return false;
-        }else if(url==''){
-            layer.msg('URL必须填写', {
-                    icon: 5,
-                    time: 2000 //2秒关闭（如果不配置，默认是3秒）
-                }); 
-            //layer.alert('文章标题必须填写', {icon: 5});
-            return false;
-        }else{
-            return true;
-        }
-}
+
+<script type="text/javascript">
+	$(function(){
+		var logic = function( currentDateTime ){
+			if( currentDateTime.getDay()==6 ){
+				this.setOptions({
+					minTime:'11:00'
+				});
+			}else
+				this.setOptions({
+					minTime:'8:00'
+				});
+		};
+		$('#starTime').datetimepicker({
+			lang:'ch',
+			step:30,
+		});
+		$('#endTime').datetimepicker({
+			lang:'ch',
+			step:30,
+		});
+	
+	});
 </script>

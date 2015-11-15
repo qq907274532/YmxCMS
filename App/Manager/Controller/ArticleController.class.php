@@ -15,9 +15,7 @@ class ArticleController extends BaseController {
         $this->modelCate=M('cate');
     }
     public function index(){
-    	echo U();
-    	echo "<br>";
-    	echo __APP__;EXIT;
+    	
         $title=empty(I('title'))?'':I('title');//标题
         $pid=empty(I('pid'))?'':I('pid');//分类
         $start=empty(I('starTime'))?'':strtotime(I('starTime'));//开始时间

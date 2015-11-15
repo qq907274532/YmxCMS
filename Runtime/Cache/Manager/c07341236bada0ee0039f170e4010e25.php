@@ -417,7 +417,7 @@
                                     <div class="form-group">
                                         <label class="col-sm-3 control-label">规则标识：</label>
                                         <div class="col-sm-4">
-                                            <input type="text" class="form-control" name="name" id="name"  placeholder="模块/控制器/方法" value="<?php echo ($info["name"]); ?>">
+                                            <input type="text" class="form-control" name="name" id="name"  placeholder="模块/控制器/方法" value="<?php echo ($info["name"]); ?>" onblur="return checkOnly() ">
                                         </div>
                                     </div>
                                    <div class="form-group">
@@ -605,6 +605,37 @@
 </html>
 
 <script type="text/javascript">
+ function checkOnly(){
+
+        var name=$("#name").val();
+
+        var url="<?php echo U('Login/checkOnly');?>";
+        if(name==''){
+        	 $("#blur").css('color','red');
+            $("#blur").html("规则标识不能为空");
+            return false;
+        }else{
+        	 $.ajax({
+                    type:'POST',
+                    url:url,
+                    data:{name:name},
+                    success:function(data){
+                        
+                        if(data==1){
+                            $("#blur").css('color','red');
+                            $("#blur").html("规则标识已经存在");
+                            return false;
+                        }else{
+                            $("#blur").css('color','green');
+                            $("#blur").html("规则标识可以使用");
+                            return true;
+                        }
+                }
+                    
+              })
+        }
+       
+    }
 function check(){
    
         var name=$("#title").val();

@@ -246,19 +246,19 @@
 			</div><!-- /.container -->
 		</div>
 
-		<style type="text/css">
+	<style type="text/css">
 		
 		.onShow{
-			height:30px;display:block;float:right;margin-right:336px;width:138px
+			height:30px;display:block;float:right;margin-right:335px;width:140px
 		}
 		.onError{
-			height:30px;display:block;float:right;margin-right:336px;width:138px
+			height:30px;display:block;float:right;margin-right:335px;width:140px
 		}
 		.onFocus{
-			height:30px;display:block;float:right;margin-right:336px;width:138px
+			height:30px;display:block;float:right;margin-right:335px;width:140px
 		}
 		.onCorrect{
-			height:30px;display:block;float:right;margin-right:336px;width:138px
+			height:30px;display:block;float:right;margin-right:335px;width:140px
 		}
 
 	</style>	
@@ -376,17 +376,17 @@
 							</li>
 
 							<li>
-								<a href="<?php echo U('Node/index');?>">节点列表</a>
+								<a href="<?php echo U('Admin/index');?>">管理员列表</a>
 							</li>
-							<li class="active">添加节点</li>
+							<li class="active">添加管理员</li>
 						</ul><!-- .breadcrumb -->
 
-					
+						
 					</div>
 
 					<div class="page-content">
 						<div class="page-header">
-						 <a class="label label-xlg label-primary arrowed " href="<?php echo U('Node/index');?>">
+						 <a class="label label-xlg label-primary arrowed " href="<?php echo U('Admin/index');?>">
 							返回列表</a>
 							
 						</div><!-- /.page-header -->
@@ -395,122 +395,46 @@
 							<div class="col-xs-12">
 								<!-- PAGE CONTENT BEGINS -->
 
-								<form class="form-horizontal" action="" method="post" onsubmit="return check()">
-								<div class="form-group">
-										<label class="col-sm-3 control-label no-padding-right" for="form-field-2"> 选择父级： </label>
-									
-										<div class="col-sm-3">
-											
-											<select class="form-control" name="pid" id="role">
-                                                <option value="0">请选择父级</option>
-                                                 <?php if(is_array($list)): $i = 0; $__LIST__ = $list;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$v): $mod = ($i % 2 );++$i;?><option value="<?php echo ($v["id"]); ?>"><?php echo ($v["title"]); ?></option>
-                                                    <?php if(is_array($v["child"])): $i = 0; $__LIST__ = $v["child"];if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><option value="<?php echo ($vo["id"]); ?>"> &nbsp;└-<?php echo ($vo["title"]); ?></option><?php endforeach; endif; else: echo "" ;endif; endforeach; endif; else: echo "" ;endif; ?>
-                                            </select>
+								<form class="form-horizontal" action="" method="post" id="myform">
+									<div class="form-group">
+										<label class="col-sm-3 control-label no-padding-right" for="form-field-1"> 管理员名称： </label>
+
+										<div class="col-sm-9">
+											<input type="text" id="username" placeholder="管理员名称" class="col-xs-5" name="username"  value="<?php echo ($info["username"]); ?>" disabled="disabled" />
 											 
 										</div>
-
-										
 									</div>
 
-									 <div class="form-group">
-                                        <label class="col-sm-3 control-label">规则名称：</label>
-                                        <div class="col-sm-4">
-                                            <input type="text" class="form-control" name="title" id="title" placeholder="规则名称" value="">
-                                        </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <label class="col-sm-3 control-label">规则标识：</label>
-                                        <div class="col-sm-4">
-                                            <input type="text" class="form-control" name="name" id="name"  placeholder="模块/控制器/方法" value="">
-                                        </div>
-                                    </div>
-                                   <div class="form-group">
-                                        <label class="col-sm-3 control-label">URL：</label>
-                                        <div class="col-sm-4">
-                                            <input type="text" class="form-control" name="url" id='url' value="" placeholder="控制器/方法">
-                                        </div>
-                                    </div>
-                                     <div class="form-group">
-                                        <label class="col-sm-3 control-label">ICON图标：</label>
-                                        <div class="col-sm-4">
-                                            <input type="text" class="form-control" name="icon" id='icon' value="" placeholder="fa-camera">
-                                        </div>
-                                    </div>
-                                      <div class="form-group">
-                                        <label class="col-sm-3 control-label">排序：</label>
-                                        <div class="col-sm-4">
-                                            <input type="text" class="form-control" name="sort" id='icon' value="50" >
-                                        </div>
-                                    </div>
-                                    <div class="form-group">
-										<label class="col-sm-3 control-label no-padding-right" for="form-field-1"> 状态： </label>
+									<div class="space-4"></div>
+									
+									<div class="form-group">
+										<label class="col-sm-3 control-label no-padding-right" for="form-field-2"> 密码： </label>
 
 										<div class="col-sm-9">
-										<label>
-											<input name="status" type="radio" class="ace" value="1" />
-											<span class="lbl">&nbsp;正常</span>
-										</label>
-										<label>	
-											<input name="status" type="radio" class="ace" value="1" />
-											<span class="lbl">&nbsp;禁用</span>
-										</label>	
-									
+											<input type="password" id="password"  placeholder="最少六位密码" class="col-xs-5"  name="password" />
+											 <span class='onShow'  id="passwordTip"></span>
+											
 										</div>
 									</div>
-                                    
-                                  <div class="form-group">
-                                        <label class="col-sm-3 control-label">是否启用附加规则：</label>
-                                        <div class="col-sm-6">
-                                            <label class="checkbox-inline">
-												<input   type="checkbox" class="ace" style="margin-left: 20px;"name="type"/>
-												<span class="lbl" style="color:grey;"> 启用之后附加规则才能生效</span>
-												
-												
-                                        </div>
-                                    </div>
-                                    <div class="form-group">
-										<label class="col-sm-3 control-label no-padding-right" for="form-field-1"> 是否是菜单： </label>
+									<div class="form-group">
+										<label class="col-sm-3 control-label no-padding-right" for="form-field-2"> 重复密码： </label>
 
 										<div class="col-sm-9">
-										<label>
-											<input name="menu" type="radio" class="ace" value="1" />
-											<span class="lbl">&nbsp;是</span>
-										</label>
-										&nbsp;
-										<label>
-											<input name="menu" type="radio" class="ace" value="0" />
-											<span class="lbl">&nbsp;否</span>
-										</label>	
-									
+											<input type="password"  placeholder="最少六位重复密码" class="col-xs-5"  name="repass" id="repass" />
+											 <span class='onShow'  id="repassTip"></span>
 										</div>
 									</div>
-                                    
-                                    <div class="form-group">
-
-											
-
-												
-											
-                                        <label class="col-sm-3 control-label">附加规则：</label>
-                                        <div class="col-sm-4">
-
-                                            <input type="text" class="form-control" name="condition" id='icon' value="" placeholder="附加规则">
-                                        </div>
-                                    </div>
-								
+									
 
 									<div class="clearfix form-actions">
 										<div class="col-md-offset-3 col-md-9">
-											<button class="btn btn-info" id="button" type="submit">
+										   <input type="hidden" name="id" value="<?php echo ($info["id"]); ?>">
+											<button class="btn btn-info" type="submit">
 												<i class="icon-ok bigger-110"></i>
 												提交
 											</button>
 
-											&nbsp; &nbsp; &nbsp;
-											<button class="btn" type="reset">
-												<i class="icon-undo bigger-110"></i>
-												重置
-											</button>
+											
 										</div>
 									</div>
 
@@ -530,6 +454,10 @@
 				
 			</div><!-- /.main-container-inner -->
 
+			<a href="#" id="btn-scroll-up" class="btn-scroll-up btn btn-sm btn-inverse">
+				<i class="icon-double-angle-up icon-only bigger-110"></i>
+			</a>
+		</div><!-- /.main-container -->
 
 	<a href="#" id="btn-scroll-up" class="btn-scroll-up btn btn-sm btn-inverse">
 				<i class="icon-double-angle-up icon-only bigger-110"></i>
@@ -598,36 +526,16 @@
 	</body>
 </html>
 
-<script type="text/javascript">function check(){
+<script type="text/javascript">
+$(function(){
+	$.formValidator.initConfig({formID:"myform",debug:false,submitOnce:true
+		
+	});
+	
+	$("#password").formValidator({onShow:"填写密码",onFocus:"填写6位以上密码",onCorrect:"密码已经输入"}).inputValidator({min:6,onError:"填写6位以上密码"}).defaultPassed();
+	
+	$("#repass").formValidator({onShow:"再次输入密码",onFocus:"至少6个长度",onCorrect:"密码一致"}).inputValidator({min:1,empty:{leftEmpty:false,rightEmpty:false},onError:"重复密码不能为空"}).compareValidator({desID:"password",operateor:"=",onError:"2次密码不一致"});
+	
    
-        var name=$("#title").val();
-            
-        var title=$("#name").val();
-        var url=$("#url").val();
-       
-        if(name==''){
-            layer.msg('规则名称必须填写', {
-                    icon: 5,
-                    time: 2000 //2秒关闭（如果不配置，默认是3秒）
-                }); 
-            //layer.alert('分类必须选择', {icon: 5});
-            return false;
-        }else if(title==''){
-            layer.msg('规则标识必须填写', {
-                    icon: 5,
-                    time: 2000 //2秒关闭（如果不配置，默认是3秒）
-                }); 
-            //layer.alert('文章标题必须填写', {icon: 5});
-            return false;
-        }else if(url==''){
-            layer.msg('URL必须填写', {
-                    icon: 5,
-                    time: 2000 //2秒关闭（如果不配置，默认是3秒）
-                }); 
-            //layer.alert('文章标题必须填写', {icon: 5});
-            return false;
-        }else{
-            return true;
-        }
-}
+});
 </script>

@@ -9,6 +9,8 @@ use Think\Model;
 class AdminModel extends Model {
 	
 	const TBL_ADMIN="admin";
+	const TBL_RULE="auth_rule";
+	const TBL_Log="lolog";
 	/*总数*/
 	public function articleCount($where){
 		$count=M(self::TBL_ARTICLE)->where($where)->count();
@@ -17,21 +19,33 @@ class AdminModel extends Model {
 
 	/*查询用户名*/
 	public function user($id){
-		$username=M(self::TBL_ADMIN)->where(array('username'=>I('name')))->getField('username');
+		$username=M(self::TBL_ADMIN)->where(array('username'=>I('username')))->getField('username');
 		return $username;
+	}
+	public function addLog($data){
+		$log=M(self::TBL_Log)->add($data);
+		return $log;
 	}
 	/**
 	 * [userInfo 查询用户是否存在]
 	 * @return [type] [description]
 	 */
 	public function userInfo(){
-		$userInfo=M(self::TBL_ADMIN)->where(array('username'=>I('name'),'password'=>md5(I('password'))))->find();
+		$userInfo=M(self::TBL_ADMIN)->where(array('username'=>I('username'),'password'=>md5(I('password'))))->find();
 		return $userInfo;
 	}
 	public function infoUpdate($id,$data){
 		M(self::TBL_ADMIN)->where(array('id'=>$id))->save($data);
 	}
-	
+	/*查询规则标示*/
+	public function checkRule(){
+		 $name=M(self::TBL_RULE)->where(array('name'=>I('name')))->find();
+		 return $name;
+	}
+	public function checkName(){
+		$info=M(self::TBL_ADMIN)->where(array('username'=>I('username')))->find();
+		return $info;
+	}
 	/**
 	 * [check_verify 验证验证码是否正确]
 	 * @param  [type] $code [验证码]

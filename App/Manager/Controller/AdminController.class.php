@@ -69,17 +69,7 @@ class AdminController extends BaseController {
           $this->display();  
         }
     }
-    public function check_user(){
-        $name=I('username');
-
-        $info=$this->model->where(array('username'=>$name))->find();
-       
-        if(empty($info)){
-            exit('0');
-        }else{
-            exit('1');
-        }
-    }
+  
     public function del(){
         $id=I('id',0,'intval');
         if($this->del_com($this->model,array('id'=>$id))){

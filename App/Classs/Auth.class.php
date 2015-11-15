@@ -102,7 +102,7 @@ class Auth{
         if (!$this->_config['AUTH_ON'])
             return true;
         $authList = $this->getAuthList($uid,$type); //获取用户需要验证的所有有效规则列表
-        //print_r( $authList);exit;
+       
         if (is_string($name)) {
             $name = strtolower($name);
             if (strpos($name, ',') !== false) {
@@ -238,7 +238,7 @@ class Auth{
         );
         //读取用户组所有权限规则
         $rules = M()->table($this->_config['AUTH_RULE'])->where($map)->field('condition,name')->select();
-        //echo M()->getLastSql();
+       
         //循环规则，判断结果。
         $authList = array();   //
         foreach ($rules as $rule) {

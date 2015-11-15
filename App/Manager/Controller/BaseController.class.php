@@ -14,44 +14,27 @@ class BaseController extends Controller {
        }
       
        
-       $this->name=MODULE_NAME.'/'.CONTROLLER_NAME.'/'.ACTION_NAME;
-       $this->checkAuth($this->name,$_SESSION['id']);
+        $this->name=MODULE_NAME.'/'.CONTROLLER_NAME.'/'.ACTION_NAME;
+
+
+        $this->checkAuth($this->name,$_SESSION['id']);
        /*第三级菜单pid*/
        $openId=$this->Auth->getId($this->name);
-
        
+       $data=array(
+        'uid'=>$_SESSION['id'],
+        'time'=>time(),
+        'name'=>$_SERVER['PHP_SELF'].$_SERVER["QUERY_STRING"],
+        'ip'=>get_client_ip(),
+        );
+       M('log')->add($data);
        /*第二级菜单的pid*/
        $openFirstId=$this->Auth->getFirstId($openId);
-       // print_r($this->name);exit;
        $this->assign('openFirstId',$openFirstId);
        $this->assign('open',$openId);
        $this->assign('menu',$this->ruleList($_SESSION['id']));
        
-       // $info=D('Node')->getRbac($_SESSION['id']);
        
-       // if(CONTROLLER_NAME !='Index'){
-       //     $rbac=$this->authTF(node_merge($info));
-       //     if(!$rbac){
-       //        $this->error('您没有权限！！！');
-       //     }
-       // }
-   
-       //  // //查询当前用户权限
-       //   $menu=$this->getWhere();
-
-        
-       //  $rbac=D('node');
-       //  $open=$rbac->where(array('name'=>CONTROLLER_NAME))->getField('pid');
-        
-
-    
-       //  // //所有菜单
-       //  $node=D('node');
-       //  $nodeInfo=$node->getMenu();
-        
-       //  $active=array('controller'=>CONTROLLER_NAME,'action'=>ACTION_NAME);
-       //  $this->assign('open',$open);
-       //  $this->assign('menu',$menu); 
        
     }
     /**
@@ -60,7 +43,7 @@ class BaseController extends Controller {
      */
     public function checkAuth($auth,$id){
       
-       if(!in_array($auth,C('NOT_AUTH'))){
+       if(CONTROLLER_NAME!='Index'){
           if(!$this->Auth->check($auth,$id)){            
               $this->error('没有权限访问本页面!',U ( 'Index/index' ));
             }  
@@ -119,6 +102,7 @@ class BaseController extends Controller {
      */
     public function edit_com($model,$where){
        $edit_com=$model->where($where)->find();
+
        return $edit_com;
     }
     /**
