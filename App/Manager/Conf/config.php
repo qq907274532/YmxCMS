@@ -17,7 +17,7 @@ return array(
 	'php' => PHP_VERSION, //php版本
 	'mysql' => mysql_get_server_info(), //mysql信息
 	'lan' => $_SERVER['HTTP_ACCEPT_LANGUAGE'], //服务器语言
-	'IP' => $_SERVER['SERVER_ADDR'], //服务器ip
+	'IP' => get_client_ip(), //服务器ip
 	'COMM_TITLE'=>'易名轩管理系统',
 	'AUTH_ON' => true, //认证开关
     'AUTH_TYPE' => 1, // 认证方式，1为时时认证；2为登录认证。
