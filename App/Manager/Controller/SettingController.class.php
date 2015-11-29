@@ -22,7 +22,7 @@ class SettingController extends BaseController {
             $data=I('post.');
            
             unset($data['id']);
-           if($this->update_com($this->model,array('id'=>$id),$data)){
+           if($this->model->where(array('id'=>$id))->save($data)){
                
                 $this->success('修改成功',U('Setting/index'));
               }else{

@@ -10,6 +10,13 @@ class ArticleModel extends Model {
 	const TBL_ARTICLE="article";
 	const TBL_CATE="cate";
 	const TBL_ADMIN="admin";
+	protected $_validate = array(
+      array('cate_id','require','文章分类必须选择'), //默认情况下用正则进行验证
+      array('title','require','文章标题必须填写'),
+      array('desc','require','文章描述必须填写'),
+      array('content','require','文章内容必须填写'),
+    
+   );
 	/*总数*/
 	public function articleCount($where){
 		$count=M(self::TBL_ARTICLE)->where($where)->count();

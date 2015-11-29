@@ -245,29 +245,34 @@
 				</div><!-- /.navbar-header -->
 			</div><!-- /.container -->
 		</div>
-<style type="text/css">
-    
-    .wminimize:hover{
-        text-decoration:none;
-    }
-    .table thead>tr>th, .table tbody>tr>th, .table tfoot>tr>th, .table thead>tr>td, .table tbody>tr>td, .table tfoot>tr>td {
-            padding: 8px;
-            line-height: 1.428571429;
-            vertical-align: top;
-             border-top: 0px solid #ddd; 
-}
-</style>
-        <div class="main-container" id="main-container">
-            <script type="text/javascript">
-                try{ace.settings.check('main-container' , 'fixed')}catch(e){}
-            </script>
 
-            <div class="main-container-inner">
-                <a class="menu-toggler" id="menu-toggler" href="#">
-                    <span class="menu-text"></span>
-                </a>
+	<style type="text/css">
+		
+		.onShow{
+			height:30px;display:block;float:right;margin-right:335px;width:140px
+		}
+		.onError{
+			height:30px;display:block;float:right;margin-right:335px;width:140px
+		}
+		.onFocus{
+			height:30px;display:block;float:right;margin-right:335px;width:140px
+		}
+		.onCorrect{
+			height:30px;display:block;float:right;margin-right:335px;width:140px
+		}
 
-                <div class="sidebar" id="sidebar">
+	</style>	
+		<div class="main-container" id="main-container">
+			<script type="text/javascript">
+				try{ace.settings.check('main-container' , 'fixed')}catch(e){}
+			</script>
+
+			<div class="main-container-inner">
+				<a class="menu-toggler" id="menu-toggler" href="#">
+					<span class="menu-text"></span>
+				</a>
+
+				<div class="sidebar" id="sidebar">
 <style type="text/css">
 	.activ{
 		background: #438eb9;
@@ -358,58 +363,186 @@
 					</script>
 				</div>
 
-                <div class="main-content">
-                    
+				<div class="main-content">
+					<div class="breadcrumbs" id="breadcrumbs">
+						<script type="text/javascript">
+							try{ace.settings.check('breadcrumbs' , 'fixed')}catch(e){}
+						</script>
 
-                    <div class="page-content">
-                       
+						<ul class="breadcrumb">
+							<li>
+								<i class="icon-home home-icon"></i>
+								<a href="#">首页</a>
+							</li>
 
-                <div class="row">
-                    <div class="col-xs-12">
-                        <!-- PAGE CONTENT BEGINS -->
+							<li>
+								<a href="javascript:void(0)">基本设置</a>
+							</li>
+							<li class="active">网站设置</li>
+						</ul><!-- .breadcrumb -->
 
-                        <div class="row">
-                           <div class="col-md-6 col-md-offset-3" style="margin-top:130px;">
-                            <div class="login-panel  panel panel-primary">
-                                <div class="panel-heading">
-                                    <h3 class="panel-title" style="font-family: 微软雅黑;font-size:20px"><?php echo C('COMM_TITLE');?>提示页面</h3>
-                                </div>
-                                <div class="panel-body" >
-                                  
-                                            <div class="form-group" style="height:200px;width:400px;overflow:hidden">
-                                              
-                                                <div class="success" style="font-family: 微软雅黑;margin-left:150px;line-height:8">
-                                                <?php if(isset($message)):?>
-                                                <img  src="/Public/admin/img/success.gif"><span style="margin-left:20px;font-size:16px"><?php echo($message); ?></span>
-                                                <?php else:?>
-                                                     <img  src="/Public/admin/img/error.gif"><span style="margin-left:20px;font-size:16px"><?php echo ($error); ?></span>
-                                                 <?php endif;?>   
-                                                </div>
-                                                <div class="success" style="font-family: 微软雅黑;margin-left:150px;">页面自动 <a id="href" href="<?php echo($jumpUrl); ?>">跳转</a> 等待时间： <b id="wait"><?php echo($waitSecond); ?></b></div>
-                                              
-                                            </div>
-                                            
-                                            
-                                          
-                                   
-                                </div>
-                            </div>
-            </div>
-                        </div><!-- /row -->
+						
+					</div>
 
-                    
+					<div class="page-content">
+						<div class="page-header">
+						 <a class="label label-xlg label-primary arrowed " href="javascript:void(0)">
+							网站设置</a>
+							
+						</div><!-- /.page-header -->
 
-                    
-                    </div><!-- /.col -->
-                </div><!-- /.row -->
-                    </div><!-- /.page-content -->
-                </div><!-- /.main-content -->
+						<div class="row">
+							<div class="col-xs-12">
+								<!-- PAGE CONTENT BEGINS -->
 
-            
-            </div><!-- /.main-container-inner -->
+								<form class="form-horizontal" action="" method="post" id="myform">
+									<div class="form-group">
+										<label class="col-sm-3 control-label no-padding-right" for="form-field-1"> 网站名称： </label>
 
-            
-<a href="#" id="btn-scroll-up" class="btn-scroll-up btn btn-sm btn-inverse">
+										<div class="col-sm-9">
+											<input type="text"  placeholder="网站名称" class="col-xs-5" name="name" value="<?php echo ($info["name"]); ?>" />
+											
+										</div>
+									</div>
+
+									<div class="space-4"></div>
+
+									<div class="form-group">
+										<label class="col-sm-3 control-label no-padding-right" for="form-field-2"> 网站标题： </label>
+
+										<div class="col-sm-9">
+											<input type="text"   placeholder="网站标题" class="col-xs-5"  name="title"  value="<?php echo ($info["title"]); ?>" />
+											
+										</div>
+									</div>
+									<div class="form-group">
+										<label class="col-sm-3 control-label no-padding-right" for="form-field-2"> 网站域名： </label>
+
+										<div class="col-sm-9">
+											<input type="text"   placeholder="网站域名" class="col-xs-5"  name="domain"  value="<?php echo ($info["domain"]); ?>" />
+											
+										</div>
+									</div>
+									<div class="form-group">
+										<label class="col-sm-3 control-label no-padding-right" for="form-field-2"> 公司地址： </label>
+
+										<div class="col-sm-9">
+											<input type="text"   placeholder="公司地址" class="col-xs-5"  name="address"  value="<?php echo ($info["address"]); ?>" />
+											
+										</div>
+									</div>
+									<div class="form-group">
+										<label class="col-sm-3 control-label no-padding-right" for="form-field-2"> 网站关键字： </label>
+
+										<div class="col-sm-9">
+											<input type="text"   placeholder="网站关键字" class="col-xs-5"  name="keyword"  value="<?php echo ($info["keyword"]); ?>" />
+											
+										</div>
+									</div>
+									
+									
+                                  <div class="form-group">
+										<label class="col-sm-3 control-label no-padding-right" for="form-field-2"> 网站版权信息： </label>
+
+										<div class="col-sm-9">
+											<input type="text"   placeholder="网站版权信息" class="col-xs-5"  name="copyright"  value="<?php echo ($info["copyright"]); ?>" />
+											
+										</div>
+									</div>
+									
+									<div class="form-group">
+										<label class="col-sm-3 control-label no-padding-right" for="form-field-2"> 联系我们： </label>
+
+										<div class="col-sm-9">
+											<input type="text"   placeholder="联系我们" class="col-xs-5"  name="iphone"  value="<?php echo ($info["iphone"]); ?>" />
+											
+										</div>
+									</div>
+									<div class="form-group">
+										<label class="col-sm-3 control-label no-padding-right" for="form-field-2"> 公司电话： </label>
+
+										<div class="col-sm-9">
+											<input type="text"   placeholder="公司电话" class="col-xs-5"  name="phone"  value="<?php echo ($info["phone"]); ?>" />
+											
+										</div>
+									</div>
+									<div class="form-group">
+										<label class="col-sm-3 control-label no-padding-right" for="form-field-2"> 公司email： </label>
+
+										<div class="col-sm-9">
+											<input type="text"   placeholder="公司email" class="col-xs-5"  name="email"  value="<?php echo ($info["email"]); ?>" />
+											
+										</div>
+									</div>
+									<div class="form-group">
+										<label class="col-sm-3 control-label no-padding-right" for="form-field-2"> 公司QQ： </label>
+
+										<div class="col-sm-9">
+											<input type="text"   placeholder="公司QQ" class="col-xs-5"  name="qq"  value="<?php echo ($info["qq"]); ?>" />
+											
+										</div>
+									</div>
+									<div class="form-group">
+										<label class="col-sm-3 control-label no-padding-right" for="form-field-2"> 公司地址： </label>
+
+										<div class="col-sm-9">
+											<input type="text"   placeholder="公司地址" class="col-xs-5"  name="address"  value="<?php echo ($info["address"]); ?>" />
+											
+										</div>
+									</div>
+									<div class="form-group">
+										<label class="col-sm-3 control-label no-padding-right" for="form-field-2"> 网站描述： </label>
+
+										<div class="col-sm-9">
+										  <textarea  type="text"  style="width:350px;height:100px;" name="desc" id="descs" placeholder="关键字描述" ><?php echo ($info["desc"]); ?></textarea>
+										</div>
+									</div>
+									
+									<div class="form-group">
+										<label class="col-sm-3 control-label no-padding-right" for="form-field-2"> 关于我们： </label>
+
+										<div class="col-sm-9">
+										<textarea id="desc" name="content" style="width:700px;height:300px;"><?php echo ($info["content"]); ?>
+										</textarea>
+										
+										 
+											
+										</div>
+									</div>
+									<div class="clearfix form-actions">
+										<div class="col-md-offset-3 col-md-9">
+										   <input type="hidden" name="id" value="<?php echo ($info["id"]); ?>">
+											<button class="btn btn-info" type="submit">
+												<i class="icon-ok bigger-110"></i>
+												提交
+											</button>
+
+										
+										</div>
+									</div>
+
+								
+
+									
+								</form>
+
+								
+
+							
+							</div><!-- /.col -->
+						</div><!-- /.row -->
+					</div><!-- /.page-content -->
+				</div><!-- /.main-content -->
+
+				
+			</div><!-- /.main-container-inner -->
+
+			<a href="#" id="btn-scroll-up" class="btn-scroll-up btn btn-sm btn-inverse">
+				<i class="icon-double-angle-up icon-only bigger-110"></i>
+			</a>
+		</div><!-- /.main-container -->
+
+	<a href="#" id="btn-scroll-up" class="btn-scroll-up btn btn-sm btn-inverse">
 				<i class="icon-double-angle-up icon-only bigger-110"></i>
 			</a>
 		</div><!-- /.main-container -->
@@ -475,17 +608,3 @@
 		
 	</body>
 </html>
-
-
-<script type="text/javascript">
-(function(){
-var wait = document.getElementById('wait'),href = document.getElementById('href').href;
-var interval = setInterval(function(){
-    var time = --wait.innerHTML;
-    if(time <= 0) {
-        location.href = href;
-        clearInterval(interval);
-    };
-}, 1000);
-})();
-</script>

@@ -12,7 +12,7 @@ class ArticleController extends BaseController {
 	public function _initialize(){
 	 	parent::_initialize();
 	 	$this->model=D('Article');
-        $this->modelCate=M('cate');
+        $this->modelCate=D('cate');
     }
     public function index(){
     	
@@ -59,11 +59,16 @@ class ArticleController extends BaseController {
             $data['userid']=$_SESSION['id'];
             $data['time']=time();
             $data['content']=$_POST['content'];
-            if($this->add_com($this->model,$data)){
-                $this->success('添加成功',U('Article/index'));
+            if(!$this->model->create($data)){
+                $this->error($this->model->getError());
             }else{
-                $this->error('添加失败');
+                 if($this->model->add()){
+                    $this->success('添加成功',U('Article/index'));
+                }else{
+                    $this->error('添加失败');
+                }
             }
+           
         }else{
             $this->list=$this->cate_list($this->modelCate,'',array('sort','id'=>'desc'));
 
@@ -74,7 +79,7 @@ class ArticleController extends BaseController {
     public function edit(){
         
         $id=I('id',0,'intval');
-        $where['id']=array('eq',$id);
+        $this->where=array('id'=>$id);
         if(IS_POST){
 
             $data=I('post.');
@@ -82,16 +87,20 @@ class ArticleController extends BaseController {
             $data['userid']=$_SESSION['id'];
             $data['time']=time();
             $data['content']=$_POST['content'];
-        
-          if($this->update_com($this->model,$where,$data)){
-            $this->success('修改成功',U('Article/index'));
+          if(!$this->model->create($data)){
+            $this->error($this->model->getError());
           }else{
-             $this->success('修改失败');
+            if($this->model->where($this->where)->save()){
+                $this->success('修改成功',U('Article/index'));
+              }else{
+                 $this->success('修改失败');
+              }
           }
+          
         }else{
           $this->list=$this->cate_list($this->modelCate,'',$this->order);
 
-          $this->info=$this->edit_com($this->model,$where);
+          $this->info=$this->edit_com($this->model,$this->where);
           
           $this->display();  
         }

@@ -245,29 +245,19 @@
 				</div><!-- /.navbar-header -->
 			</div><!-- /.container -->
 		</div>
-<style type="text/css">
-    
-    .wminimize:hover{
-        text-decoration:none;
-    }
-    .table thead>tr>th, .table tbody>tr>th, .table tfoot>tr>th, .table thead>tr>td, .table tbody>tr>td, .table tfoot>tr>td {
-            padding: 8px;
-            line-height: 1.428571429;
-            vertical-align: top;
-             border-top: 0px solid #ddd; 
-}
-</style>
-        <div class="main-container" id="main-container">
-            <script type="text/javascript">
-                try{ace.settings.check('main-container' , 'fixed')}catch(e){}
-            </script>
 
-            <div class="main-container-inner">
-                <a class="menu-toggler" id="menu-toggler" href="#">
-                    <span class="menu-text"></span>
-                </a>
+		
+		<div class="main-container" id="main-container">
+			<script type="text/javascript">
+				try{ace.settings.check('main-container' , 'fixed')}catch(e){}
+			</script>
 
-                <div class="sidebar" id="sidebar">
+			<div class="main-container-inner">
+				<a class="menu-toggler" id="menu-toggler" href="#">
+					<span class="menu-text"></span>
+				</a>
+
+				<div class="sidebar" id="sidebar">
 <style type="text/css">
 	.activ{
 		background: #438eb9;
@@ -358,58 +348,128 @@
 					</script>
 				</div>
 
-                <div class="main-content">
-                    
+				<div class="main-content">
+					<div class="breadcrumbs" id="breadcrumbs">
+						<script type="text/javascript">
+							try{ace.settings.check('breadcrumbs' , 'fixed')}catch(e){}
+						</script>
 
-                    <div class="page-content">
-                       
+						<ul class="breadcrumb">
+							<li>
+								<i class="icon-home home-icon"></i>
+								<a href="#">首页</a>
+							</li>
 
-                <div class="row">
-                    <div class="col-xs-12">
-                        <!-- PAGE CONTENT BEGINS -->
+							<li>
+								<a href="<?php echo U('Link/index');?>">友情链接</a>
+							</li>
+							<li class="active">添加友情链接</li>
+						</ul><!-- .breadcrumb -->
 
-                        <div class="row">
-                           <div class="col-md-6 col-md-offset-3" style="margin-top:130px;">
-                            <div class="login-panel  panel panel-primary">
-                                <div class="panel-heading">
-                                    <h3 class="panel-title" style="font-family: 微软雅黑;font-size:20px"><?php echo C('COMM_TITLE');?>提示页面</h3>
-                                </div>
-                                <div class="panel-body" >
-                                  
-                                            <div class="form-group" style="height:200px;width:400px;overflow:hidden">
-                                              
-                                                <div class="success" style="font-family: 微软雅黑;margin-left:150px;line-height:8">
-                                                <?php if(isset($message)):?>
-                                                <img  src="/Public/admin/img/success.gif"><span style="margin-left:20px;font-size:16px"><?php echo($message); ?></span>
-                                                <?php else:?>
-                                                     <img  src="/Public/admin/img/error.gif"><span style="margin-left:20px;font-size:16px"><?php echo ($error); ?></span>
-                                                 <?php endif;?>   
-                                                </div>
-                                                <div class="success" style="font-family: 微软雅黑;margin-left:150px;">页面自动 <a id="href" href="<?php echo($jumpUrl); ?>">跳转</a> 等待时间： <b id="wait"><?php echo($waitSecond); ?></b></div>
-                                              
-                                            </div>
-                                            
-                                            
-                                          
-                                   
-                                </div>
-                            </div>
-            </div>
-                        </div><!-- /row -->
+					
+					</div>
 
-                    
+					<div class="page-content">
+						<div class="page-header">
+						 <a class="label label-xlg label-primary arrowed " href="<?php echo U('Link/index');?>">
+							返回列表</a>
+							
+						</div><!-- /.page-header -->
 
-                    
-                    </div><!-- /.col -->
-                </div><!-- /.row -->
-                    </div><!-- /.page-content -->
-                </div><!-- /.main-content -->
+						<div class="row">
+							<div class="col-xs-12">
+								<!-- PAGE CONTENT BEGINS -->
 
-            
-            </div><!-- /.main-container-inner -->
+								<form class="form-horizontal" enctype="multipart/form-data" action="" method="post" id="myform"  >
+								
+									<div class="form-group">
+										<label class="col-sm-3 control-label no-padding-right" for="form-field-1"> 公司名称： </label>
 
-            
-<a href="#" id="btn-scroll-up" class="btn-scroll-up btn btn-sm btn-inverse">
+										<div class="col-sm-9">
+											<input type="text" id="title" placeholder="公司名称" class="col-sm-4" name="name"  />
+											
+										</div>
+									</div>
+									<div class="form-group">
+										<label class="col-sm-3 control-label no-padding-right" for="form-field-1"> 公司描述： </label>
+
+										<div class=" col-xs-12 col-sm-4">
+											<textarea class="form-control" rows="4" name="desc" id="descs" placeholder="描述"></textarea>
+										</div>
+									</div>
+									<div class="form-group">
+										<label class="col-sm-3 control-label no-padding-right" for="form-field-1"> 公司链接： </label>
+
+										<div class="col-sm-9">
+											<input type="text" id="url" placeholder="http://" class="col-sm-4" name="url"  />
+											
+										</div>
+									</div>
+									<div class="form-group">
+										<label class="col-sm-3 control-label no-padding-right" for="form-field-2"> 排序： </label>
+
+										<div class="col-sm-9">
+											<input type="text" id="sort" placeholder="排序" class="col-sm-4" name="sort"  value="50" />
+											
+										</div>
+									</div>
+									<div class="form-group">
+										<label class="col-sm-3 control-label no-padding-right" for="form-field-1"> 是否显示： </label>
+
+										<div class="col-sm-9">
+										<label>
+											<input name="status" type="radio" class="ace" value="1" />
+											<span class="lbl">&nbsp;显示</span>
+										</label>
+										<label>	
+											<input name="status" type="radio" class="ace" value="0" />
+											<span class="lbl">&nbsp;不显示</span>
+										</label>	
+									
+										</div>
+									</div>
+									<div class="form-group">
+										<label class="col-sm-3 control-label no-padding-right" for="form-field-1"> 上传logo： </label>
+
+										<div class="col-sm-4">
+										<div class="ace-file-input ace-file-multiple">
+										    <input type="file" id="id-input-file-3" name="imgPath">
+										 </div>
+										
+									
+										</div>
+									</div>
+									
+									
+									
+
+									<div class="space-4"></div>
+
+									<div class="clearfix form-actions">
+										<div class="col-md-offset-3 col-md-9">
+											<button class="btn btn-info" id="button" type="button">
+												<i class="icon-ok bigger-110"></i>
+												提交
+											</button>
+
+											&nbsp; &nbsp; &nbsp;
+											<button class="btn" type="reset">
+												<i class="icon-undo bigger-110"></i>
+												重置
+											</button>
+										</div>
+									</div>
+								</form>
+							</div><!-- /.col -->
+						</div><!-- /.row -->
+					</div><!-- /.page-content -->
+				</div><!-- /.main-content -->
+
+				
+			</div><!-- /.main-container-inner -->
+
+
+	<a href="#" id="btn-scroll-up" class="btn-scroll-up btn btn-sm btn-inverse">
 				<i class="icon-double-angle-up icon-only bigger-110"></i>
 			</a>
 		</div><!-- /.main-container -->
@@ -476,16 +536,126 @@
 	</body>
 </html>
 
-
+	  <script src="/Public/admin/js/jquery-ui-1.10.3.custom.min.js"></script>
+		<script src="/Public/admin/js/jquery.ui.touch-punch.min.js"></script>
+		<script src="/Public/admin/js/chosen.jquery.min.js"></script>
+		<script src="/Public/admin/js/fuelux/fuelux.spinner.min.js"></script>
+	
+		<script src="/Public/admin/js/bootstrap-colorpicker.min.js"></script>
+		<script src="/Public/admin/js/jquery.knob.min.js"></script>
+		<script src="/Public/admin/js/jquery.autosize.min.js"></script>
+		<script src="/Public/admin/js/jquery.inputlimiter.1.3.1.min.js"></script>
+		<script src="/Public/admin/js/jquery.maskedinput.min.js"></script>
+		<script src="/Public/admin/js/bootstrap-tag.min.js"></script>
+		<script src="/Public/admin/js/ace-elements.min.js"></script>
+		<script src="/Public/admin/js/ace.min.js"></script>
 <script type="text/javascript">
-(function(){
-var wait = document.getElementById('wait'),href = document.getElementById('href').href;
-var interval = setInterval(function(){
-    var time = --wait.innerHTML;
-    if(time <= 0) {
-        location.href = href;
-        clearInterval(interval);
-    };
-}, 1000);
-})();
+	$(function(){
+		$("#button").click(function(){
+			
+			var title=$("#title").val();
+			var url=$("#url").val();
+			var img=$(".file-name").attr("data-title");
+			
+			if(title==''){
+				layer.msg('文章公司名称必须填写', {
+				    icon: 5,
+				    time: 2000 //2秒关闭（如果不配置，默认是3秒）
+				}); 
+				//layer.alert('文章公司名称必须填写', {icon: 5});
+				return false;
+			}else if(url==''){
+				layer.msg('公司链接必须填写', {
+				    icon: 5,
+				    time: 2000 //2秒关闭（如果不配置，默认是3秒）
+				}); 
+				//layer.alert('公司链接必须填写', {icon: 5});
+				return false;
+			}else if(img=='No File ...'){
+				layer.msg('公司logo必须上传', {
+				    icon: 5,
+				    time: 2000 //2秒关闭（如果不配置，默认是3秒）
+				}); 
+				//layer.alert('公司logo必须上传', {icon: 5});
+				return false;
+			}else{
+				$("#myform").submit();
+			}
+		});
+     $('#id-input-file-3').ace_file_input({
+					style:'well',
+					btn_choose:'请上传图片',
+					btn_change:null,
+					no_icon:'icon-cloud-upload',
+					droppable:true,
+					thumbnail:'small'//large | fit
+					//,icon_remove:null//set null, to hide remove/reset button
+					/**,before_change:function(files, dropped) {
+						//Check an example below
+						//or examples/file-upload.html
+						return true;
+					}*/
+					/**,before_remove : function() {
+						return true;
+					}*/
+					,
+					preview_error : function(filename, error_code) {
+						//name of the file that failed
+						//error_code values
+						//1 = 'FILE_LOAD_FAILED',
+						//2 = 'IMAGE_LOAD_FAILED',
+						//3 = 'THUMBNAIL_FAILED'
+						//alert(error_code);
+					}
+			
+				}).on('change', function(){
+					//console.log($(this).data('ace_input_files'));
+					//console.log($(this).data('ace_input_method'));
+				});
+				
+			
+				//dynamically change allowed formats by changing before_change callback function
+				$('#id-file-format').removeAttr('checked').on('change', function() {
+					var before_change
+					var btn_choose
+					var no_icon
+					if(this.checked) {
+						btn_choose = "Drop images here or click to choose";
+						no_icon = "icon-picture";
+						before_change = function(files, dropped) {
+							var allowed_files = [];
+							for(var i = 0 ; i < files.length; i++) {
+								var file = files[i];
+								if(typeof file === "string") {
+									//IE8 and browsers that don't support File Object
+									if(! (/\.(jpe?g|png|gif|bmp)$/i).test(file) ) return false;
+								}
+								else {
+									var type = $.trim(file.type);
+									if( ( type.length > 0 && ! (/^image\/(jpe?g|png|gif|bmp)$/i).test(type) )
+											|| ( type.length == 0 && ! (/\.(jpe?g|png|gif|bmp)$/i).test(file.name) )//for android's default browser which gives an empty string for file.type
+										) continue;//not an image so don't keep this file
+								}
+								
+								allowed_files.push(file);
+							}
+							if(allowed_files.length == 0) return false;
+			
+							return allowed_files;
+						}
+					}
+					else {
+						btn_choose = "Drop files here or click to choose";
+						no_icon = "icon-cloud-upload";
+						before_change = function(files, dropped) {
+							return files;
+						}
+					}
+					var file_input = $('#id-input-file-3');
+					file_input.ace_file_input('update_settings', {'before_change':before_change, 'btn_choose': btn_choose, 'no_icon':no_icon})
+					file_input.ace_file_input('reset_input');
+				});
+			
+		
+	});
 </script>

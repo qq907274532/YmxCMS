@@ -12,7 +12,7 @@ class RecycleController extends BaseController {
 	public function _initialize(){
 	 	parent::_initialize();
 	 	$this->model=D('Article');
-        $this->modelCate=M('cate');
+        $this->modelCate=D('cate');
     }
     public function index(){
         $title=empty(I('title'))?'':I('title');//标题
@@ -54,7 +54,7 @@ class RecycleController extends BaseController {
         
        $id=I('id',0,'intval');
        
-        if($this->update_com($this->model,array('id'=>$id),array('del'=>'0'))){
+        if($this->model->where(array('id'=>$id))->save(array('del'=>'0'))){
             $this->success('恢复成功');
         }else{
             $this->error('恢复失败');

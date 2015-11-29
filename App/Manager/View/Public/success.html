@@ -43,7 +43,13 @@
                                   
                                             <div class="form-group" style="height:200px;width:400px;overflow:hidden">
                                               
-                                                <div class="success" style="font-family: 微软雅黑;margin-left:150px;line-height:8"><img  src="__PUBLIC__/admin/img/success.gif"><span style="margin-left:20px;font-size:16px"><?php echo($message); ?></span></div>
+                                                <div class="success" style="font-family: 微软雅黑;margin-left:150px;line-height:8">
+                                                <?php if(isset($message)):?>
+                                                <img  src="__PUBLIC__/admin/img/success.gif"><span style="margin-left:20px;font-size:16px"><?php echo($message); ?></span>
+                                                <?php else:?>
+                                                     <img  src="__PUBLIC__/admin/img/error.gif"><span style="margin-left:20px;font-size:16px"><?php echo ($error); ?></span>
+                                                 <?php endif;?>   
+                                                </div>
                                                 <div class="success" style="font-family: 微软雅黑;margin-left:150px;">页面自动 <a id="href" href="<?php echo($jumpUrl); ?>">跳转</a> 等待时间： <b id="wait"><?php echo($waitSecond); ?></b></div>
                                               
                                             </div>

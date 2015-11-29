@@ -8,7 +8,7 @@ class LinkController extends BaseController {
     private $where;
 	public function _initialize(){
 	 	parent::_initialize();
-	 	$this->model=M('links');
+	 	$this->model=D('Link');
 
        
     }
@@ -25,12 +25,16 @@ class LinkController extends BaseController {
             $data=I('post.');
             $data['image']=$this->upload('link/');
             $data['time']=time();
-
-            if($this->add_com($this->model,$data)){
-                $this->success('添加成功',U('Link/index'));
+            if(!$this->model->create($data)){
+                $this->error($this->model->getError());
             }else{
-                $this->error('添加失败');
+                if($this->model->add()){
+                    $this->success('添加成功',U('Link/index'));
+                }else{
+                    $this->error('添加失败');
+                }
             }
+            
         }else{
            
             $this->display();
@@ -47,12 +51,17 @@ class LinkController extends BaseController {
           if(!empty($_FILES['imgPath']['name'])){
             $data['image']=$this->upload('link/');
           }
-         
-          if($this->update_com($this->model,$where,$data)){
-            $this->success('修改成功',U('Link/index'));
+          if(!$this->model->create()){
+            $this->error($this->model->getError($data));
           }else{
-            $this->success('修改失败');
+             if($this->model->where($where)->save($data)){
+                $this->success('修改成功',U('Link/index'));
+              }else{
+                $this->success('修改失败');
+              }
           }
+         
+         
         }else{
         
           $this->info=$this->edit_com($this->model,$where);

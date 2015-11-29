@@ -11,7 +11,7 @@ class UserInfoController extends BaseController {
     private $where;
 	public function _initialize(){
 	 	parent::_initialize();
-	 	$this->model=M('admin');
+	 	$this->model=D('admin');
         
     }
     /*修改用户名*/
@@ -20,7 +20,7 @@ class UserInfoController extends BaseController {
         if(IS_POST){
             $data=I('post.');
             unset($data['id']);
-       if($this->update_com($this->model,array('id'=>$id),$data)){
+       if($this->model->where(array('id'=>$id))->save($data)){
             session_unset();
             session_destroy();
             $this->success('修改成功',U('UserInfo/index',array('id'=>$id)));
@@ -42,7 +42,7 @@ class UserInfoController extends BaseController {
         if(IS_POST){
             $data['password']=md5(I('password'));
            
-           if($this->update_com($this->model,array('id'=>$id),$data)){
+           if($this->model->where(array('id'=>$id))->save($data)){
                 session_unset();
                 session_destroy();
               $this->success('修改成功',U('UserInfo/index',array('id'=>$id)));

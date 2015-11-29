@@ -8,17 +8,14 @@ class AdController extends BaseController {
     private $where;
 	public function _initialize(){
 	 	parent::_initialize();
-	 	$this->model=M('ad');
-	 	$this->modelPos=M('adpos');
+	 	$this->model=D('ad');
+	 	$this->modelPos=D('adpos');
 
        
     }
     public function index(){
-
         $this->order=array('sort','ad_id'=>'desc');
-
         $data=$this->page_com($this->model,$this->order);
-
         foreach ($data['list'] as $k => $v) {
             $data['list'][$k]['name']=$this->modelPos->where(array('id'=>$v['cate_id']))->getField('name');
         }
@@ -27,15 +24,19 @@ class AdController extends BaseController {
     	
     }
     public function add(){
-     
         if(IS_POST){
             $data=I('post.');
             $data['time']=time();
-            if($this->add_com($this->model,$data)){
-                $this->success('添加成功',U('Ad/index'));
+            if(!$this->model->create($data)){
+                $this->error($this->model->getError());
             }else{
-                $this->error('添加失败');
+                 if($this->model->add()){
+                    $this->success('添加成功',U('Ad/index'));
+                }else{
+                    $this->error('添加失败');
+                }
             }
+           
         }else{
             $this->info=$this->info_com($this->modelPos);
             $this->display();
@@ -43,21 +44,24 @@ class AdController extends BaseController {
         
     }
     public function edit(){
-        
         $id=I('id',0,'intval');
         $where['ad_id']=array('eq',$id);
         if(IS_POST){
           $data=I('post.');
           $data['time']=time();
-          if($this->update_com($this->model,$where,$data)){
-            $this->success('修改成功',U('Ad/index'));
+          if(!$this->model->create($data)){
+            $this->error($this->model->getError());
           }else{
-             $this->success('修改失败');
+            if($this->model->where($where)->save()){
+                $this->success('修改成功',U('Ad/index'));
+              }else{
+                 $this->success('修改失败');
+              }
           }
+          
         }else{
           $this->modelPos=$this->info_com($this->modelPos);
           $this->info=$this->edit_com($this->model,$where);
-          
           $this->display();  
         }
     }

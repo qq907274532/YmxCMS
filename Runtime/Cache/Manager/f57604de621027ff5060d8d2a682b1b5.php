@@ -245,29 +245,17 @@
 				</div><!-- /.navbar-header -->
 			</div><!-- /.container -->
 		</div>
-<style type="text/css">
-    
-    .wminimize:hover{
-        text-decoration:none;
-    }
-    .table thead>tr>th, .table tbody>tr>th, .table tfoot>tr>th, .table thead>tr>td, .table tbody>tr>td, .table tfoot>tr>td {
-            padding: 8px;
-            line-height: 1.428571429;
-            vertical-align: top;
-             border-top: 0px solid #ddd; 
-}
-</style>
-        <div class="main-container" id="main-container">
-            <script type="text/javascript">
-                try{ace.settings.check('main-container' , 'fixed')}catch(e){}
-            </script>
+		<div class="main-container" id="main-container">
+			<script type="text/javascript">
+				try{ace.settings.check('main-container' , 'fixed')}catch(e){}
+			</script>
 
-            <div class="main-container-inner">
-                <a class="menu-toggler" id="menu-toggler" href="#">
-                    <span class="menu-text"></span>
-                </a>
+			<div class="main-container-inner">
+				<a class="menu-toggler" id="menu-toggler" href="#">
+					<span class="menu-text"></span>
+				</a>
 
-                <div class="sidebar" id="sidebar">
+			<div class="sidebar" id="sidebar">
 <style type="text/css">
 	.activ{
 		background: #438eb9;
@@ -358,57 +346,118 @@
 					</script>
 				</div>
 
-                <div class="main-content">
-                    
+				<div class="main-content">
+					<div class="breadcrumbs" id="breadcrumbs">
+						<script type="text/javascript">
+							try{ace.settings.check('breadcrumbs' , 'fixed')}catch(e){}
+						</script>
 
-                    <div class="page-content">
-                       
+						<ul class="breadcrumb">
+							<li>
+								<i class="icon-home home-icon"></i>
+								<a href="<?php echo U('Index/index');?>">首页</a>
+							</li>
 
-                <div class="row">
-                    <div class="col-xs-12">
-                        <!-- PAGE CONTENT BEGINS -->
+							<li>
+								<a href="#">广告管理</a>
+							</li>
+							<li class="active">广告列表</li>
+						</ul><!-- .breadcrumb -->
 
-                        <div class="row">
-                           <div class="col-md-6 col-md-offset-3" style="margin-top:130px;">
-                            <div class="login-panel  panel panel-primary">
-                                <div class="panel-heading">
-                                    <h3 class="panel-title" style="font-family: 微软雅黑;font-size:20px"><?php echo C('COMM_TITLE');?>提示页面</h3>
-                                </div>
-                                <div class="panel-body" >
-                                  
-                                            <div class="form-group" style="height:200px;width:400px;overflow:hidden">
-                                              
-                                                <div class="success" style="font-family: 微软雅黑;margin-left:150px;line-height:8">
-                                                <?php if(isset($message)):?>
-                                                <img  src="/Public/admin/img/success.gif"><span style="margin-left:20px;font-size:16px"><?php echo($message); ?></span>
-                                                <?php else:?>
-                                                     <img  src="/Public/admin/img/error.gif"><span style="margin-left:20px;font-size:16px"><?php echo ($error); ?></span>
-                                                 <?php endif;?>   
-                                                </div>
-                                                <div class="success" style="font-family: 微软雅黑;margin-left:150px;">页面自动 <a id="href" href="<?php echo($jumpUrl); ?>">跳转</a> 等待时间： <b id="wait"><?php echo($waitSecond); ?></b></div>
-                                              
-                                            </div>
-                                            
-                                            
-                                          
-                                   
-                                </div>
-                            </div>
-            </div>
-                        </div><!-- /row -->
+					</div>
 
-                    
+					<div class="page-content">
+						<div class="page-header">
+						 
+							<a class="label label-xlg label-primary arrowed-right " href="<?php echo U('Ad/add');?>">
+							添加广告</a>
+							
+							
+							
+						</div>
 
-                    
-                    </div><!-- /.col -->
-                </div><!-- /.row -->
-                    </div><!-- /.page-content -->
-                </div><!-- /.main-content -->
+						<div class="row">
+							<div class="col-xs-12">
+								<!-- PAGE CONTENT BEGINS -->
 
-            
-            </div><!-- /.main-container-inner -->
+								<div class="row">
+									<div class="col-xs-12">
+										<div class="table-responsive">
+											<table id="sample-table-1" class="table table-striped table-bordered table-hover">
+												<thead>
+													<tr>
+														
+														<th>ID</th>
+														<th>广告名称</th>
+														<th>广告位</th>
+														<th>代码</th>
+														<th>状态</th>
+														<th>排序</th>
+														<th class="hidden-480">创建时间</th>
+														<th>操作</th>
+													</tr>
+												</thead>
 
-            
+												<tbody>
+												 <?php if(is_array($data["list"])): $i = 0; $__LIST__ = $data["list"];if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$v): $mod = ($i % 2 );++$i;?><tr>
+														<td><?php echo ($v["ad_id"]); ?></td>
+														<td><?php echo ($v["ad_name"]); ?></td>
+														<td><?php echo ($v["name"]); ?></td>
+														<td><?php echo ($v["ad_content"]); ?></td>
+														<td>
+															<?php if($v["status"] == '1'): ?><span class="label label-success arrowed">显示</span>
+															<?php else: ?>
+															  <span class="label label-danger arrowed-in">不显示</span><?php endif; ?>
+														</td>
+														<td class="hidden-480"><?php echo ($v["sort"]); ?></td>
+														
+														<td class="hidden-480">
+															<?php echo (date('Y-m-d H:i:s',$v["time"])); ?>
+															
+														</td>
+														<td>
+															<div class="visible-md visible-lg hidden-sm hidden-xs btn-group">
+																
+
+																<a href="<?php echo U('Ad/edit',array('id'=>$v['ad_id']));?>" class="btn btn-xs btn-info">
+																	<i class="icon-edit bigger-120"></i>
+																</a>
+
+																<a onclick="if(confirm('确认删除?')) location.href='<?php echo U('Ad/del',array('id'=>$v[ad_id]));?>'"  href="javascript:;" class="btn btn-xs btn-danger">
+																	<i class="icon-trash bigger-120"></i>
+																</a>
+
+																
+															</div>
+
+															
+														</td>
+													</tr><?php endforeach; endif; else: echo "" ;endif; ?>
+												
+												</tbody>
+											</table>
+											
+										</div><!-- /.table-responsive -->
+										<div class="col-sm-6 pull-right">
+											<div class="dataTables_paginate paging_bootstrap ">
+												<ul class="pagination ">
+												<?php echo ($data["page"]); ?>
+												</ul>
+											</div>
+										</div>
+									</div><!-- /span -->
+								</div><!-- /row -->
+
+							
+
+							
+							</div><!-- /.col -->
+						</div><!-- /.row -->
+					</div><!-- /.page-content -->
+				</div><!-- /.main-content -->
+
+			
+			</div><!-- /.main-container-inner -->
 <a href="#" id="btn-scroll-up" class="btn-scroll-up btn btn-sm btn-inverse">
 				<i class="icon-double-angle-up icon-only bigger-110"></i>
 			</a>
@@ -475,17 +524,3 @@
 		
 	</body>
 </html>
-
-
-<script type="text/javascript">
-(function(){
-var wait = document.getElementById('wait'),href = document.getElementById('href').href;
-var interval = setInterval(function(){
-    var time = --wait.innerHTML;
-    if(time <= 0) {
-        location.href = href;
-        clearInterval(interval);
-    };
-}, 1000);
-})();
-</script>

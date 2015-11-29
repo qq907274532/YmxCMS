@@ -245,29 +245,17 @@
 				</div><!-- /.navbar-header -->
 			</div><!-- /.container -->
 		</div>
-<style type="text/css">
-    
-    .wminimize:hover{
-        text-decoration:none;
-    }
-    .table thead>tr>th, .table tbody>tr>th, .table tfoot>tr>th, .table thead>tr>td, .table tbody>tr>td, .table tfoot>tr>td {
-            padding: 8px;
-            line-height: 1.428571429;
-            vertical-align: top;
-             border-top: 0px solid #ddd; 
-}
-</style>
-        <div class="main-container" id="main-container">
-            <script type="text/javascript">
-                try{ace.settings.check('main-container' , 'fixed')}catch(e){}
-            </script>
 
-            <div class="main-container-inner">
-                <a class="menu-toggler" id="menu-toggler" href="#">
-                    <span class="menu-text"></span>
-                </a>
+		<div class="main-container" id="main-container">
+			<script type="text/javascript">
+				try{ace.settings.check('main-container' , 'fixed')}catch(e){}
+			</script>
 
-                <div class="sidebar" id="sidebar">
+			<div class="main-container-inner">
+				<a class="menu-toggler" id="menu-toggler" href="#">
+					<span class="menu-text"></span>
+				</a>
+<div class="sidebar" id="sidebar">
 <style type="text/css">
 	.activ{
 		background: #438eb9;
@@ -358,58 +346,125 @@
 					</script>
 				</div>
 
-                <div class="main-content">
-                    
+				<div class="main-content">
+					<div class="breadcrumbs" id="breadcrumbs">
+						<script type="text/javascript">
+							try{ace.settings.check('breadcrumbs' , 'fixed')}catch(e){}
+						</script>
 
-                    <div class="page-content">
-                       
+						<ul class="breadcrumb">
+							<li>
+								<i class="icon-home home-icon"></i>
+								<a href="#">首页</a>
+							</li>
 
-                <div class="row">
-                    <div class="col-xs-12">
-                        <!-- PAGE CONTENT BEGINS -->
+							<li>
+								<a href="<?php echo U('Ad/index');?>">广告列表</a>
+							</li>
+							<li class="active">添加广告</li>
+						</ul><!-- .breadcrumb -->
 
-                        <div class="row">
-                           <div class="col-md-6 col-md-offset-3" style="margin-top:130px;">
-                            <div class="login-panel  panel panel-primary">
-                                <div class="panel-heading">
-                                    <h3 class="panel-title" style="font-family: 微软雅黑;font-size:20px"><?php echo C('COMM_TITLE');?>提示页面</h3>
-                                </div>
-                                <div class="panel-body" >
-                                  
-                                            <div class="form-group" style="height:200px;width:400px;overflow:hidden">
-                                              
-                                                <div class="success" style="font-family: 微软雅黑;margin-left:150px;line-height:8">
-                                                <?php if(isset($message)):?>
-                                                <img  src="/Public/admin/img/success.gif"><span style="margin-left:20px;font-size:16px"><?php echo($message); ?></span>
-                                                <?php else:?>
-                                                     <img  src="/Public/admin/img/error.gif"><span style="margin-left:20px;font-size:16px"><?php echo ($error); ?></span>
-                                                 <?php endif;?>   
-                                                </div>
-                                                <div class="success" style="font-family: 微软雅黑;margin-left:150px;">页面自动 <a id="href" href="<?php echo($jumpUrl); ?>">跳转</a> 等待时间： <b id="wait"><?php echo($waitSecond); ?></b></div>
-                                              
-                                            </div>
-                                            
-                                            
-                                          
-                                   
-                                </div>
-                            </div>
-            </div>
-                        </div><!-- /row -->
+					</div>
 
-                    
+					<div class="page-content">
+						<div class="page-header">
+						 <a class="label label-xlg label-primary arrowed " href="<?php echo U('Ad/index');?>">
+							返回列表</a>
+							
+						</div><!-- /.page-header -->
 
-                    
-                    </div><!-- /.col -->
-                </div><!-- /.row -->
-                    </div><!-- /.page-content -->
-                </div><!-- /.main-content -->
+						<div class="row">
+							<div class="col-xs-12">
+								<!-- PAGE CONTENT BEGINS -->
 
-            
-            </div><!-- /.main-container-inner -->
+								<form class="form-horizontal" action="" method="post" id="myform">
+								<div class="form-group">
+										<label class="col-sm-3 control-label no-padding-right" for="form-field-2"> 广告位： </label>
+									
+										<div class="col-sm-3">
+											
+											<select   class="form-control"  name="cate_id" id="cate">
+												<option value="0">请选择广告位</option>
+												 <?php if(is_array($info)): $i = 0; $__LIST__ = $info;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$v): $mod = ($i % 2 );++$i;?><option value="<?php echo ($v["id"]); ?>"><?php echo ($v["name"]); ?></option><?php endforeach; endif; else: echo "" ;endif; ?>
+											</select>
+											 
+										</div>
 
-            
-<a href="#" id="btn-scroll-up" class="btn-scroll-up btn btn-sm btn-inverse">
+										
+									</div>
+									<div class="form-group">
+										<label class="col-sm-3 control-label no-padding-right" for="form-field-1"> 广告名称： </label>
+
+										<div class="col-sm-9">
+											<input type="text" id="name" placeholder="广告名称" class="input-large" name="ad_name"  />
+										</div>
+									</div>
+									<div class="form-group">
+										<label class="col-sm-3 control-label no-padding-right" for="form-field-1"> 广告代码： </label>
+
+										<div class=" col-xs-12 col-sm-4">
+											<textarea class="form-control" rows="4" name="ad_content" id="descs" placeholder="广告代码"></textarea>
+										</div>
+									</div>
+										<div class="form-group">
+										<label class="col-sm-3 control-label no-padding-right" for="form-field-1"> 是否显示： </label>
+
+										<div class="col-sm-9">
+										<label>
+											<input name="status" type="radio" class="ace" value="1" />
+											<span class="lbl">&nbsp;显示</span>
+										</label>
+										<label>	
+											<input name="status" type="radio" class="ace" value="0" />
+											<span class="lbl">&nbsp;不显示</span>
+										</label>	
+									
+										</div>
+									</div>
+									<div class="space-4"></div>
+
+									<div class="form-group">
+										<label class="col-sm-3 control-label no-padding-right" for="form-field-2"> 排序： </label>
+
+										<div class="col-sm-9">
+											<input type="text" id="form-field-2" placeholder="排序" class="input-large"  name="sort" value="50" />
+											
+										</div>
+									</div>
+									
+
+									<div class="clearfix form-actions">
+										<div class="col-md-offset-3 col-md-9">
+											<button class="btn btn-info" type="button" id="button">
+												<i class="icon-ok bigger-110"></i>
+												提交
+											</button>
+
+											&nbsp; &nbsp; &nbsp;
+											<button class="btn" type="reset">
+												<i class="icon-undo bigger-110"></i>
+												重置
+											</button>
+										</div>
+									</div>
+
+								
+
+									
+								</form>
+
+								
+
+							
+							</div><!-- /.col -->
+						</div><!-- /.row -->
+					</div><!-- /.page-content -->
+				</div><!-- /.main-content -->
+
+				
+			</div><!-- /.main-container-inner -->
+
+		<a href="#" id="btn-scroll-up" class="btn-scroll-up btn btn-sm btn-inverse">
 				<i class="icon-double-angle-up icon-only bigger-110"></i>
 			</a>
 		</div><!-- /.main-container -->
@@ -476,16 +531,38 @@
 	</body>
 </html>
 
-
 <script type="text/javascript">
-(function(){
-var wait = document.getElementById('wait'),href = document.getElementById('href').href;
-var interval = setInterval(function(){
-    var time = --wait.innerHTML;
-    if(time <= 0) {
-        location.href = href;
-        clearInterval(interval);
-    };
-}, 1000);
-})();
+	$(function(){
+		$("#button").click(function(){
+			var name=$("#name").val();
+			var cate=$("#cate").val();
+			var descs=$("#descs").val();
+			
+			
+			if(cate==0){
+				layer.msg('广告位必须选择', {
+				    icon: 5,
+				    time: 2000 //2秒关闭（如果不配置，默认是3秒）
+				}); 
+				//layer.alert('广告位必须选择', {icon: 5});
+				return false;
+			}else if(name==''){
+				layer.msg('广告名称必须填写', {
+				    icon: 5,
+				    time: 2000 //2秒关闭（如果不配置，默认是3秒）
+				}); 
+				//layer.alert('广告名称必须填写', {icon: 5});
+				return false;
+			}else if(descs==''){
+				layer.msg('广告代码必须填写', {
+				    icon: 5,
+				    time: 2000 //2秒关闭（如果不配置，默认是3秒）
+				}); 
+				//layer.alert('广告代码必须填写', {icon: 5});
+				return false;
+			}else{
+				$("#myform").submit();
+			}
+		});
+	});
 </script>

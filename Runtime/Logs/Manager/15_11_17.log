@@ -1,0 +1,11 @@
+[ 2015-11-17T08:10:44+08:00 ] 121.42.0.34 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000287s ]
+NOTIC: [8192] mysql_get_server_info(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /var/www/shop/App/Manager/Conf/config.php 第 18 行.
+NOTIC: [2] mysql_get_server_info(): Access denied for user 'www'@'localhost' (using password: NO) /var/www/shop/App/Manager/Conf/config.php 第 18 行.
+NOTIC: [2] mysql_get_server_info(): A link to the server could not be established /var/www/shop/App/Manager/Conf/config.php 第 18 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000361s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000405s ]
+

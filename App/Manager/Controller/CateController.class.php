@@ -11,7 +11,7 @@ class CateController extends BaseController {
     private $where;
 	public function _initialize(){
 	 	parent::_initialize();
-	 	$this->model=M('cate');
+	 	$this->model=D('cate');
     }
     public function index(){
         $this->order=array('sort','id'=>'desc');
@@ -23,12 +23,16 @@ class CateController extends BaseController {
        
         if(IS_POST){
             $data=I('post.');
-           
-            if($this->add_com($this->model,$data)){
-                $this->success('添加成功',U('Cate/index'));
+            if(!$this->model->create($data)){
+                $this->error($this->model->getError());
             }else{
-                $this->error('添加失败');
+                if($this->model->add()){
+                    $this->success('添加成功',U('Cate/index'));
+                }else{
+                    $this->error('添加失败');
+                }
             }
+            
         }else{
             $this->list=$this->cate_list($this->model,'',$this->order);
 
@@ -40,18 +44,22 @@ class CateController extends BaseController {
     public function edit(){
         
         $id=I('id',0,'intval');
-        $where['id']=array('eq',$id);
+        $this->where=array('id'=>$id);
         if(IS_POST){
           $data=I('post.');
-        
-          if($this->update_com($this->model,$where,$data)){
-            $this->success('修改成功',U('Cate/index'));
+          if(!$this->model->create()){
+            $this->error($this->model->getError());
           }else{
-             $this->success('修改失败',U('Cate/index'));
+             if($this->model->where($this->where)->save($data)){
+                 $this->success('修改成功',U('Cate/index'));
+              }else{
+                 $this->success('修改失败',U('Cate/index'));
+              }
           }
+         
         }else{
           $this->list=$this->cate_list($this->model,'',$this->order);
-          $this->info=$this->edit_com($this->model,$where);
+          $this->info=$this->edit_com($this->model,$this->where);
           
           $this->display();  
         }

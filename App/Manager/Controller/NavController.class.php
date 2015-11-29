@@ -11,7 +11,7 @@ class NavController extends BaseController {
     private $where;
 	public function _initialize(){
 	 	parent::_initialize();
-	 	$this->model=M('nav');
+	 	$this->model=D('Nav');
     }
     public function index(){
         $this->order=array('sort','id'=>'desc');
@@ -25,14 +25,18 @@ class NavController extends BaseController {
         if(IS_POST){
             $data=I('post.');
             $data['time']=time();
-            if($this->add_com($this->model,$data)){
-                $this->success('添加成功',U('Nav/index'));
+            if(!$this->model->create($data)){
+                $this->error($this->model->getError());
             }else{
-                $this->error('添加失败');
+                if($this->model->add()){
+                    $this->success('添加成功',U('Nav/index'));
+                }else{
+                    $this->error('添加失败');
+                }
             }
+            
         }else{
             $this->list=$this->cate_list($this->model,'',$this->order);
-
             $this->info=$this->info_com($this->model);
             $this->display();
         }
@@ -45,11 +49,16 @@ class NavController extends BaseController {
         if(IS_POST){
           $data=I('post.');
           $data['time']=time();
-          if($this->update_com($this->model,$where,$data)){
-            $this->success('修改成功',U('Nav/index'));
+          if(!$this->model->create($data)){
+            $this->error($this->model->getError());
           }else{
-             $this->success('修改失败');
+             if($this->model->where($where)->save()){
+                 $this->success('修改成功',U('Nav/index'));
+              }else{
+                 $this->success('修改失败');
+              }
           }
+         
         }else{
           $this->list=$this->cate_list($this->model,'',$this->order);
           $this->info=$this->edit_com($this->model,$where);

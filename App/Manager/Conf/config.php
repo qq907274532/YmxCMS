@@ -17,7 +17,7 @@ return array(
 	'php' => PHP_VERSION, //php版本
 	'mysql' => mysql_get_server_info(), //mysql信息
 	'lan' => $_SERVER['HTTP_ACCEPT_LANGUAGE'], //服务器语言
-	'IP' => get_client_ip(), //服务器ip
+	'IP' => $_SERVER['SERVER_ADDR'], //服务器ip
 	'COMM_TITLE'=>'易名轩管理系统',
 	'AUTH_ON' => true, //认证开关
     'AUTH_TYPE' => 1, // 认证方式，1为时时认证；2为登录认证。
@@ -27,7 +27,7 @@ return array(
     'AUTH_USER' => 'hx_admin',//用户信息表
     
     'NOT_AUTH'=>['Manager/Index/index','Manager/Admin/check_user'],
-	'TMPL_ACTION_ERROR'     =>  'Public:error', // 默认错误跳转对应的模板文件
+	'TMPL_ACTION_ERROR'     =>  'Public:success', // 默认错误跳转对应的模板文件
     'TMPL_ACTION_SUCCESS'   =>  'Public:success', // 默认成功跳转对应的模板文件
 	
 );

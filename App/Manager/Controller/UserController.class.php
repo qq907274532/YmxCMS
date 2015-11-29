@@ -64,7 +64,7 @@ class UserController extends BaseController {
         $id=I('id',0,'intval');
         $where['id']=array('eq',$id);
         $data['user_status']='1';
-        if($this->update_com($this->model,$where,$data)){
+        if($this->model->where($where)->save($data)){
             $this->success('启用成功',U('User/index'));
           }else{
              $this->success('启用失败');
@@ -75,7 +75,7 @@ class UserController extends BaseController {
         $id=I('id',0,'intval');
         $where['id']=array('eq',$id);
         $data['user_status']='0';
-        if($this->update_com($this->model,$where,$data)){
+        if($this->model->where($where)->save($data)){
             $this->success('禁用成功',U('User/index'));
           }else{
              $this->success('禁用失败');

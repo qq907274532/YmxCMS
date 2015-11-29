@@ -11,16 +11,13 @@ class AdPosController extends BaseController {
     private $where;
 	public function _initialize(){
 	 	parent::_initialize();
-	 	$this->model=M('adpos');
+	 	$this->model=D('adpos');
 
        
     }
     public function index(){
         $this->order=array('sort','id'=>'desc');
-
         $this->data=$this->page_com($this->model,$this->order);
-
-      
         $this->display();
     	
     }
@@ -29,11 +26,16 @@ class AdPosController extends BaseController {
         if(IS_POST){
             $data=I('post.');
             $data['time']=time();
-            if($this->add_com($this->model,$data)){
-                $this->success('添加成功',U('AdPos/index'));
+            if(!$this->model->create($data)){
+                $this->error($this->model->getError());
             }else{
-                $this->error('添加失败');
+                if($this->model->add()){
+                    $this->success('添加成功',U('AdPos/index'));
+                }else{
+                    $this->error('添加失败');
+                }
             }
+            
         }else{
             
             $this->display();
@@ -47,15 +49,18 @@ class AdPosController extends BaseController {
         if(IS_POST){
           $data=I('post.');
           $data['time']=time();
-          if($this->update_com($this->model,$where,$data)){
-            $this->success('修改成功',U('AdPos/index'));
+          if(!$this->model->create($data)){
+             $this->error($this->model->getError());
           }else{
-             $this->success('修改失败');
+            if($this->model->where($where)->save()){
+                $this->success('修改成功',U('AdPos/index'));
+              }else{
+                 $this->success('修改失败');
+              }
           }
-        }else{
-        
-          $this->info=$this->edit_com($this->model,$where);
           
+        }else{
+          $this->info=$this->edit_com($this->model,$where);
           $this->display();  
         }
     }
